@@ -4,6 +4,9 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json yarn.lock ./
 # --frozen-lockfile ensures it doesn't modify the lockfile
+# Optimization for slow networks
+RUN yarn config set network-timeout 600000 && \
+    yarn config set registry https://registry.npmjs.org/
 RUN yarn install --frozen-lockfile
 
 # Stage 2: Build the application
