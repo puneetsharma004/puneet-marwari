@@ -16,7 +16,7 @@
     "@react-google-maps/api": "^2.20.6",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.6",
-    "next": "15.3.8",
+    "next": "^15.5.12",
     "prop-types": "15.8.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
