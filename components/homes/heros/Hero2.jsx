@@ -87,7 +87,7 @@ export default function Hero2() {
           <path
             opacity="0.05"
             d="M0 0H1920V515.556C1920 515.556 1665 386.305 960 515.556C255 644.806 0 515.556 0 515.556V0Z"
-            fill="#EB662B"
+            fill="#000"
           />
         </svg>
       </div>

@@ -2,6 +2,7 @@ import ArticlesOne from "@/components/homes/articles/ArticlesOne";
 import Banner12 from "@/components/homes/banners/Banner12";
 import Banner13 from "@/components/homes/banners/Banner13";
 import BannerTwo from "@/components/homes/banners/BannerTwo";
+import BrandsOne from "@/components/homes/brands/BrandsOne";
 import Destinations6 from "@/components/homes/destinations/Destinations6";
 import Destinations7 from "@/components/homes/destinations/Destinations7";
 import DestinationsTwo from "@/components/homes/destinations/DestinationsTwo";
@@ -28,14 +29,14 @@ export default function page() {
       <main>
         <Header7 />
         <Hero8 />
-        <SpacialOffer />
+        {/* <SpacialOffer /> */}
         <PopularTourSlider />
-        <Destinations6 />
-        <Destinations7 />
-        <CityTour />
-        <CulturalTour />
-        <Banner12 />
-        <CruiseTour />
+        {/* <Destinations6 /> */}
+        {/* <Destinations7 /> */}
+        {/* <CityTour /> */}
+        {/* <CulturalTour /> */}
+        {/* <Banner12 /> */}
+        {/* <CruiseTour /> */}
         {/* <Banner13 /> */}
         <Features6 />
         <DestinationsTwo />
@@ -44,7 +45,7 @@ export default function page() {
           <TestimonialOne />
         </div>
         <BrandsOne />
-        <ArticlesOne />
+        {/* <ArticlesOne /> */}
         <FooterSix />
       </main>
     </>
