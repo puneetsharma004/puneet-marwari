@@ -12,7 +12,7 @@ export default function PopularTourSlider() {
   return (
     <section className="layout-pt-xl">
       <div className="container">
-        <div className="row y-gap-10 justify-between items-center y-gap-10">
+        <div className="row y-gap-10 justify-between items-center y-gap-10 font-heading">
           <div className="col-auto">
             <h2 data-aos="fade-up" data-aos-delay="" className="text-30">
               Find Popular Tours

@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "JosefinSansVar";
+  src: url("/fonts/Josefin_Sans/JosefinSans-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  /* variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InterVar";
+  src: url("/fonts/Inter/Inter-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  /* variable weight range */
+  font-style: normal;
+}
+
+
+
+
+body {
+  font-family: var(--font-body);
+}
+
+/* Headings */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
 .ratio {
   position: relative;
   display: block;
@@ -79,7 +107,8 @@
 }
 
 :root {
-  /* --font-primary: "DM sans", sans-serif; */
+  --font-body: "InterVar", sans-serif;
+  --font-heading: "JosefinSansVar", sans-serif;
 }
 
 :root {
@@ -2252,6 +2281,7 @@ h6 {
 
 .header {
   transition: 0.2s;
+  font-family: var(--font-heading);
 }
 
 .header.-is-sticky {

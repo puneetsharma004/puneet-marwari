@@ -10,7 +10,7 @@ export default function BrandsOne() {
   return (
     <section className="layout-pt-xl layout-pb-xl">
       <div className="container">
-        <div className="row justify-center text-center">
+        <div className="row justify-center text-center font-heading">
           <div className="col-auto">
             <h2 data-aos="fade-up" data-aos-delay="" className="text-30">
               Trusted by all the largest travel brands

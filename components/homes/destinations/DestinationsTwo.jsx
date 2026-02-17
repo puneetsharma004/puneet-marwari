@@ -7,7 +7,7 @@ export default function DestinationsTwo() {
   return (
     <section className="layout-pt-xl">
       <div className="container">
-        <div className="row y-gap-10 justify-between items-end">
+        <div className="row y-gap-10 justify-between items-end font-heading">
           <div className="col-auto">
             <h2 data-aos="fade-up" data-aos-delay="" className="text-30">
               Trending Destinations
@@ -45,7 +45,7 @@ export default function DestinationsTwo() {
                   />
                 </div>
 
-                <h3 className="text-18 fw-500 mt-20">{elm.title}</h3>
+                <h3 className="text-18 fw-500 mt-20 font-heading">{elm.title}</h3>
                 <p className="text-14">{elm.tours}+ Tours</p>
               </Link>
             </div>

@@ -24,7 +24,7 @@ export default function Features6() {
                 <h2
                   data-aos="fade-up"
                   data-aos-delay=""
-                  className="text-30 md:text-24 fw-700"
+                  className="text-30 md:text-24 fw-700 font-heading"
                 >
                   Why choose Tourz
                 </h2>
@@ -54,7 +54,7 @@ export default function Features6() {
                         />
                       </div>
 
-                      <h3 className="featureIcon__title text-18 fw-500 mt-30">
+                      <h3 className="featureIcon__title text-18 fw-500 mt-30 font-heading">
                         {elm.title}
                       </h3>
                       <p className="featureIcon__text mt-10">{elm.text}</p>
