@@ -2597,6 +2597,10 @@ h6 {
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3); /* translucent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .header.-type-8.-is-sticky {

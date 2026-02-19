@@ -1,9 +1,11 @@
-import FooterOne from "@/components/layout/footers/FooterOne";
-import Header1 from "@/components/layout/header/Header1";
+
+
 import PageHeader from "@/components/tours/PageHeader";
 import TourList2 from "@/components/tours/TourList2";
 import TourTypes from "@/components/tours/TourTypes";
 import React from "react";
+import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
   title: "Tour-list-3 || ViaTour - Travel & Tour React NextJS Template",
@@ -14,13 +16,13 @@ export default function page() {
   return (
     <>
       <main>
-        <Header1 />
+        <Header />
         <PageHeader />
         <div className="container mb-40">
           <TourTypes />
         </div>
         <TourList2 />
-        <FooterOne />
+        <Footer />
       </main>
     </>
   );

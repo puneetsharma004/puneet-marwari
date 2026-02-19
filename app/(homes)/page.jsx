@@ -5,7 +5,7 @@ import Features6 from "@/components/homes/features/Features6";
 import Hero8 from "@/components/homes/heros/Hero8";
 import TestimonialOne from "@/components/homes/testimonials/TestimonialOne";
 import PopularTourSlider from "@/components/homes/tours/PopulerTourSlider";
-import FooterSix from "@/components/layout/footers/FooterSix";
+import Footer from "@/components/layout/footers/Footer";
 import Header from "@/components/layout/header/Header";
 import React from "react";
 
@@ -28,7 +28,7 @@ export default function Home() {
           <TestimonialOne />
         </div>
         <BrandsOne />
-        <FooterSix />
+        <Footer />
       </main>
     </>
   );

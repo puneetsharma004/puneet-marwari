@@ -1,6 +1,8 @@
-import FooterOne from "@/components/layout/footers/FooterOne";
-import Header1 from "@/components/layout/header/Header1";
+
 import Image from "next/image";
+import Header from "@/components/layout/header/Header";
+import React from "react";
+import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
   title: "Not found || ViaTour - Travel & Tour React NextJS Template",
@@ -11,7 +13,7 @@ export default function NotFound() {
   return (
     <>
       <main>
-        <Header1 />
+        <Header />
         <section className="nopage mt-header">
           <div className="container">
             <div className="row y-gap-30 justify-between items-center">
@@ -46,7 +48,7 @@ export default function NotFound() {
             </div>
           </div>
         </section>
-        <FooterOne />
+        <Footer />
       </main>
     </>
   );

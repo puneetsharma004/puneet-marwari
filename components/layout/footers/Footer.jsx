@@ -3,9 +3,9 @@ import Socials from "../components/Socials";
 import Image from "next/image";
 import FooterLinksTwo from "../components/FooterLinksTwo";
 
-export default function FooterFour() {
+export default function Footer() {
   return (
-    <footer className="footer -type-1 -light bg-dark-1">
+    <footer className="footer -type-1 -light bg-accent-2">
       <div className="footer__main">
         <div className="container">
           <div className="footer__info">

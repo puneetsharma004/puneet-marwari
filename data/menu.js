@@ -15,9 +15,7 @@ export const tours = [
       { id: 215, title: "Tour list 5", href: "/tour-list-5" },
       { id: 216, title: "Tour list 6", href: "/tour-list-6" },
       { id: 217, title: "Tour list 7", href: "/tour-list-7" },
-      { id: 218, title: "Tour list 8", href: "/tour-list-8" },
-      { id: 219, title: "Tour list 9", href: "/tour-list-9" },
-      { id: 220, title: "Tour list 10", href: "/tour-list-10" },
+
     ],
   },
   {
