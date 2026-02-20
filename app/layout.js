@@ -18,16 +18,18 @@ const inter = Inter({
 
 import ScrollTopBehaviour from "@/components/common/ScrollTopBehavier";
 import Wrapper from "@/components/layout/Wrapper";
+import BootstrapClient from "./BootstrapClient";
 
-if (typeof window !== "undefined") {
-  import("bootstrap");
-}
+// if (typeof window !== "undefined") {
+//   import("bootstrap");
+// }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
       <body className={`${josefin.className} ${inter.className}`}>
+        <BootstrapClient />
         <Wrapper>{children}</Wrapper>
         <ScrollToTop />
         <ScrollTopBehaviour />
