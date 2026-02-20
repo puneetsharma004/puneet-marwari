@@ -1,3 +1,4 @@
+"use client"
 import BannerTwo from "@/components/homes/banners/BannerTwo";
 import BrandsOne from "@/components/homes/brands/BrandsOne";
 import DestinationsTwo from "@/components/homes/destinations/DestinationsTwo";
