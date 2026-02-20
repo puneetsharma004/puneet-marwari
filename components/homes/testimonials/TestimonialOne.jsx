@@ -18,7 +18,7 @@ export default function TestimonialOne() {
       </div>
 
       <div className="container">
-        <div className="row justify-center text-center">
+        <div className="row justify-center text-center font-heading">
           <div className="col-auto">
             <h2
               data-aos="fade-up"

@@ -1,11 +1,13 @@
 import Hero1 from "@/components/homes/heros/Hero1";
 import TourSlderOne from "@/components/homes/tours/TourSlderOne";
-import FooterOne from "@/components/layout/footers/FooterOne";
-import Header1 from "@/components/layout/header/Header1";
+
+
 import Destinations from "@/components/tours/Destinations";
 import TourList4 from "@/components/tours/TourList4";
 import TourSlder from "@/components/tours/TourSlider";
 import React from "react";
+import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
   title: "Tour-list-7 || ViaTour - Travel & Tour React NextJS Template",
@@ -16,7 +18,7 @@ export default function page() {
   return (
     <>
       <main>
-        <Header1 />
+        <Header />
         <Hero1 />
 
         <Destinations />
@@ -24,7 +26,7 @@ export default function page() {
 
         <TourList4 />
 
-        <FooterOne />
+        <Footer />
       </main>
     </>
   );

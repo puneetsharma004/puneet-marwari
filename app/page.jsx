@@ -1,5 +1,5 @@
 import React from "react";
-import Firstpage from "./(homes)/home-1/page";
+import Home from "./(homes)/page";
 
 export const metadata = {
   title: "Home-1 || ViaTour - Travel & Tour React NextJS Template",
@@ -9,7 +9,7 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Firstpage />
+      <Home/>
     </>
   );
 }

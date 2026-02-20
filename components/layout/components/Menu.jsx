@@ -13,37 +13,13 @@ export default function Menu() {
       <div className="xl:d-none ml-30">
         <div className="desktopNav">
           <div className="desktopNav__item">
-            <a
-              className={
-                pathname?.split("/")[1].split("-")[0] == "home"
-                  ? "activeMenu"
-                  : ""
-              }
-              href="#"
-            >
-              Home <i className="icon-chevron-down"></i>
-            </a>
-
-            <div className="desktopNavSubnav">
-              <div className="desktopNavSubnav__content">
-                {homes.map((elm, i) => (
-                  <div key={i} className="desktopNavSubnav__item text-dark-1">
-                    <Link
-                      className={pathname == elm.href ? "activeMenu" : ""}
-                      href={elm.href}
-                    >
-                      {elm.title}
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Link href="/">Home</Link>
           </div>
 
           <div className="desktopNav__item">
-            <a href="#">
+            <Link href="/tour-list-1">
               Tour <i className="icon-chevron-down"></i>
-            </a>
+            </Link>
 
             <div className="desktopNavMega">
               <div className="desktopNavMega__container">
@@ -126,13 +102,13 @@ export default function Menu() {
           </div>
 
           <div className="desktopNav__item">
-            <a href="#">Activities</a>
+            <Link href="#">Activities</Link>
           </div>
 
           <div className="desktopNav__item">
-            <a href="#">
+            <Link href="#">
               Pages <i className="icon-chevron-down"></i>
-            </a>
+            </Link>
 
             <div className="desktopNavSubnav">
               <div className="desktopNavSubnav__content">

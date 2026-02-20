@@ -3,7 +3,7 @@ import React from "react";
 
 export default function BannerTwo() {
   return (
-    <section className="layout-pt-xl">
+    <section className="layout-pt-xl layout-pb-xl">
       <div className="container">
         <div className="bg-accent-1 py-50 px-50 rounded-12">
           <div className="row y-gap-20 justify-between items-center">
