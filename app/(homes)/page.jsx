@@ -9,11 +9,6 @@ import Footer from "@/components/layout/footers/Footer";
 import Header from "@/components/layout/header/Header";
 import React from "react";
 
-export const metadata = {
-  title: "Home || ViaTour - Travel & Tour React NextJS Template",
-  description: "ViaTour - Travel & Tour React NextJS Template",
-};
-
 export default function Home() {
   return (
     <>

@@ -1,6 +1,5 @@
 import Paymentcards from "../components/Paymentcards";
 import Socials from "../components/Socials";
-import Image from "next/image";
 import FooterLinksTwo from "../components/FooterLinksTwo";
 
 export default function Footer() {
