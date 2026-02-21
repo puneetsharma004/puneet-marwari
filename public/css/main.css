@@ -3110,6 +3110,13 @@ h6 {
   right: 30px;
 }
 
+@media (max-width: 600px) {
+  .navAbsolute {
+    display: none !important;
+  }
+}
+
+
 @media (max-width: 991px) {
   .hero.-type-2 .navAbsolute {
     left: 12px;
@@ -10277,6 +10284,7 @@ h6 {
 
 .layout-pt-xl {
   padding-top: 120px;
+  overflow-block: hidden;
 }
 
 .layout-pb-xl {
