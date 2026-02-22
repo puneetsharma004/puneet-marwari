@@ -39,7 +39,8 @@ export default function Hero8() {
         <Image
           width={1920}
           height={860}
-          src="/img/hero/8/1.jpg"
+            // src="/img/hero/8/1.jpg"
+            src="/home/s01.jpg"
           alt="background"
         />
       </div>

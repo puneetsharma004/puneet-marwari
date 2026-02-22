@@ -10,7 +10,7 @@ export default function Features6() {
         <Image
           width={717}
           height={700}
-          src="/img/about/3/1.jpg"
+          src="/home/s16.png"
           alt="image"
           className="rounded-24"
         />
