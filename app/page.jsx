@@ -12,8 +12,8 @@ import React from "react";
 
 
 export const metadata = {
-  title: "Home-1 || ViaTour - Travel & Tour React NextJS Template",
-  description: "ViaTour - Travel & Tour React NextJS Template",
+  title: "Mawari - Travel & Tour",
+  description: "Mawari - Travel & Tour",
 };
 
 export default function page() {
