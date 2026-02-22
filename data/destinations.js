@@ -102,37 +102,37 @@ export const destinationOffers = [
 export const destinationsTwo = [
   {
     id: 1,
-    imgSrc: "/img/destinationCards/1/1.png",
+    imgSrc: "/home/s09.png",
     title: "Paris",
     tours: 100,
   },
   {
     id: 2,
-    imgSrc: "/img/destinationCards/1/2.png",
+    imgSrc: "/home/s10.jpg",
     title: "Singapore",
     tours: 300,
   },
   {
     id: 3,
-    imgSrc: "/img/destinationCards/1/3.png",
+    imgSrc: "/home/s11.jpg",
     title: "Roma",
     tours: 400,
   },
   {
     id: 4,
-    imgSrc: "/img/destinationCards/1/4.png",
+    imgSrc: "/home/s12.jpg",
     title: "Bangkok",
     tours: 100,
   },
   {
     id: 5,
-    imgSrc: "/img/destinationCards/1/5.png",
+    imgSrc: "/home/s13.jpg",
     title: "Bali",
     tours: 600,
   },
   {
     id: 6,
-    imgSrc: "/img/destinationCards/1/6.png",
+    imgSrc: "/home/s14.jpg",
     title: "Phuket",
     tours: 200,
   },

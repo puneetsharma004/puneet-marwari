@@ -51,7 +51,7 @@ export default function Menu() {
                           <Image
                             width={615}
                             height={300}
-                            src="/img/cta/10/1.jpg"
+                            src="/home/t2.jpg"
                             alt="image"
                           />
                         </div>
@@ -74,7 +74,7 @@ export default function Menu() {
                           <Image
                             width={615}
                             height={300}
-                            src="/img/cta/10/2.jpg"
+                            src="/home/t1.jpg"
                             alt="image"
                           />
                         </div>

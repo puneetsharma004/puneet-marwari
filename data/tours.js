@@ -1,7 +1,7 @@
 export const tourData = [
   {
     id: 1,
-    imageSrc: "/img/tourCards/1/1.png",
+    imageSrc: "/home/s05.png",
     location: "Paris, France",
     title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
     ratingCount: 243,
@@ -13,7 +13,7 @@ export const tourData = [
   },
   {
     id: 2,
-    imageSrc: "/img/tourCards/1/2.png",
+    imageSrc: "/home/s02.png",
     location: "New York, USA",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     ratingCount: 243,
@@ -25,7 +25,7 @@ export const tourData = [
   },
   {
     id: 3,
-    imageSrc: "/img/tourCards/1/3.png",
+    imageSrc: "/home/s03.png",
     location: "London, UK",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     ratingCount: 243,
@@ -37,7 +37,7 @@ export const tourData = [
   },
   {
     id: 4,
-    imageSrc: "/img/tourCards/1/4.png",
+    imageSrc: "/home/s04.png",
     location: "New York, USA",
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     ratingCount: 243,
@@ -49,7 +49,7 @@ export const tourData = [
   },
   {
     id: 5,
-    imageSrc: "/img/tourCards/1/5.png",
+    imageSrc: "/home/s05.png",
     location: "Paris, France",
     title: "Space Center Houston Admission Ticket",
     ratingCount: 243,
@@ -61,7 +61,7 @@ export const tourData = [
   },
   {
     id: 6,
-    imageSrc: "/img/tourCards/1/6.png",
+    imageSrc: "/home/s06.png",
     location: "New York, USA",
     title: "Clear Kayak Tour of Shell Key Preserve and Tampa Bay Area",
     ratingCount: 243,
@@ -73,7 +73,7 @@ export const tourData = [
   },
   {
     id: 7,
-    imageSrc: "/img/tourCards/1/7.png",
+    imageSrc: "/home/s07.png",
     location: "London, UK",
     title: "History and Hauntings of Salem Guided Walking Tour",
     ratingCount: 243,
@@ -85,7 +85,7 @@ export const tourData = [
   },
   {
     id: 8,
-    imageSrc: "/img/tourCards/1/9.png",
+    imageSrc: "/home/s09.png",
     location: "New York, USA",
     title:
       "Mauna Kea Summit Sunset and Stars Free Astro Photos Hilo Kona Waikoloa Pick Up",
