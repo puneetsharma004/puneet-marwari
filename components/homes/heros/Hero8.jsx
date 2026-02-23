@@ -35,14 +35,7 @@ export default function Hero8() {
 
   return (
     <section className="hero -type-8">
-      <div className="hero__bg overflow-hidden object-fit-cover">
-        {/*<Image*/}
-        {/*  width={1920}*/}
-        {/*  height={860}*/}
-        {/*    // src="/img/hero/8/1.jpg"*/}
-        {/*    src="/home/s01.jpg"*/}
-        {/*  alt="background"*/}
-        {/*/>*/}
+      <div className="hero__vbg overflow-hidden object-fit-cover">
         <video loop autoPlay muted playsInline className="opacity-25" >
           <source src="/home/paris.mp4" />
         </video>
@@ -59,7 +52,7 @@ export default function Hero8() {
               >
                 <div
                   ref={dropDownContainer}
-                  className="searchForm -type-1 shadow-1 rounded-200"
+                  className="searchForm -type-1 shadow-1 rounded-200 overflow-hidden"
                 >
                   <div className="searchForm__form">
                     <div className="searchFormItem js-select-control js-form-dd">
