@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 @font-face {
   font-family: "JosefinSansVar";
   src: url("/fonts/Josefin_Sans/JosefinSans-Variable.ttf") format("truetype");
@@ -153,7 +156,7 @@ body {
   --color-light-1: #F5F5F5;
   --color-light-2: #717171;
   --color-light-3: #FBFBFB;
-  --color-light-4: #DDD3EC;
+  --color-light-4: #aeaeae;
   --color-light-5: #F2F1EC;
   --color-light-6: #E7E6E6;
   --color-light-7: #C6C6D2;

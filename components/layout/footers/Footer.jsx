@@ -4,7 +4,7 @@ import FooterLinksTwo from "../components/FooterLinksTwo";
 
 export default function Footer() {
   return (
-    <footer className="footer -type-1 -light bg-accent-2">
+    <footer className="footer -type-1 -light bg-accent-2 footer-bg-overlay">
       <div className="footer__main">
         <div className="container">
           <div className="footer__info">
@@ -18,7 +18,7 @@ export default function Footer() {
                   <div className="col-auto">
                     <div className="text-20 fw-500 text-white text-white">
                       Speak to our expert at
-                      <span className="text-white">1-800-453-6744</span>
+                      <span className="text-white"> 1-800-453-6744</span>
                     </div>
                   </div>
                 </div>

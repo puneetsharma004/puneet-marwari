@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Banner12() {
   return (
-    <section className="cta -type-4">
+    <section className="cta -type-4 layout-pt-xl layout-pb-xl">
       <div className="container">
         <div className="cta__content">
-          <div className="row justify-between">
+          <div className="justify-between">
             <div className="col-xl-7 col-lg-8">
               <h2
                 data-aos="fade-up"
@@ -33,26 +33,26 @@ export default function Banner12() {
           </div>
 
           <div className="col-lg-6">
-            <div className="cta__image">
+            <div className="cta__image ">
               <Image
-                src="/img/cta/11/1.jpg"
+                src="/home/s11.jpg"
                 width={730}
                 height={375}
                 alt="image"
               />
-              <Image
-                src="/img/cta/11/shape.svg"
-                width="21"
-                height="250"
-                style={{ width: "auto", height: "100%" }}
-                alt="image"
-              />
-              <Image
-                src="/img/cta/11/mobileShape.svg"
-                width="254"
-                height="23"
-                alt="image"
-              />
+              {/*<Image*/}
+              {/*  src="/img/cta/11/shape.svg"*/}
+              {/*  width="21"*/}
+              {/*  height="250"*/}
+              {/*  style={{ width: "auto", height: "100%" }}*/}
+              {/*  alt="image"*/}
+              {/*/>*/}
+              {/*<Image*/}
+              {/*  src="/img/cta/11/mobileShape.svg"*/}
+              {/*  width="254"*/}
+              {/*  height="23"*/}
+              {/*  alt="image"*/}
+              {/*/>*/}
             </div>
           </div>
         </div>

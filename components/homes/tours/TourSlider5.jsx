@@ -26,7 +26,7 @@ export default function TourSlider5() {
               <div data-aos="fade-up" data-aos-delay="" className="">
                 <Swiper
                   spaceBetween={30}
-                  className="w-100 overflow-visible"
+                  className="w-100 overflow-hidden"
                   navigation={{
                     prevEl: ".js-slider1-prev",
                     nextEl: ".js-slider1-next",

@@ -7,7 +7,9 @@ import TestimonialOne from "@/components/homes/testimonials/TestimonialOne";
 import PopularTourSlider from "@/components/homes/tours/PopulerTourSlider";
 import Footer from "@/components/layout/footers/Footer";
 import Header from "@/components/layout/header/Header";
+import TourSlider5 from "@/components/homes/tours/TourSlider5";
 import React from "react";
+import Banner12 from "@/components/homes/banners/Banner12";
 
 
 
@@ -21,10 +23,12 @@ export default function page() {
     <>
       <Header />
       <Hero8 />
-      <PopularTourSlider />
+      {/*<PopularTourSlider />*/}
+        <TourSlider5/>
       <Features6 />
       <DestinationsTwo />
-      <BannerTwo />
+        {/*<BannerTwo />*/}
+        <Banner12 />
       <div className="bg-accent-1-05">
         <TestimonialOne />
       </div>

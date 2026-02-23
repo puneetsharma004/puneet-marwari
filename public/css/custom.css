@@ -334,3 +334,122 @@ opacity: 1;
 .ButtonBooking{
   transition: 0.4s;
 }
+
+
+/*///////////////////////////////////////////////////////////////*/
+.student-section {
+    position: relative;
+    padding: 120px 0;
+    background: #0c0f14;
+    color: white;
+    overflow: hidden;
+}
+
+/* Abstract Image Layer */
+.abstract-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/home/a1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.02; /* 🔥 Very subtle */
+    pointer-events: none;
+}
+
+/* Heading */
+.student-heading {
+    margin-bottom: 60px;
+}
+
+.student-subtitle {
+    font-size: 14px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.student-heading h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #e63946; /* red accent like reference */
+}
+
+.student-heading p {
+    max-width: 600px;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* Grid */
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.student-card {
+    position: relative;
+    height: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-img {
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.2)
+    );
+}
+
+.card-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+/*footer overlay */
+
+.footer-bg-overlay {
+    position: relative;
+    background-image: url("/home/s01.jpg"); /* change path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.footer-bg-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.6)
+    );
+    z-index: -1;
+}
+
+/* Make sure content stays above overlay */
+.footer-bg-overlay > * {
+    position: relative;
+    z-index: 2;
+}

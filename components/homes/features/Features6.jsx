@@ -2,70 +2,69 @@ import { featuresFour } from "@/data/features";
 import Image from "next/image";
 import React from "react";
 
+
 export default function Features6() {
-  return (
-    <section className="relative">
-      <div className="sectionBg -type-1">
-        <div className="bg-accent-1-05 rounded-24"></div>
-        <Image
-          width={717}
-          height={700}
-          src="/home/s16.png"
-          alt="image"
-          className="rounded-24"
-        />
-      </div>
+    return (
+        <section className="student-section">
+            {/* Abstract Background Layer */}
+            <div className="abstract-bg"></div>
+            <div className="container student-content">
 
-      <div className="container">
-        <div className="aboutSection -type-1">
-          <div className="row">
-            <div className="col-xl offset-xl-5 col-lg-7 offset-lg-5">
-              <div className="aboutSection__text">
-                <h2
-                  data-aos="fade-up"
-                  data-aos-delay=""
-                  className="text-30 md:text-24 fw-700 font-heading"
-                >
-                  Why choose Tourz
-                </h2>
-                <p data-aos="fade-up" data-aos-delay="">
-                  Most viewed and all-time top-selling services
-                </p>
-              </div>
+                {/* Heading */}
+                <div className="student-heading">
+
+                    <h2 className="text-white">
+                        Why choose <span className="highlight">Tourz</span>
+                    </h2>
+
+                    <p className="text-white">
+                        Most viewed and all-time top-selling services
+                    </p>
+                </div>
+
+                {/* Cards */}
+                <div className="student-grid">
+                    {whyCards.map((elm, i) => (
+                        <div key={i} className="student-card">
+                            <Image
+                                src={elm.image}
+                                alt={elm.title}
+                                fill
+                                className="card-img"
+                            />
+                            <div className="card-overlay"></div>
+
+                            <div className="card-title">
+                                {elm.title}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
             </div>
-          </div>
-
-          <div className="row">
-            <div className="col-xl offset-xl-2 col-lg-7 offset-lg-5">
-              <div
-                data-aos="fade-up"
-                data-aos-delay=""
-                className="row y-gap-30"
-              >
-                {featuresFour.map((elm, i) => (
-                  <div key={i} className="col-xl-4 col-lg-6 col-sm-6">
-                    <div className="featureIcon -type-1 px-40 py-40 rounded-24 bg-white shadow-1">
-                      <div className="featureIcon__icon">
-                        <Image
-                          width="60"
-                          height="60"
-                          src={elm.iconSrc}
-                          alt="icon"
-                        />
-                      </div>
-
-                      <h3 className="featureIcon__title text-18 fw-500 mt-30 font-heading">
-                        {elm.title}
-                      </h3>
-                      <p className="featureIcon__text mt-10">{elm.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 }
+
+
+
+const whyCards = [
+    {
+        id: 1,
+        image: "/home/why1.png",
+        title: "Ultimate flexibility",
+        text: "You’re in control, with free cancellation and payment.",
+    },
+    {
+        id: 2,
+        image: "/home/why2.png",
+        title: "Memorable experiences",
+        text: "Browse and book tours and activities so incredible.",
+    },
+    {
+        id: 3,
+        image: "/home/why3.png",
+        title: "Quality at our core",
+        text: "High quality standards. Millions of reviews.",
+    },
+];

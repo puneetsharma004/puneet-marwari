@@ -30,7 +30,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={() => scrollTop()}
-      className={`toTopButton js-top-button ${notHidden ? "" : "is-hidden"} `}
+      className={`toTopButton js-top-button d-flex justify-center items-center ${notHidden ? "" : "is-hidden"} `}
     >
       <svg
         width="22"
