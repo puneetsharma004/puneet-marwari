@@ -36,7 +36,7 @@ export default function Hero8() {
   return (
     <section className="hero -type-8">
       <div className="hero__vbg overflow-hidden object-fit-cover">
-        <video loop autoPlay muted playsInline className="opacity-25" >
+        <video loop autoPlay muted playsInline className="opacity-25">
           <source src="/home/paris.mp4" />
         </video>
       </div>
@@ -45,10 +45,21 @@ export default function Hero8() {
         <div className="row justify-center">
           <div className="col-lg-8 col-md-10">
             <div className="hero__content text-center">
+              <div>
+                <h1 className="hero__title text-white font-heading">
+                  Find Next PlaceTo Visit
+                </h1>
+
+                <div className="hero__text text-white mt-10">
+                  Discover amzaing places at exclusive deals.Eat, Shop, Visit
+                  <br className="lg:d-none" />
+                  interesting places around the world.
+                </div>
+              </div>
               <div
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="hero__filter mb-60 md:mb-0 md:mt-30"
+                className="hero__filter mt-60 md:mb-0 md:mt-30"
               >
                 <div
                   ref={dropDownContainer}
@@ -141,18 +152,6 @@ export default function Hero8() {
                       <i className="icon-search text-16"></i>
                     </button>
                   </div>
-                </div>
-              </div>
-
-              <div>
-                <h1 className="hero__title text-white font-heading">
-                  Find Next PlaceTo Visit
-                </h1>
-
-                <div className="hero__text text-white mt-10">
-                  Discover amzaing places at exclusive deals.Eat, Shop, Visit
-                  <br className="lg:d-none" />
-                  interesting places around the world.
                 </div>
               </div>
             </div>
