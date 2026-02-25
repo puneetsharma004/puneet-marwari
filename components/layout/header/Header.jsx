@@ -53,9 +53,9 @@ export default function Header() {
             <div className="header__logo">
               <Link href="/" className="header__logo">
                 <Image
-                  width="167"
-                  height="32"
-                  src="/img/general/logo-light.svg"
+                  width="250"
+                  height="64"
+                  src="/home/mawari-logo.png"
                   alt="logo icon"
                 />
               </Link>

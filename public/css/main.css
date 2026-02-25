@@ -714,7 +714,7 @@ button:focus {
 
 .button.-accent-1:hover {
   border-color: var(--color-accent-1);
-  background-color: var(--color-accent-1) !important;
+  background-color: var(--color-yellow-2) !important;
   color: white !important;
 }
 
@@ -2600,7 +2600,8 @@ h6 {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3); /* translucent */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* translucent */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
@@ -5805,7 +5806,7 @@ h6 {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background-color: var(--color-light-4);
+  background-color: var(--color-blue-1);
   padding: 60px;
   z-index: 2;
 }

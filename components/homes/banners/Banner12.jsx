@@ -11,12 +11,16 @@ export default function Banner12() {
               <h2
                 data-aos="fade-up"
                 data-aos-delay=""
-                className="text-24 lh-13"
+                className="text-24 lh-13 text-white"
               >
                 7 Reasons to Plan a Trip to Lowa in {new Date().getFullYear()}
               </h2>
 
-              <p data-aos="fade-up" data-aos-delay="" className="mt-10">
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-10  text-white"
+              >
                 River cruises, railroad adventures, and Frank Lloyd Wright
                 architecture.
               </p>
@@ -24,7 +28,7 @@ export default function Banner12() {
               <button
                 data-aos="fade-right"
                 data-aos-delay=""
-                className="button -md -accent-1 bg-dark-1 text-white mt-10"
+                className="button -md -accent-1 bg-white text-black mt-10"
               >
                 Read Now
                 <i className="icon-arrow-top-right ml-10"></i>
@@ -34,12 +38,7 @@ export default function Banner12() {
 
           <div className="col-lg-6">
             <div className="cta__image ">
-              <Image
-                src="/home/s11.jpg"
-                width={730}
-                height={375}
-                alt="image"
-              />
+              <Image src="/home/s11.jpg" width={730} height={375} alt="image" />
               {/*<Image*/}
               {/*  src="/img/cta/11/shape.svg"*/}
               {/*  width="21"*/}
