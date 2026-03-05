@@ -2,47 +2,47 @@ export const testimonialsOne = [
   {
     id: 1,
     imageSrc: "/home/s17.png",
-    title: "Excellent Service!",
+    title: "Micki S. - USA",
     content:
-      "I had an amazing experience with this company. The service was top-notch, and the staff was incredibly friendly. I highly recommend them!",
-    authorName: "John Smith",
-    authorRole: "Traveler",
+      "First time taking a Detours tour, and I can not say how happy I am. From the outset of asking questions and booking the trip, through the arrivals and travels for our 11 day Scandinavia tour, it was a GREAT experience. So much positivity and true passion and care for the guest and the places we visited. I was a solo traveler and had the time of my life! Highly recommend Detours!!!!!",
+    authorName: "August 2, 2025",
+    authorRole: "",
   },
   {
     id: 2,
     imageSrc: "/home/s17.png",
-    title: "Great Adventures!",
+    title: "Leo L. - USA",
     content:
-      "The tours in this website are great. I had been really enjoying with my family! The team is very professional and takes care of the customers. Will surely recommend it to my friends.",
-    authorName: "Alice Johnson",
-    authorRole: "Explorer",
+      "No matter where your destination is, Detours makes it a spectacular, fun, and stress free experience. Japan is no difference. The trip is well planned to split between big cities and a quiet onsen hotel stay in Nagano. Our trip leader Oliver made us all feel welcome the moment we met until the last day. Good job guys. Can't wait for our next Detours trip.",
+    authorName: "October 15, 2025",
+    authorRole: "",
   },
   {
     id: 3,
     imageSrc: "/home/s17.png",
-    title: "Awesome Experience!",
+    title: "Neil M. - Ecuador",
     content:
-      "The best travel company I've ever used. Their tours are fantastic, and the guides are very knowledgeable. I can't wait to go on another adventure with them.",
-    authorName: "David Williams",
-    authorRole: "Adventurer",
+      "A great trip with a very mixed but extremely friendly group of fellows. Jared, our guide, was on top of everything and never let anything slip. Detours did a fantastic job of organising everything from hotels, to tickets to ferries and flights internal to Scandinavia. Do not hesitate to take a trip with this company as they do a supreme job of planning and executing everything including the finer details.",
+    authorName: "September 27, 2025",
+    authorRole: "",
   },
   {
     id: 4,
     imageSrc: "/home/s17.png",
-    title: "Awesome Experience!",
+    title: "Scott B. - USA",
     content:
-      "The best travel company I've ever used. Their tours are fantastic, and the guides are very knowledgeable. I can't wait to go on another adventure with them.",
-    authorName: "David Williams",
-    authorRole: "Adventurer",
+      "Just got home from an amazing adventure in Croatia. This was my 8th trip with Detours and all have been great. Oliver was outstanding as a trip leader and did a great job of making sure we all had a great time. If you are traveling solo, or wondering if Detours is a good fit for you......Go for it! Detours does a great job and has many repeat customers.",
+    authorName: "September 19, 2025",
+    authorRole: "",
   },
   {
     id: 5,
     imageSrc: "/home/s17.png",
-    title: "Awesome Experience!",
+    title: "Paul H. - USA",
     content:
-      "The best travel company I've ever used. Their tours are fantastic, and the guides are very knowledgeable. I can't wait to go on another adventure with them.",
-    authorName: "David Williams",
-    authorRole: "Adventurer",
+      "Detours has mastered the art of small group travel. They create unique, magical experiences, using leaders who are super-attentive to individuals as well as to the needs of the group. I leave every trip with countless memories -- and always some new friends.",
+    authorName: "August 8, 2025",
+    authorRole: "",
   },
 ];
 

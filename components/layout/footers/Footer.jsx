@@ -18,7 +18,9 @@ export default function Footer() {
                   <div className="col-auto">
                     <div className="text-20 fw-500 text-white text-white">
                       Speak to our expert at
-                      <span className="text-white"> 1-800-453-6744</span>
+                      <span className="text-white">
+                        <a href="tel:+18006808066"> 800-680-8066</a>{" "}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -48,11 +50,16 @@ export default function Footer() {
 
                   <div className="y-gap-10 mt-20 text-white">
                     <a className="d-block" href="#">
-                      328 Queensberry Street, North Melbourne VIC3051,
-                      Australia.
+                      400-601 W Broadway, Vancouver, BC V5Z 4C2 Canada
                     </a>
-                    <a className="d-block" href="#">
-                      hi@viatours.com
+                    <a
+                      className="d-block"
+                      href="mailto:travel@detourstravel.com"
+                    >
+                      travel@detourstravel.com
+                    </a>
+                    <a className="d-block" href="tel:+18006808066">
+                      800-680-8066
                     </a>
                   </div>
                 </div>
@@ -70,7 +77,7 @@ export default function Footer() {
                     <button>Send</button>
                   </div>
 
-                  <h4 className="text-20 fw-500 text-white mt-30">
+                  {/* <h4 className="text-20 fw-500 text-white mt-30">
                     Mobile Apps
                   </h4>
 
@@ -87,7 +94,7 @@ export default function Footer() {
                       <i className="icon-android text-16 mr-10"></i>
                       Android App
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -105,7 +112,7 @@ export default function Footer() {
 
               <div className="col-auto">
                 <div className="footer__images d-flex items-center x-gap-10">
-                  <Paymentcards />
+                  {/* <Paymentcards /> */}
                 </div>
               </div>
             </div>

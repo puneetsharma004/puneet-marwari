@@ -6,46 +6,45 @@ import { useRouter } from "next/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 const slides = [
   {
     id: 1,
-    imageSrc: "/img/hero/7/1.jpg",
+    imageSrc: "/img/hero/7/Hero1.webp",
     subtitle:
-      "Search, compare and book 15,000+ multiday tours all over the world.",
-    title: "Tours and Trip packages, Globally",
+      "Mawari was created for travelers who value beautiful places, well-paced journeys, and experiences that feel considered rather than rushed.",
+    title: "Luxury Travel, Thoughtfully Done. For Our Community.",
   },
   {
     id: 2,
-    imageSrc: "/img/hero/7/1.jpg",
+    imageSrc: "/img/hero/7/Hero2.webp",
     subtitle:
-      "Search, compare and book 15,000+ multiday tours all over the world.",
-    title: "Tours and Trip packages, Globally",
+      "At the heart of Mawari is what we like to call structured spontaneity.",
+    title: "Structure Where It Matters. Freedom Where It Counts.",
   },
   {
     id: 3,
-    imageSrc: "/img/hero/7/1.jpg",
+    imageSrc: "/img/hero/7/Hero3.webp",
     subtitle:
-      "Search, compare and book 15,000+ multiday tours all over the world.",
-    title: "Tours and Trip packages, Globally",
+      "Our travelers often arrive solo but never stay that way for long.",
+    title: "More Than a Group. More Than a Trip.",
   },
   {
     id: 4,
-    imageSrc: "/img/hero/7/1.jpg",
-    subtitle:
-      "Search, compare and book 15,000+ multiday tours all over the world.",
-    title: "Tours and Trip packages, Globally",
+    imageSrc: "/img/hero/7/Hero4.webp",
+    subtitle: "Mawari trips are led by seasoned Detours Trip Leaders.",
+    title: "Experienced, Attentive, and Genuinely Human.",
   },
-  {
-    id: 5,
-    imageSrc: "/img/hero/7/1.jpg",
-    subtitle:
-      "Search, compare and book 15,000+ multiday tours all over the world.",
-    title: "Tours and Trip packages, Globally",
-  },
+  // {
+  //   id: 5,
+  //   imageSrc: "/img/hero/7/1.jpg",
+  //   subtitle:
+  //     "Search, compare and book 15,000+ multiday tours all over the world.",
+  //   title: "Tours and Trip packages, Globally",
+  // },
 ];
 
 export default function Hero7() {
@@ -84,7 +83,12 @@ export default function Hero7() {
           <div className="swiper-wrapper">
             <Swiper
               className="w-100"
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
               navigation={{
                 prevEl: ".js-sliderHero-prev",
                 nextEl: ".js-sliderHero-next",
@@ -106,36 +110,50 @@ export default function Hero7() {
             >
               {slides.map((elm, i) => (
                 <SwiperSlide key={i}>
-                  <div className="hero__bg">
+                  <div className="hero__bg hero-overlay">
                     <Image
                       width={1920}
                       height={960}
                       src={elm.imageSrc}
                       alt="background"
                     />
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "rgba(0,0,0,0.6)" }}
+                    ></div>
                   </div>
 
                   <div className="container">
                     <div className="row justify-center">
                       <div className="col-lg-8 col-md-10">
                         <div className="hero__content text-center">
-                          <div
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="hero__subtitle text-white mb-20 md:mb-10"
-                          >
-                            {elm.subtitle}
-                          </div>
-
                           <h1
                             data-aos="fade-up"
                             data-aos-delay="300"
                             className="hero__title text-white"
                           >
-                            {elm.title.split(",")[0]},
-                            <br className="md:d-none" />
-                            {elm.title.split(",")[1]}
+                            {(() => {
+                              const parts = elm.title.split(",");
+                              return (
+                                <>
+                                  {parts[0]}
+                                  {parts[1] && (
+                                    <>
+                                      <br className="md:d-none" />
+                                      {parts.slice(1).join(",")}
+                                    </>
+                                  )}
+                                </>
+                              );
+                            })()}
                           </h1>
+                          <div
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                            className="hero__subtitle text-white mt-20 md:mt-10"
+                          >
+                            {elm.subtitle}
+                          </div>
                         </div>
                       </div>
                     </div>
