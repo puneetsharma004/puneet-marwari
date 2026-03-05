@@ -55,7 +55,7 @@ export default function Header() {
                 <Image
                   width="250"
                   height="64"
-                  src="/home/mawari-logo.png"
+                  src="/home/Mawari-logo-white.webp"
                   alt="logo icon"
                 />
               </Link>

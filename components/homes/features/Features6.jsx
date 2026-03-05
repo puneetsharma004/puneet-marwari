@@ -15,7 +15,10 @@ export default function Features6() {
           </h2>
 
           <p className="text-white">
-            Most viewed and all-time top-selling services
+            Every trip is thoughtfully designed from start to finish, so the
+            logistics are handled and the experience flows seamlessly with
+            enough flexibility to follow your heart, linger a little longer, or
+            slow things down when the moment calls for it.
           </p>
         </div>
 
@@ -32,6 +35,7 @@ export default function Features6() {
               <div className="card-overlay"></div>
 
               <div className="card-title">{elm.title}</div>
+              <div className="card-text">{elm.text}</div>
             </div>
           ))}
         </div>
@@ -44,19 +48,19 @@ const whyCards = [
   {
     id: 1,
     image: "/home/why1.png",
-    title: "Ultimate flexibility",
-    text: "You’re in control, with free cancellation and payment.",
+    title: "Well-paced itineraries",
+    text: "You're in control, with free cancellation and payment.",
   },
   {
     id: 2,
     image: "/home/why2.png",
-    title: "Memorable experiences",
+    title: "Small groups capped at 12 travelers",
     text: "Browse and book tours and activities so incredible.",
   },
   {
     id: 3,
     image: "/home/why3.png",
-    title: "Quality at our core",
+    title: "Guaranteed departures",
     text: "High quality standards. Millions of reviews.",
   },
 ];

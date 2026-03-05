@@ -1,8 +1,8 @@
 export const tourData = [
   {
     id: 1,
-    imageSrc: "/home/trip1.webp",
-    location: "Paris, France",
+    imageSrc: "/home/trip11.webp",
+    location: "Greece",
     title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
     ratingCount: 243,
     rating: 4.8,
@@ -13,8 +13,8 @@ export const tourData = [
   },
   {
     id: 2,
-    imageSrc: "/home/trip2.webp",
-    location: "New York, USA",
+    imageSrc: "/home/trip21.webp",
+    location: "Southeast Asia",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     ratingCount: 243,
     rating: 4.8,
@@ -25,8 +25,8 @@ export const tourData = [
   },
   {
     id: 3,
-    imageSrc: "/home/trip3.webp",
-    location: "London, UK",
+    imageSrc: "/home/trip31.webp",
+    location: "African Safari",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     ratingCount: 243,
     rating: 4.8,
@@ -37,8 +37,8 @@ export const tourData = [
   },
   {
     id: 4,
-    imageSrc: "/home/trip4.webp",
-    location: "New York, USA",
+    imageSrc: "/home/trip41.webp",
+    location: "Antarctica Cruise",
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     ratingCount: 243,
     rating: 4.8,
@@ -47,55 +47,55 @@ export const tourData = [
     spead: 'Furious',
     feature: 'Advanture'
   },
-  {
-    id: 5,
-    imageSrc: "/home/trip5.webp",
-    location: "Paris, France",
-    title: "Space Center Houston Admission Ticket",
-    ratingCount: 243,
-    rating: 4.8,
-    duration: "4 days",
-    price: 189.25,
-    spead: 'Furious',
-    feature: 'Food'
-  },
-  {
-    id: 6,
-    imageSrc: "/home/trip6.webp",
-    location: "New York, USA",
-    title: "Clear Kayak Tour of Shell Key Preserve and Tampa Bay Area",
-    ratingCount: 243,
-    rating: 4.8,
-    duration: "4 days",
-    price: 225.0,
-    spead: 'Furious',
-    feature: 'Food'
-  },
-  {
-    id: 7,
-    imageSrc: "/home/trip7.webp",
-    location: "London, UK",
-    title: "History and Hauntings of Salem Guided Walking Tour",
-    ratingCount: 243,
-    rating: 4.8,
-    duration: "4 days",
-    price: 943.0,
-    spead: 'Steady',
-    feature: 'Nature'
-  },
-  {
-    id: 8,
-    imageSrc: "/home/trip8.webp",
-    location: "New York, USA",
-    title:
-      "Mauna Kea Summit Sunset and Stars Free Astro Photos Hilo Kona Waikoloa Pick Up",
-    ratingCount: 243,
-    rating: 4.8,
-    duration: "4 days",
-    price: 771.0,
-    spead: 'Steady',
-    feature: 'Food'
-  },
+  // {
+  //   id: 5,
+  //   imageSrc: "/home/trip5.webp",
+  //   location: "Paris, France",
+  //   title: "Space Center Houston Admission Ticket",
+  //   ratingCount: 243,
+  //   rating: 4.8,
+  //   duration: "4 days",
+  //   price: 189.25,
+  //   spead: 'Furious',
+  //   feature: 'Food'
+  // },
+  // {
+  //   id: 6,
+  //   imageSrc: "/home/trip6.webp",
+  //   location: "New York, USA",
+  //   title: "Clear Kayak Tour of Shell Key Preserve and Tampa Bay Area",
+  //   ratingCount: 243,
+  //   rating: 4.8,
+  //   duration: "4 days",
+  //   price: 225.0,
+  //   spead: 'Furious',
+  //   feature: 'Food'
+  // },
+  // {
+  //   id: 7,
+  //   imageSrc: "/home/trip7.webp",
+  //   location: "London, UK",
+  //   title: "History and Hauntings of Salem Guided Walking Tour",
+  //   ratingCount: 243,
+  //   rating: 4.8,
+  //   duration: "4 days",
+  //   price: 943.0,
+  //   spead: 'Steady',
+  //   feature: 'Nature'
+  // },
+  // {
+  //   id: 8,
+  //   imageSrc: "/home/trip8.webp",
+  //   location: "New York, USA",
+  //   title:
+  //     "Mauna Kea Summit Sunset and Stars Free Astro Photos Hilo Kona Waikoloa Pick Up",
+  //   ratingCount: 243,
+  //   rating: 4.8,
+  //   duration: "4 days",
+  //   price: 771.0,
+  //   spead: 'Steady',
+  //   feature: 'Food'
+  // },
   // Add more tour objects here...
 ];
 

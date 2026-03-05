@@ -11,12 +11,15 @@ import Link from "next/link";
 export default function TourSlider5() {
   return (
     <>
-      <section className="layout-pt-xl layout-pb-xl">
+      <section
+        className="layout-pt-xl layout-pb-xl"
+        style={{ backgroundColor: "#fef7f4" }}
+      >
         <div className="container">
           <div className="row y-gap-10 justify-between items-center y-gap-10">
             <div className="col-auto">
               <h2 data-aos="fade-up" data-aos-delay="" className="text-30">
-                Trips
+                Featured Trips
               </h2>
             </div>
           </div>
@@ -40,10 +43,10 @@ export default function TourSlider5() {
                       slidesPerView: 2,
                     },
                     1024: {
-                      slidesPerView: 3,
+                      slidesPerView: 4,
                     },
                     1200: {
-                      slidesPerView: 3,
+                      slidesPerView: 4,
                     },
                   }}
                 >
