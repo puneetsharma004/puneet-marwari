@@ -11,7 +11,7 @@ export default function Features5() {
           <Image
             width={1920}
             height={690}
-            src="/img/about/2/bg.jpg"
+            src="/home/features.webp"
             alt="image"
             className="img-ratio"
           />
@@ -22,7 +22,7 @@ export default function Features5() {
             <h2
               data-aos="fade-up"
               data-aos-delay=""
-              className="text-40 lh-13 text-white"
+              className="font-heading lh-13 text-white"
             >
               We Make
               <br className="md:d-none" />
@@ -55,10 +55,10 @@ export default function Features5() {
               {featuresTwo.map((elm, i) => (
                 <div
                   key={i}
-                  className="featuresGrid__item px-40 py-40 text-center bg-white rounded-12"
+                  className="featuresGrid__item px-40 py-40 text-center bg-white"
                 >
-                  <Image width="60" height="60" src={elm.iconSrc} alt="icon" />
-                  <div className="text-40 fw-700 text-accent-1 mt-20 lh-14">
+                  <Image width="40" height="40" src={elm.iconSrc} alt="icon" />
+                  <div className="text-30 fw-700 text-accent-1 mt-20 lh-14">
                     {elm.value}
                   </div>
                   <div>{elm.label}</div>

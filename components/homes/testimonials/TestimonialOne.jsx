@@ -22,7 +22,7 @@ export default function TestimonialOne() {
             <h2
               data-aos="fade-up"
               data-aos-delay=""
-              className="text-30 md:text-24"
+              className="font-heading md:text-24"
             >
               Customer Reviews
             </h2>
@@ -88,18 +88,14 @@ export default function TestimonialOne() {
                           </div>
                         </div>
 
-                        <div className="text-18 fw-500 text-accent-1 mt-60 md:mt-40">
+                        <div className=" fw-500 text-accent-1 mt-60 md:mt-40">
                           {elm.title}
                         </div>
 
-                        <div className="text-20 fw-500 mt-20">
-                          {elm.content}
-                        </div>
+                        <div className="fw-500 mt-20">{elm.content}</div>
 
                         <div className="mt-20 md:mt-40">
-                          <div className="lh-16 text-16 fw-500">
-                            {elm.authorName}
-                          </div>
+                          <div className="lh-16 fw-500">{elm.authorName}</div>
                           <div className="lh-16">{elm.authorRole}</div>
                         </div>
                       </div>

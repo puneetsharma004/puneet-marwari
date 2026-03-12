@@ -33,8 +33,8 @@ export default function ScrollToTop() {
       className={`toTopButton js-top-button d-flex justify-center items-center ${notHidden ? "" : "is-hidden"} `}
     >
       <svg
-        width="22"
-        height="22"
+        width="15"
+        height="15"
         viewBox="0 0 22 22"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

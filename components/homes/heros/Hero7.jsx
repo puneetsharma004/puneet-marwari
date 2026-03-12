@@ -1,12 +1,17 @@
 "use client";
-import Calender from "@/components/common/dropdownSearch/Calender";
-import Location from "@/components/common/dropdownSearch/Location";
-import TourType from "@/components/common/dropdownSearch/TourType";
+import "/node_modules/swiper/swiper-bundle.min.css";
 import { useRouter } from "next/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  EffectCreative,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
@@ -38,13 +43,6 @@ const slides = [
     subtitle: "Mawari trips are led by seasoned Detours Trip Leaders.",
     title: "Experienced, Attentive, and Genuinely Human.",
   },
-  // {
-  //   id: 5,
-  //   imageSrc: "/img/hero/7/1.jpg",
-  //   subtitle:
-  //     "Search, compare and book 15,000+ multiday tours all over the world.",
-  //   title: "Tours and Trip packages, Globally",
-  // },
 ];
 
 export default function Hero7() {
@@ -77,21 +75,20 @@ export default function Hero7() {
   return (
     <>
       <section className="hero -type-7">
-        <div className="hero__shape"></div>
-
         <div className="hero__slider js-section-slider">
           <div className="swiper-wrapper">
             <Swiper
               className="w-100"
-              modules={[Navigation, Autoplay]}
+              modules={[Navigation, Autoplay, Pagination, EffectFade]}
+              effect={"fade"}
               autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
+                delay: 6000,
+                disableOnInteraction: true,
               }}
+              speed={1000}
               loop={true}
-              navigation={{
-                prevEl: ".js-sliderHero-prev",
-                nextEl: ".js-sliderHero-next",
+              pagination={{
+                clickable: true,
               }}
               breakpoints={{
                 500: {
@@ -161,111 +158,6 @@ export default function Hero7() {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
-
-          <div className="hero__nav d-flex mt-40">
-            <button className="button -outline-white rounded-full size-72 flex-center text-white js-sliderHero-prev">
-              <i className="icon-arrow-left text-20"></i>
-            </button>
-
-            <button className="button -outline-white rounded-full size-72 flex-center text-white ml-10 js-sliderHero-next">
-              <i className="icon-arrow-right text-20"></i>
-            </button>
-          </div>
-        </div>
-
-        <div className="hero__filter">
-          <div
-            ref={dropDownContainer}
-            className="searchForm -type-1 shadow-1 rounded-200"
-          >
-            <div className="searchForm__form">
-              <div className="searchFormItem js-select-control js-form-dd">
-                <div
-                  className="searchFormItem__button"
-                  onClick={() =>
-                    setCurrentActiveDD((pre) =>
-                      pre == "location" ? "" : "location",
-                    )
-                  }
-                >
-                  <div className="searchFormItem__icon size-50 rounded-full border-1 flex-center">
-                    <i className="text-20 icon-pin"></i>
-                  </div>
-                  <div className="searchFormItem__content">
-                    <h5>Where</h5>
-                    <div className="js-select-control-chosen">
-                      {location ? location : "Search destinations"}
-                    </div>
-                  </div>
-                </div>
-
-                <Location
-                  setLocation={setLocation}
-                  active={currentActiveDD === "location"}
-                />
-              </div>
-
-              <div className="searchFormItem js-select-control js-form-dd js-calendar">
-                <div
-                  className="searchFormItem__button"
-                  onClick={() =>
-                    setCurrentActiveDD((pre) =>
-                      pre == "calender" ? "" : "calender",
-                    )
-                  }
-                >
-                  <div className="searchFormItem__icon size-50 rounded-full border-1 flex-center">
-                    <i className="text-20 icon-calendar"></i>
-                  </div>
-                  <div className="searchFormItem__content">
-                    <h5>When</h5>
-                    <div>
-                      <span className="js-first-date">
-                        <Calender active={currentActiveDD === "calender"} />
-                      </span>
-                      <span className="js-last-date"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="searchFormItem js-select-control js-form-dd">
-                <div
-                  className="searchFormItem__button"
-                  onClick={() =>
-                    setCurrentActiveDD((pre) =>
-                      pre == "tourType" ? "" : "tourType",
-                    )
-                  }
-                >
-                  <div className="searchFormItem__icon size-50 rounded-full border-1 flex-center">
-                    <i className="text-20 icon-flag"></i>
-                  </div>
-                  <div className="searchFormItem__content">
-                    <h5>Tour Type</h5>
-                    <div className="js-select-control-chosen">
-                      {tourType ? tourType : "All tour"}
-                    </div>
-                  </div>
-                </div>
-
-                <TourType
-                  setTourType={setTourType}
-                  active={currentActiveDD === "tourType"}
-                />
-              </div>
-            </div>
-
-            <div
-              onClick={() => router.push("/tour-list-5")}
-              className="searchForm__button"
-            >
-              <button className="button -dark-1 bg-accent-1 rounded-200 text-white">
-                <i className="icon-search text-16 mr-10"></i>
-                Search
-              </button>
-            </div>
           </div>
         </div>
       </section>

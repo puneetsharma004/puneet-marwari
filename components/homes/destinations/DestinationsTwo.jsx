@@ -5,11 +5,11 @@ import React from "react";
 
 export default function DestinationsTwo() {
   return (
-    <section className="layout-pt-xl">
+    <section className="layout-pt-xl layout-pb-xl">
       <div className="container">
         <div className="row y-gap-10 justify-between items-end font-heading">
           <div className="col-auto">
-            <h2 data-aos="fade-up" data-aos-delay="" className="text-30">
+            <h2 data-aos="fade-up" data-aos-delay="" className="font-heading">
               Trending Destinations
             </h2>
           </div>
@@ -30,23 +30,23 @@ export default function DestinationsTwo() {
         <div
           data-aos="fade-up"
           data-aos-delay=""
-          className="row y-gap-30 justify-between xl:justify-center sm:justify-start pt-40 sm:pt-20 mobile-css-slider -w-160"
+          className="row y-gap-30 justify-around xl:justify-center sm:justify-start pt-40 sm:pt-20 mobile-css-slider -w-160"
         >
           {destinationsTwo.map((elm, i) => (
-            <div key={i} className="col-xl-2 col-lg-3 col-md-4 col-6">
+            <div key={i} className="col-xl-3 col-lg-3 col-md-4 col-6">
               <Link href="/tour-list-1" className="-hover-image-scale">
-                <div className="ratio ratio-19:21 rounded-12 -hover-image-scale__image">
+                <div className="ratio ratio-3:4 -hover-image-scale__image">
                   <Image
-                    width={260}
-                    height={260}
+                    width={2000}
+                    height={2000}
                     src={elm.imgSrc}
                     alt="image"
-                    className="img-ratio rounded-12"
+                    className="img-ratio"
                   />
                 </div>
 
-                <h3 className="text-18 fw-500 mt-20 font-heading">{elm.title}</h3>
-                <p className="text-14">{elm.tours}+ Tours</p>
+                <h3 className="fw-600 mt-20 font-heading">{elm.title}</h3>
+                <p className="sub-caps pt-20">{elm.tours}</p>
               </Link>
             </div>
           ))}

@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`header -type-8 js-header font-heading  ${addClass ? "-is-sticky" : ""}`}
+        className={`header -type-8 js-header font-heading sub-caps  ${addClass ? "-is-sticky" : ""}`}
       >
         <div className="header__container container">
           <div className="headerMobile__left">
@@ -53,8 +53,8 @@ export default function Header() {
             <div className="header__logo">
               <Link href="/" className="header__logo">
                 <Image
-                  width="250"
-                  height="64"
+                  width="125"
+                  height="32"
                   src="/home/Mawari-logo-white.webp"
                   alt="logo icon"
                 />

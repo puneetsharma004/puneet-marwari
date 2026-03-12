@@ -1,6 +1,8 @@
 import Paymentcards from "../components/Paymentcards";
 import Socials from "../components/Socials";
 import FooterLinksTwo from "../components/FooterLinksTwo";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,21 +10,30 @@ export default function Footer() {
       <div className="footer__main">
         <div className="container">
           <div className="footer__info">
-            <div className="row y-gap-20 justify-between">
+            <div className="row y-gap-20 justify-between items-center">
               <div className="col-auto">
                 <div className="row y-gap-20 items-center">
-                  <div className="col-auto">
-                    <i className="icon-headphone text-50 text-white"></i>
+                  <div className="header__left">
+                    <div className="header__logo">
+                      <Link href="/" className="header__logo">
+                        <Image
+                          width="125"
+                          height="32"
+                          src="/home/Mawari-logo-white.webp"
+                          alt="logo icon"
+                        />
+                      </Link>
+                    </div>
                   </div>
 
-                  <div className="col-auto">
+                  {/* <div className="col-auto">
                     <div className="text-20 fw-500 text-white text-white">
                       Speak to our expert at
                       <span className="text-white">
                         <a href="tel:+18006808066"> 800-680-8066</a>{" "}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -46,7 +57,7 @@ export default function Footer() {
             <div className="footer__content">
               <div className="row y-gap-40 justify-between">
                 <div className="col-lg-4 col-md-6">
-                  <h4 className="text-20 fw-500 text-white">Contact</h4>
+                  <h4 className="fw-500 text-white">Contact</h4>
 
                   <div className="y-gap-10 mt-20 text-white">
                     <a className="d-block" href="#">
@@ -67,7 +78,7 @@ export default function Footer() {
                 <FooterLinksTwo />
 
                 <div className="col-lg-3 col-md-6">
-                  <h4 className="text-20 fw-500 text-white">Newsletter</h4>
+                  <h4 className="fw-500 text-white">Newsletter</h4>
                   <p className="text-white mt-20">
                     Subscribe to the free newsletter and stay up to date
                   </p>

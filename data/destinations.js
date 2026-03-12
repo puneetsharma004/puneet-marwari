@@ -102,40 +102,40 @@ export const destinationOffers = [
 export const destinationsTwo = [
   {
     id: 1,
-    imgSrc: "/home/s09.png",
-    title: "Paris",
-    tours: 100,
+    imgSrc: "/home/trip11.webp",
+    title: "Greece",
+    tours: "Athens -> Mykonos -> Paros -> Santorini",
   },
   {
     id: 2,
-    imgSrc: "/home/s10.jpg",
-    title: "Singapore",
-    tours: 300,
+    imgSrc: "/home/trip21.webp",
+    title: "Southeast Asia",
+    tours: "Hanoi -> Luang Prabang -> Siem Reap -> Cruise down the Tonle Sap -> Phnom Penh",
   },
   {
     id: 3,
-    imgSrc: "/home/s11.jpg",
-    title: "Roma",
-    tours: 400,
+    imgSrc: "/home/trip31.webp",
+    title: "African Safari",
+    tours: "Cape Town -> Victoria Falls -> Chobe National Park -> Okavango Delta",
   },
   {
     id: 4,
-    imgSrc: "/home/s12.jpg",
-    title: "Bangkok",
-    tours: 100,
+    imgSrc: "/home/trip42.webp",
+    title: "Antarctica Cruise",
+    tours: "Athens -> Mykonos -> Paros -> Santorini",
   },
-  {
-    id: 5,
-    imgSrc: "/home/s13.jpg",
-    title: "Bali",
-    tours: 600,
-  },
-  {
-    id: 6,
-    imgSrc: "/home/s14.jpg",
-    title: "Phuket",
-    tours: 200,
-  },
+  // {
+  //   id: 5,
+  //   imgSrc: "/home/s13.jpg",
+  //   title: "Bali",
+  //   tours: 600,
+  // },
+  // {
+  //   id: 6,
+  //   imgSrc: "/home/s14.jpg",
+  //   title: "Phuket",
+  //   tours: 200,
+  // },
 ];
 
 export const destinationsThree = [
