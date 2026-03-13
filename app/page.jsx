@@ -11,6 +11,9 @@ import TourSlider5 from "@/components/homes/tours/TourSlider5";
 import React from "react";
 import Banner12 from "@/components/homes/banners/Banner12";
 import Features5 from "@/components/homes/features/Features5";
+import Activity from "@/components/pages/helpCenter/Activity";
+import FeaturesVideo from "@/components/homes/features/FeaturesVideo";
+import TestimonialsThree from "@/components/homes/testimonials/TestimonialsThree";
 
 export const metadata = {
   title: "Mawari - Travel & Tour",
@@ -25,10 +28,8 @@ export default function page() {
       {/*<PopularTourSlider />*/}
       <DestinationsTwo />
       <Features5 />
-      {/* <Features6 /> */}
-      {/* <TourSlider5 /> */}
-      {/*<BannerTwo />*/}
-      {/* <Banner12 /> */}
+      <Activity />
+      <FeaturesVideo />
       <div className="bg-accent-1-05">
         <TestimonialOne />
       </div>

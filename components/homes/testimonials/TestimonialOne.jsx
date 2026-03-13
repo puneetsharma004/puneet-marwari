@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { testimonialsOne } from "@/data/testimonials";
 import Image from "next/image";
 export default function TestimonialOne() {
@@ -19,11 +19,7 @@ export default function TestimonialOne() {
       <div className="container">
         <div className="row justify-center text-center font-heading">
           <div className="col-auto">
-            <h2
-              data-aos="fade-up"
-              data-aos-delay=""
-              className="font-heading md:text-24"
-            >
+            <h2 data-aos="fade-up" data-aos-delay="" className="font-heading">
               Customer Reviews
             </h2>
           </div>
@@ -40,12 +36,17 @@ export default function TestimonialOne() {
                 <Swiper
                   spaceBetween={30}
                   className="w-100"
-                  loop
+                  modules={[Pagination, Autoplay]}
+                  autoplay={{
+                    delay: 6000,
+                    disableOnInteraction: true,
+                  }}
+                  speed={1000}
+                  loop={true}
                   pagination={{
                     el: ".pbutton2",
                     clickable: true,
                   }}
-                  modules={[Pagination]}
                   breakpoints={{
                     500: {
                       slidesPerView: 1,
@@ -63,8 +64,8 @@ export default function TestimonialOne() {
                 >
                   {testimonialsOne.map((elm, i) => (
                     <SwiperSlide key={i}>
-                      <div className="testimonials -type-1 pt-10 text-center">
-                        <div className="testimonials__image size-100 rounded-full">
+                      <div className="pt-10 text-center">
+                        {/* <div className="testimonials__image size-100 rounded-full">
                           <Image
                             width={98}
                             height={98}
@@ -72,20 +73,23 @@ export default function TestimonialOne() {
                             alt="image"
                           />
 
-                          <div className="testimonials__icon">
-                            <svg
-                              width="16"
-                              height="13"
-                              viewBox="0 0 16 13"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M13.3165 0.838867C12.1013 1.81846 10.9367 3.43478 9.77215 5.63887C8.65823 7.84295 8 10.2429 7.8481 12.8389H12.4557C12.4051 8.87152 13.6203 5.24703 16 1.91642L13.3165 0.838867ZM5.51899 0.838867C4.25316 1.81846 3.08861 3.43478 1.92405 5.63887C0.810126 7.84295 0.151899 10.2429 0 12.8389H4.60759C4.55696 8.87152 5.77215 5.19805 8.20253 1.91642L5.51899 0.838867Z"
-                                fill="white"
-                              />
-                            </svg>
-                          </div>
+                        </div> */}
+                        <div
+                          className="testimonials__icon"
+                          style={{ display: "flex", justifyContent: "center" }}
+                        >
+                          <svg
+                            width="25"
+                            height="25"
+                            viewBox="0 0 60 43"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.837 42.0652C11.0326 42.0652 7.6087 40.5435 4.56522 37.5C1.52174 34.3478 0 29.7283 0 23.6413C0 16.6848 1.84783 11.0326 5.54348 6.68478C9.34783 2.22825 14.7283 0 21.6848 0C24.1848 0 26.1413 0.163038 27.5543 0.489121V7.98912C26.0326 7.77173 24.0761 7.66304 21.6848 7.66304C17.9891 7.66304 15 8.91304 12.7174 11.413C10.5435 13.5869 9.29348 16.4674 8.96739 20.0543C10.3804 18.3152 12.663 17.4456 15.8152 17.4456C19.0761 17.4456 21.8478 18.587 24.1304 20.8696C26.413 23.0435 27.5543 25.9239 27.5543 29.5109C27.5543 33.2065 26.3587 36.25 23.9674 38.6413C21.5761 40.9239 18.5326 42.0652 14.837 42.0652ZM47.2826 42.0652C43.4783 42.0652 40.0543 40.5435 37.0109 37.5C33.9674 34.3478 32.4456 29.7283 32.4456 23.6413C32.4456 16.6848 34.2935 11.0326 37.9891 6.68478C41.7935 2.22825 47.1739 0 54.1304 0C56.6304 0 58.587 0.163038 60 0.489121V7.98912C58.4783 7.77173 56.5217 7.66304 54.1304 7.66304C50.4348 7.66304 47.4456 8.91304 45.163 11.413C42.9891 13.5869 41.7391 16.4674 41.413 20.0543C42.8261 18.3152 45.1087 17.4456 48.2609 17.4456C51.5217 17.4456 54.2935 18.587 56.5761 20.8696C58.8587 23.0435 60 25.9239 60 29.5109C60 33.2065 58.8043 36.25 56.413 38.6413C54.0217 40.9239 50.9783 42.0652 47.2826 42.0652Z"
+                              fill="#000"
+                            />
+                          </svg>
                         </div>
 
                         <div className=" fw-500 text-accent-1 mt-60 md:mt-40">
@@ -104,7 +108,7 @@ export default function TestimonialOne() {
                 </Swiper>
               </div>
 
-              <div className="pagination -type-1 justify-center pt-60 md:pt-40 js-testimonials-pagination swiperPagination1">
+              <div className="pagination -type-1 justify-center pt-60 md:pt-40 js-testimonials-pagination swiperPagination2">
                 <div className="pagination__button pbutton2"></div>
               </div>
             </div>

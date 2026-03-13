@@ -5,7 +5,10 @@ import React from "react";
 
 export default function Features5() {
   return (
-    <section className="layout-pt-xl layout-pb-xl relative">
+    <section
+      className="layout-pt-xl layout-pb-xl relative"
+      style={{ minHeight: "800px", display: "flex", alignItems: "center" }}
+    >
       <div className="container">
         <div className="sectionBg">
           <Image
@@ -50,7 +53,7 @@ export default function Features5() {
             </button>
           </div>
 
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <div data-aos="fade-up" data-aos-delay="" className="featuresGrid">
               {featuresTwo.map((elm, i) => (
                 <div
@@ -65,7 +68,7 @@ export default function Features5() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

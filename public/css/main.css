@@ -174,7 +174,7 @@ h6 {
   --color-black-hover: #282828;
   --color-border: #DDDDDD;
   --color-accent-hover: #aeaeae;
-  --color-accent-1: #000;
+  --color-accent-1: #1b1212;
   --color-accent-new: #E8E2DD;
   --color-accent-1-dark: #000000;
   --color-accent-new-dark: #E8E2DD;
@@ -6248,16 +6248,17 @@ h6 {
 
 .testimonials.-type-1 .testimonials__icon {
   position: absolute;
-  top: -8px;
-  left: -17px;
+  /* top: -8px;
+    left: -17px;
+    */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
-  height: 46px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   color: white;
-  background-color: var(--color-accent-1);
+  /* background-color: var(--color-accent-1); */
 }
 
 .accordion__icon {

@@ -19,14 +19,14 @@ export const sections = [
     title: "Promo codes & credits",
     content: "Lorem ipsum is placeholder text commonly used in site.",
   },
-  {
-    imgSrc: "/img/icons/6/5.svg",
-    title: "On the participation day",
-    content: "Lorem ipsum is placeholder text commonly used in site.",
-  },
-  {
-    imgSrc: "/img/icons/6/6.svg",
-    title: "Value Packs",
-    content: "Lorem ipsum is placeholder text commonly used in site.",
-  },
+  // {
+  //   imgSrc: "/img/icons/6/5.svg",
+  //   title: "On the participation day",
+  //   content: "Lorem ipsum is placeholder text commonly used in site.",
+  // },
+  // {
+  //   imgSrc: "/img/icons/6/6.svg",
+  //   title: "Value Packs",
+  //   content: "Lorem ipsum is placeholder text commonly used in site.",
+  // },
 ];
