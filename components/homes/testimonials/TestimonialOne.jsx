@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { testimonialsOne } from "@/data/testimonials";
 import Image from "next/image";
 export default function TestimonialOne() {
