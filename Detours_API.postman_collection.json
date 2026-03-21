@@ -1,0 +1,2425 @@
+{
+  "info": {
+    "name": "Detours / EpicTravels API",
+    "description": "Complete API documentation for the Detours application. Includes 86 endpoints covering registration, payments, trip management, user authentication, webhooks, and admin functions.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "detours-api-2026",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Public Pages",
+      "item": [
+        {
+          "name": "Homepage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            }
+          }
+        },
+        {
+          "name": "Contact Us - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contact-us",
+              "host": ["{{base_url}}"],
+              "path": ["contact-us"]
+            }
+          }
+        },
+        {
+          "name": "Contact Us - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "first_name",
+                  "value": "John",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Doe",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "john@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "comments",
+                  "value": "I'm interested in learning more about your trips.",
+                  "type": "text"
+                },
+                {
+                  "key": "g-recaptcha-response",
+                  "value": "[reCAPTCHA token]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/contact-us",
+              "host": ["{{base_url}}"],
+              "path": ["contact-us"]
+            }
+          }
+        },
+        {
+          "name": "Gallery View",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/galleries/{{gallery_key}}",
+              "host": ["{{base_url}}"],
+              "path": ["galleries", "{{gallery_key}}"]
+            },
+            "description": "View a specific gallery"
+          }
+        },
+        {
+          "name": "Cities of Origin",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/cities-of-origin/",
+              "host": ["{{base_url}}"],
+              "path": ["cities-of-origin", ""]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Newsletter & Info Requests",
+      "item": [
+        {
+          "name": "Newsletter Signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"jane@example.com\",\n  \"given_name\": \"Jane\",\n  \"family_name\": \"Smith\",\n  \"middle_name\": \"Marie\",\n  \"gender\": \"Female\",\n  \"city\": \"New York\",\n  \"trip\": 15\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/registration/newsletter",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "newsletter"]
+            }
+          }
+        },
+        {
+          "name": "Newsletter Wildcard Redirect",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/newsletter/*",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "newsletter", "*"]
+            }
+          }
+        },
+        {
+          "name": "More Info Request - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/more-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "more-info"]
+            }
+          }
+        },
+        {
+          "name": "More Info Request - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/registration/more-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "more-info"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": ["{{base_url}}"],
+              "path": ["login"]
+            }
+          }
+        },
+        {
+          "name": "Login - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "user@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "password123",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": ["{{base_url}}"],
+              "path": ["login"]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/logout",
+              "host": ["{{base_url}}"],
+              "path": ["logout"]
+            }
+          }
+        },
+        {
+          "name": "Forgotten Password - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/forgotten-password",
+              "host": ["{{base_url}}"],
+              "path": ["forgotten-password"]
+            }
+          }
+        },
+        {
+          "name": "Forgotten Password - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "user@example.com",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/forgotten-password",
+              "host": ["{{base_url}}"],
+              "path": ["forgotten-password"]
+            }
+          }
+        },
+        {
+          "name": "Set Password - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/set-password?token={{reset_token}}",
+              "host": ["{{base_url}}"],
+              "path": ["set-password"],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "{{reset_token}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Set Password - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/set-password",
+              "host": ["{{base_url}}"],
+              "path": ["set-password"]
+            }
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/change-password",
+              "host": ["{{base_url}}"],
+              "path": ["change-password"]
+            }
+          }
+        },
+        {
+          "name": "Traveler Password Reset",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/travelers/{{traveler_id}}/password/reset",
+              "host": ["{{base_url}}"],
+              "path": ["travelers", "{{traveler_id}}", "password", "reset"]
+            }
+          }
+        },
+        {
+          "name": "Facebook Email Update",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/fb-email-update",
+              "host": ["{{base_url}}"],
+              "path": ["fb-email-update"]
+            }
+          }
+        },
+        {
+          "name": "Discourse SSO - GET",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/discourse/sso?sso={{sso_payload}}&sig={{sso_signature}}",
+              "host": ["{{base_url}}"],
+              "path": ["discourse", "sso"],
+              "query": [
+                {
+                  "key": "sso",
+                  "value": "{{sso_payload}}"
+                },
+                {
+                  "key": "sig",
+                  "value": "{{sso_signature}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Discourse SSO - POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/discourse/sso",
+              "host": ["{{base_url}}"],
+              "path": ["discourse", "sso"]
+            }
+          }
+        },
+        {
+          "name": "Send Password/Account Setup Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traveler_id\": 123,\n  \"email\": \"user@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/send-password-email",
+              "host": ["{{base_url}}"],
+              "path": ["api", "send-password-email"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trip Registration & Selection",
+      "item": [
+        {
+          "name": "Registration Landing Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration",
+              "host": ["{{base_url}}"],
+              "path": ["registration"]
+            }
+          }
+        },
+        {
+          "name": "Save Dream Trip",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"adventure_id\": 5\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/registration/save",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "save"]
+            }
+          }
+        },
+        {
+          "name": "Choose Trip",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"trip\": 42\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/registration/{{adventure_slug}}/choose-trip",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{adventure_slug}}", "choose-trip"]
+            }
+          }
+        },
+        {
+          "name": "Primary Traveler Information - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{adventure_slug}}/your-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{adventure_slug}}", "your-info"]
+            }
+          }
+        },
+        {
+          "name": "Primary Traveler Information - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "traveler@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "given_name",
+                  "value": "John",
+                  "type": "text"
+                },
+                {
+                  "key": "family_name",
+                  "value": "Doe",
+                  "type": "text"
+                },
+                {
+                  "key": "citizenship",
+                  "value": "US",
+                  "type": "text"
+                },
+                {
+                  "key": "date_of_birth",
+                  "value": "1990-01-15",
+                  "type": "text"
+                },
+                {
+                  "key": "gender",
+                  "value": "Male",
+                  "type": "text"
+                },
+                {
+                  "key": "country",
+                  "value": "US",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/registration/{{adventure_slug}}/your-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{adventure_slug}}", "your-info"]
+            }
+          }
+        },
+        {
+          "name": "Additional Travelers & Booking Creation - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{adventure_slug}}/personal-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{adventure_slug}}", "personal-info"]
+            }
+          }
+        },
+        {
+          "name": "Additional Travelers & Booking Creation - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/registration/{{adventure_slug}}/personal-info",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{adventure_slug}}", "personal-info"]
+            }
+          }
+        },
+        {
+          "name": "Registration Processing - GET Poll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/processing",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "processing"]
+            }
+          }
+        },
+        {
+          "name": "Registration Processing - POST Check Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/processing",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "processing"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Deposit & Confirmation",
+      "item": [
+        {
+          "name": "Deposit Payment Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/deposit",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "deposit"]
+            }
+          }
+        },
+        {
+          "name": "Registration Confirmation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/confirmation",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "confirmation"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Waitlist",
+      "item": [
+        {
+          "name": "Join Waitlist - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/waitlist/join?trip_id={{trip_id}}&trip_type={{trip_type}}",
+              "host": ["{{base_url}}"],
+              "path": ["waitlist", "join"],
+              "query": [
+                {
+                  "key": "trip_id",
+                  "value": "{{trip_id}}"
+                },
+                {
+                  "key": "trip_type",
+                  "value": "{{trip_type}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Join Waitlist - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "user@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "bed_type_preference",
+                  "value": "single",
+                  "type": "text"
+                },
+                {
+                  "key": "notes",
+                  "value": "Any notes",
+                  "type": "text"
+                },
+                {
+                  "key": "g-recaptcha-response",
+                  "value": "[reCAPTCHA token]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/waitlist/join",
+              "host": ["{{base_url}}"],
+              "path": ["waitlist", "join"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Plaid Integration (ACH Payments)",
+      "item": [
+        {
+          "name": "Create Plaid Link Token - Trip Payment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/plaid/create-link-token",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "plaid", "create-link-token"]
+            }
+          }
+        },
+        {
+          "name": "Process ACH Payment - Trip",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"public_token\": \"public-sandbox-...\",\n  \"account_id\": \"BxBXxHkHMXcsZ4MRXEWmyrB6XvxqKZ\",\n  \"amount\": \"500.00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/plaid/process-payment",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "plaid", "process-payment"]
+            }
+          }
+        },
+        {
+          "name": "Create Plaid Link Token - Deposit",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/plaid/create-link-token",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "plaid", "create-link-token"]
+            }
+          }
+        },
+        {
+          "name": "Process Booking Deposit - ACH",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"public_token\": \"public-sandbox-...\",\n  \"account_id\": \"BxBXxHkHMXcsZ4MRXEWmyrB6XvxqKZ\",\n  \"amount\": \"450.00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/registration/{{booking_code}}/plaid/process-deposit",
+              "host": ["{{base_url}}"],
+              "path": ["registration", "{{booking_code}}", "plaid", "process-deposit"]
+            }
+          }
+        },
+        {
+          "name": "Plaid Webhook Handler",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"webhook_code\": \"TRANSFER_STATUS_UPDATE\",\n  \"webhook_type\": \"TRANSFER\",\n  \"transfer_id\": \"transfer_...\",\n  \"timestamp\": \"2026-02-10T12:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/plaid-webhook",
+              "host": ["{{base_url}}"],
+              "path": ["plaid-webhook"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stripe Integration (Credit Card Payments)",
+      "item": [
+        {
+          "name": "Create Credit Card Payment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/make-payment",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "make-payment"]
+            }
+          }
+        },
+        {
+          "name": "Submit Payment Amount",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": \"500.00\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/make-payment",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "make-payment"]
+            }
+          }
+        },
+        {
+          "name": "Salesforce Charge Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Id\": \"a01...\",\n  \"Status__c\": \"Completed\",\n  \"Amount__c\": 500.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/make-payment/salesforce-charge-webhook",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "make-payment", "salesforce-charge-webhook"]
+            }
+          }
+        },
+        {
+          "name": "Stripe Payment Success",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/make-payment/success",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "make-payment", "success"]
+            }
+          }
+        },
+        {
+          "name": "Stripe Webhook Handler",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Stripe-Signature",
+                "value": "{{stripe_signature}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"evt_...\",\n  \"object\": \"event\",\n  \"type\": \"checkout.session.completed\",\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_...\",\n      \"payment_status\": \"paid\"\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/stripe-webhook",
+              "host": ["{{base_url}}"],
+              "path": ["stripe-webhook"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Traveler Dashboard & Trip Management",
+      "item": [
+        {
+          "name": "Your Trip Entry Point",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip"]
+            }
+          }
+        },
+        {
+          "name": "Traveler Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/dashboard",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "dashboard"]
+            }
+          }
+        },
+        {
+          "name": "Specific Traveler Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_id}}/dashboard",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_id}}", "dashboard"]
+            }
+          }
+        },
+        {
+          "name": "List User Trips",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trips",
+              "host": ["{{base_url}}"],
+              "path": ["your-trips"]
+            }
+          }
+        },
+        {
+          "name": "Dream Trip Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/dream-trip",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "dream-trip"]
+            }
+          }
+        },
+        {
+          "name": "Points History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/points",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "points"]
+            }
+          }
+        },
+        {
+          "name": "Traveler Points History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_id}}/points",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_id}}", "points"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trip Information & Details",
+      "item": [
+        {
+          "name": "Trip Welcome Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/welcome",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "welcome"]
+            }
+          }
+        },
+        {
+          "name": "Dates & Prices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/dates-and-prices",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "dates-and-prices"]
+            }
+          }
+        },
+        {
+          "name": "Add Trip Extension",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/dates-and-prices/add-extension",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "dates-and-prices", "add-extension"]
+            }
+          }
+        },
+        {
+          "name": "Confirm Trip Extension",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/dates-and-prices/confirm-extension",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "dates-and-prices", "confirm-extension"]
+            }
+          }
+        },
+        {
+          "name": "Trip News & Updates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/news-and-updates",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "news-and-updates"]
+            }
+          }
+        },
+        {
+          "name": "Mark News as Read",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/news-and-updates/mark-all-as-read",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "news-and-updates", "mark-all-as-read"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trip Requirements & Pre-Trip Tasks",
+      "item": [
+        {
+          "name": "Trip Requirements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements"]
+            }
+          }
+        },
+        {
+          "name": "Set Passport Information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"passport_number\": \"AB123456\",\n  \"passport_expiry\": \"2030-12-31\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/set-passport",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "set-passport"]
+            }
+          }
+        },
+        {
+          "name": "Set Emergency Contact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"emergency_contact_name\": \"Jane Doe\",\n  \"emergency_contact_phone\": \"+1-555-0123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/set-emergency-contact",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "set-emergency-contact"]
+            }
+          }
+        },
+        {
+          "name": "Set Postal Code Requirement",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"postal_code\": \"10001\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/set-postal",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "set-postal"]
+            }
+          }
+        },
+        {
+          "name": "Trip Terms Acceptance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/terms",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "terms"]
+            }
+          }
+        },
+        {
+          "name": "Accept Trip Terms",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"agreed_to_terms\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/terms/edit",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "terms", "edit"]
+            }
+          }
+        },
+        {
+          "name": "Agree to Flight Dates",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/agree-to-flight-dates",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "agree-to-flight-dates"]
+            }
+          }
+        },
+        {
+          "name": "Confirm Self-Arranged Travel Dates",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/confirm-self-travel-dates",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "confirm-self-travel-dates"]
+            }
+          }
+        },
+        {
+          "name": "Choose Hammock / Lodging",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/choose-a-hammock",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "choose-a-hammock"]
+            }
+          }
+        },
+        {
+          "name": "Edit Hammock / Lodging Preference",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hammock_selection\": \"ground_tent\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/choose-a-hammock/edit",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "choose-a-hammock", "edit"]
+            }
+          }
+        },
+        {
+          "name": "Set Sleeping Partner",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sleeping_partner\": \"John Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/sleeping_partner/edit",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "sleeping_partner", "edit"]
+            }
+          }
+        },
+        {
+          "name": "Choose Insurance Option",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insurance_selection\": \"standard\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/insurance/edit",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "insurance", "edit"]
+            }
+          }
+        },
+        {
+          "name": "Set Insurance Policy Number",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insurance_provider\": \"ABC Insurance\",\n  \"insurance_policy_number\": \"POL-123456\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/insurance-policy-number/edit",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "insurance-policy-number", "edit"]
+            }
+          }
+        },
+        {
+          "name": "Opt Out of Trip DVD",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/requirements/opt-out-dvd",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "requirements", "opt-out-dvd"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Traveler Contact & Account Info",
+      "item": [
+        {
+          "name": "Traveler Contact Information",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/contact-info",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "contact-info"]
+            }
+          }
+        },
+        {
+          "name": "Update Contact Information",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"street_address\": \"123 Main St\",\n  \"city\": \"New York\",\n  \"state_or_province\": \"NY\",\n  \"postal_code\": \"10001\",\n  \"country\": \"US\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/contact-info/update",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "contact-info", "update"]
+            }
+          }
+        },
+        {
+          "name": "Extra Traveler Information",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/extra-info",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "extra-info"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trip Statements & Financial",
+      "item": [
+        {
+          "name": "Statement of Account",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/statement-of-account",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "statement-of-account"]
+            }
+          }
+        },
+        {
+          "name": "Printable Statement",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/statement-of-account/print",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "statement-of-account", "print"]
+            }
+          }
+        },
+        {
+          "name": "Statement Index (Legacy)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/statement-of-account",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "statement-of-account"]
+            }
+          }
+        },
+        {
+          "name": "Legacy Statement of Account",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/statement-of-account/{{traveler_on_trip_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "statement-of-account", "{{traveler_on_trip_id}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trip Cancellation",
+      "item": [
+        {
+          "name": "Cancel Trip Registration - GET Form",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "cancel"]
+            }
+          }
+        },
+        {
+          "name": "Cancel Trip Registration - POST Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/your-trip/{{traveler_on_trip_id}}/cancel",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "{{traveler_on_trip_id}}", "cancel"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Agent Management",
+      "item": [
+        {
+          "name": "Agent Welcome Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/welcome",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "welcome"]
+            }
+          }
+        },
+        {
+          "name": "Agent Travelers List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/your-travelers",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "your-travelers"]
+            }
+          }
+        },
+        {
+          "name": "Mark Traveler Confirmed",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/your-travelers/{{traveler_on_trip_id}}/mark-confirmed",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "your-travelers", "{{traveler_on_trip_id}}", "mark-confirmed"]
+            }
+          }
+        },
+        {
+          "name": "Mark Traveler Cancelled",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/your-travelers/{{traveler_on_trip_id}}/mark-cancelled",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "your-travelers", "{{traveler_on_trip_id}}", "mark-cancelled"]
+            }
+          }
+        },
+        {
+          "name": "Download Voucher",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/your-travelers/{{traveler_on_trip_id}}/voucher",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "your-travelers", "{{traveler_on_trip_id}}", "voucher"]
+            }
+          }
+        },
+        {
+          "name": "Agent Commission",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{agent_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/agent/commission",
+              "host": ["{{base_url}}"],
+              "path": ["agent", "commission"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin Functions",
+      "item": [
+        {
+          "name": "Salesforce Diagnostic Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/test-salesforce",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "test-salesforce"]
+            }
+          }
+        },
+        {
+          "name": "Import Gallery Photos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/gallery/import",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "gallery", "import"]
+            }
+          }
+        },
+        {
+          "name": "Copy Trips",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/copy-trips",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "copy-trips"]
+            }
+          }
+        },
+        {
+          "name": "Copy Trips Success Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/copy-trips/success",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "copy-trips", "success"]
+            }
+          }
+        },
+        {
+          "name": "Find Missing Combo Trips",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/missing-combo-trips/{{year}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "missing-combo-trips", "{{year}}"]
+            }
+          }
+        },
+        {
+          "name": "Validate Combo Trips",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/validate-combo-trips/{{year}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "validate-combo-trips", "{{year}}"]
+            }
+          }
+        },
+        {
+          "name": "Build Combo Trips",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/build-combo-trips/{{year}}",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "build-combo-trips", "{{year}}"]
+            }
+          }
+        },
+        {
+          "name": "Export Trip Group CSV",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/admin/travel/tripgroup/{{group_id}}/export/csv/",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "travel", "tripgroup", "{{group_id}}", "export", "csv", ""]
+            }
+          }
+        },
+        {
+          "name": "Enhanced Admin Interface",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/enhanced-traveler-admin/",
+              "host": ["{{base_url}}"],
+              "path": ["enhanced-traveler-admin", ""]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Utilities & Compliance",
+      "item": [
+        {
+          "name": "Legacy Terms Page",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/your-trip/terms",
+              "host": ["{{base_url}}"],
+              "path": ["your-trip", "terms"]
+            }
+          }
+        },
+        {
+          "name": "Dismiss GDPR Banner",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/dismiss/gdpr",
+              "host": ["{{base_url}}"],
+              "path": ["dismiss", "gdpr"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{auth_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Set base URL if not already set",
+          "if (!pm.environment.get('base_url')) {",
+          "  pm.environment.set('base_url', 'http://localhost:8000');",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    },
+    {
+      "key": "auth_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "agent_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "admin_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "stripe_signature",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "adventure_slug",
+      "value": "sample-adventure",
+      "type": "string"
+    },
+    {
+      "key": "booking_code",
+      "value": "ABC123",
+      "type": "string"
+    },
+    {
+      "key": "trip_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "trip_type",
+      "value": "adventure",
+      "type": "string"
+    },
+    {
+      "key": "traveler_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "traveler_on_trip_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "group_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "year",
+      "value": "2026",
+      "type": "string"
+    },
+    {
+      "key": "gallery_key",
+      "value": "sample-gallery",
+      "type": "string"
+    },
+    {
+      "key": "reset_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "sso_payload",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "sso_signature",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
