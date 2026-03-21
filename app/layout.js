@@ -21,13 +21,6 @@ import "../public/css/style.css";
 
 import ScrollTopBehaviour from "@/components/common/ScrollTopBehavier";
 import Wrapper from "@/components/layout/Wrapper";
-<<<<<<< HEAD
-import BootstrapClient from "./BootstrapClient";
-
-// if (typeof window !== "undefined") {
-//   import("bootstrap");
-// }
-=======
 import BootstrapLoader from "./BootstrapLoader";
 
 const caslon = localFont({
@@ -71,20 +64,13 @@ const euclid = localFont({
   variable: "--font-body",
   display: "swap",
 });
->>>>>>> f43e6bc (sqaure mawari)
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
-<<<<<<< HEAD
-      <body className={`${josefin.className} ${inter.className}`}>
-        <BootstrapClient />
-=======
-      {/* <body className={`${josefin.className} ${inter.className}`}> */}
       <body className={`${caslon.variable} ${euclid.variable}`}>
         <BootstrapLoader />
->>>>>>> f43e6bc (sqaure mawari)
         <Wrapper>{children}</Wrapper>
         <ScrollToTop />
         <ScrollTopBehaviour />

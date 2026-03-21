@@ -17,7 +17,6 @@ export default function Menu() {
           </div>
 
           <div className="desktopNav__item">
-<<<<<<< HEAD
             <Link href="/tour-list-1">
               Tour <i className="icon-chevron-down"></i>
             </Link>
@@ -107,8 +106,6 @@ export default function Menu() {
           </div>
 
           <div className="desktopNav__item">
-=======
->>>>>>> f43e6bc (sqaure mawari)
             <Link href="#">
               Tours <i className="icon-chevron-down"></i>
             </Link>

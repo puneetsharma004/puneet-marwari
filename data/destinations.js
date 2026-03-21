@@ -102,7 +102,6 @@ export const destinationOffers = [
 export const destinationsTwo = [
   {
     id: 1,
-<<<<<<< HEAD
     imgSrc: "/home/s09.png",
     title: "Paris",
     tours: 100,
@@ -136,29 +135,6 @@ export const destinationsTwo = [
     imgSrc: "/home/s14.jpg",
     title: "Phuket",
     tours: 200,
-=======
-    imgSrc: "/home/trip11.webp",
-    title: "Greece",
-    tours: "Athens -> Mykonos -> Paros -> Santorini",
-  },
-  {
-    id: 2,
-    imgSrc: "/home/trip21.webp",
-    title: "Southeast Asia",
-    tours: "Hanoi -> Luang Prabang -> Siem Reap -> Cruise down the Tonle Sap -> Phnom Penh",
-  },
-  {
-    id: 3,
-    imgSrc: "/home/trip31.webp",
-    title: "African Safari",
-    tours: "Cape Town -> Victoria Falls -> Chobe National Park -> Okavango Delta",
-  },
-  {
-    id: 4,
-    imgSrc: "/home/trip42.webp",
-    title: "Antarctica Cruise",
-    tours: "Athens -> Mykonos -> Paros -> Santorini",
->>>>>>> f43e6bc (sqaure mawari)
   },
   // {
   //   id: 5,

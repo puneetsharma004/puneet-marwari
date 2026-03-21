@@ -1,13 +1,8 @@
 export const tourData = [
   {
     id: 1,
-<<<<<<< HEAD
     imageSrc: "/home/s05.png",
     location: "Paris, France",
-=======
-    imageSrc: "/home/trip11.webp",
-    location: "Greece",
->>>>>>> f43e6bc (sqaure mawari)
     title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
     ratingCount: 243,
     rating: 4.8,
@@ -18,13 +13,8 @@ export const tourData = [
   },
   {
     id: 2,
-<<<<<<< HEAD
     imageSrc: "/home/s02.png",
     location: "New York, USA",
-=======
-    imageSrc: "/home/trip21.webp",
-    location: "Southeast Asia",
->>>>>>> f43e6bc (sqaure mawari)
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     ratingCount: 243,
     rating: 4.8,
@@ -35,13 +25,8 @@ export const tourData = [
   },
   {
     id: 3,
-<<<<<<< HEAD
     imageSrc: "/home/s03.png",
     location: "London, UK",
-=======
-    imageSrc: "/home/trip31.webp",
-    location: "African Safari",
->>>>>>> f43e6bc (sqaure mawari)
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     ratingCount: 243,
     rating: 4.8,
@@ -52,19 +37,13 @@ export const tourData = [
   },
   {
     id: 4,
-<<<<<<< HEAD
     imageSrc: "/home/s04.png",
     location: "New York, USA",
-=======
-    imageSrc: "/home/trip41.webp",
-    location: "Antarctica Cruise",
->>>>>>> f43e6bc (sqaure mawari)
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     ratingCount: 243,
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
-<<<<<<< HEAD
     spead:'Furious',
     feature:'Advanture'
   },
@@ -116,10 +95,6 @@ export const tourData = [
     price: 771.0,
     spead:'Steady',
     feature:'Food'
-=======
-    spead: 'Furious',
-    feature: 'Advanture'
->>>>>>> f43e6bc (sqaure mawari)
   },
   // {
   //   id: 5,
