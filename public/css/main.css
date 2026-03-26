@@ -18,7 +18,25 @@
 }
 
 
+<<<<<<< HEAD
 
+=======
+.tripReview__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+.tripReview__dot--active {
+  width: 18px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+>>>>>>> origin/main
 
 body {
   font-family: var(--font-body);
@@ -667,7 +685,11 @@ button:focus {
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
+<<<<<<< HEAD
   /* border-radius: 12px; */
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   border: 1px solid transparent;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1249,7 +1271,11 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   width: 160px;
   height: 160px;
 }
@@ -1296,11 +1322,19 @@ button:focus {
 .contactForm select,
 .contactForm input:not([type="range"]),
 .contactForm textarea {
+<<<<<<< HEAD
   font-size: 15px;
   line-height: 1.4;
   height: 55px;
   border: 1px solid #E7E6E6;
   border-radius: 12px;
+=======
+  font-size: 12px;
+  line-height: 1.4;
+  height: 55px;
+  border: 1px solid #E7E6E6;
+  border-radius: 0px;
+>>>>>>> origin/main
   padding: 15px;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1388,7 +1422,11 @@ input.text-white::placeholder {
   width: 18px;
   height: 18px;
   border: 1px solid #000000;
+<<<<<<< HEAD
   border-radius: 4px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .form-checkbox__icon {
@@ -1439,7 +1477,11 @@ input.text-white::placeholder {
   align-items: center;
   height: 18px;
   width: 18px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   border: 1px solid var(--color-accent-1);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1448,7 +1490,11 @@ input.text-white::placeholder {
   position: absolute;
   width: 10px;
   height: 10px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   transform-origin: center;
   opacity: 1;
   transform: scale(0.2);
@@ -1493,7 +1539,11 @@ input.text-white::placeholder {
   bottom: 0;
   background-color: var(--color-light-1);
   transition: .3s;
+<<<<<<< HEAD
   border-radius: 30px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .form-switch .switch__slider::before {
@@ -1539,7 +1589,11 @@ input.text-white::placeholder {
   line-height: 1.4;
   height: 55px;
   border: 1px solid #E7E6E6;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   padding: 15px;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1565,7 +1619,11 @@ input.text-white::placeholder {
   max-height: 340px;
   background-color: white;
   border: 1px solid var(--color-border);
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   z-index: 30;
   transition: all 0.2s ease;
   pointer-events: none;
@@ -2128,7 +2186,11 @@ h6 {
   display: flex;
   align-items: center;
   padding: 7px 20px;
+<<<<<<< HEAD
   border-radius: 200px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   transition: 0.2s;
 }
 
@@ -2267,7 +2329,11 @@ h6 {
 
 .headerDropdown .headerDropdown__container {
   background-color: white;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--Border, #E7E6E6);
   padding: 20px 40px;
@@ -2480,7 +2546,11 @@ h6 {
 
 .header .desktopNav__item {
   position: relative;
+<<<<<<< HEAD
   border-radius: 100px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .header .desktopNav__item>a {
@@ -2508,7 +2578,11 @@ h6 {
 }
 
 .header .desktopNav .desktopNavSubnav__content {
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   background-color: white;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--border, #E7E6E6);
@@ -2561,7 +2635,11 @@ h6 {
 
 .headerDropdown.-button .headerDropdown__button {
   padding: 7px 20px;
+<<<<<<< HEAD
   border-radius: 200px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .headerMobile__left {
@@ -2600,7 +2678,11 @@ h6 {
 
 .headerDropdown.-button .headerDropdown__button {
   padding: 7px 20px;
+<<<<<<< HEAD
   border-radius: 200px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .headerMobile__left {
@@ -2769,7 +2851,11 @@ h6 {
   padding: 0 20px;
   background-color: white;
   border: 1px solid var(--Border, #E7E6E6);
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .footer.-type-1 .footer__newsletter button {
@@ -2885,7 +2971,11 @@ h6 {
   bottom: 0;
   right: 60px;
   left: 60px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   z-index: -1;
 }
 
@@ -2924,7 +3014,11 @@ h6 {
 }
 
 .hero.-type-1 .hero__title {
+<<<<<<< HEAD
   font-size: 70px;
+=======
+  font-size: 20px;
+>>>>>>> origin/main
   font-weight: 600;
   line-height: 1.2;
   color: white;
@@ -5415,7 +5509,11 @@ h6 {
   grid-template-columns: max-content 1fr min-content;
   gap: 30px;
   height: 100%;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   border: 1px solid var(--border, #E7E6E6);
   padding: 20px;
   transition: 0.2s;
@@ -5460,7 +5558,11 @@ h6 {
 .tourCard.-type-2 .tourCard__image img {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -5978,7 +6080,11 @@ h6 {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   /* border: 1px solid var(--border, #E7E6E6); */
 }
 
@@ -5994,7 +6100,11 @@ h6 {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0%;
+>>>>>>> origin/main
   font-weight: 500;
 }
 
@@ -12565,7 +12675,11 @@ h6 {
   background-color: white;
   width: 100%;
   height: 60px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   padding: 0 20px;
   color: var(--color-dark-1);
   width: 350px;
@@ -12676,7 +12790,11 @@ h6 {
 }
 
 .gm-style .gm-style-iw-c {
+<<<<<<< HEAD
   border-radius: 4px;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 .mapItem__img {
@@ -12762,7 +12880,11 @@ h6 {
   gap: 10px;
   grid-template-columns: 770px 250px 250px;
   grid-template-rows: 250px 250px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 .tourSingleGrid.-type-1 .tourSingleGrid__grid>*:nth-child(1) {
@@ -12791,7 +12913,11 @@ h6 {
   .tourSingleGrid.-type-1 img {
     width: calc(100% - 40px);
     height: auto;
+<<<<<<< HEAD
     border-radius: 12px;
+=======
+    border-radius: 0;
+>>>>>>> origin/main
   }
 }
 
@@ -12812,7 +12938,11 @@ h6 {
   gap: 10px;
   grid-template-columns: 770px 510px;
   grid-template-rows: 250px 250px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 .tourSingleGrid.-type-2 .tourSingleGrid__grid>*:nth-child(1) {
@@ -12837,7 +12967,11 @@ h6 {
   .tourSingleGrid.-type-2 img {
     width: calc(100% - 40px);
     height: auto;
+<<<<<<< HEAD
     border-radius: 12px;
+=======
+    border-radius: 0;
+>>>>>>> origin/main
   }
 }
 
@@ -12855,11 +12989,19 @@ table.table th {
 }
 
 table.table th:first-child {
+<<<<<<< HEAD
   border-radius: 8px 0 0 8px;
 }
 
 table.table th:last-child {
   border-radius: 0 8px 8px 0;
+=======
+  border-radius: 0;
+}
+
+table.table th:last-child {
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 table.table tbody>tr+tr {
@@ -12886,11 +13028,19 @@ table.table-4 th {
 }
 
 table.table-4 th:first-child {
+<<<<<<< HEAD
   border-radius: 8px 0 0 8px;
 }
 
 table.table-4 th:last-child {
   border-radius: 0 8px 8px 0;
+=======
+  border-radius: 0;
+}
+
+table.table-4 th:last-child {
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 table.table-4 tbody tr {
@@ -12943,7 +13093,11 @@ table.table-4.-border-bottom tbody>tr {
   position: relative;
   width: 360px;
   padding: 30px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   border: 1px solid var(--border, #E7E6E6);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
   background-color: white;
@@ -12993,7 +13147,11 @@ table.table-4.-border-bottom tbody>tr {
   bottom: 0;
   left: 60px;
   right: 60px;
+<<<<<<< HEAD
   border-radius: 12px 12px 0 0;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   z-index: -1;
 }
 
@@ -13047,7 +13205,11 @@ table.table-4.-border-bottom tbody>tr {
   justify-content: center;
   width: 40px;
   height: 40px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0%;
+>>>>>>> origin/main
 }
 
 .dropdown {
@@ -13066,7 +13228,11 @@ table.table-4.-border-bottom tbody>tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   min-width: 220px;
   height: 60px;
   padding: 0 20px;
@@ -13087,7 +13253,11 @@ table.table-4.-border-bottom tbody>tr {
   background-color: white;
   padding: 10px 0;
   min-width: 220px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   box-shadow: 0px 10px 40px 0px #0000000D;
   opacity: 0;
   pointer-events: none;
@@ -13108,7 +13278,11 @@ table.table-4.-border-bottom tbody>tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   min-width: 220px;
   height: 60px;
   padding: 0 20px;
@@ -13129,7 +13303,11 @@ table.table-4.-border-bottom tbody>tr {
   background-color: white;
   padding: 10px 0;
   min-width: 220px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   box-shadow: 0px 10px 40px 0px #0000000D;
   opacity: 0;
   pointer-events: none;
@@ -13205,7 +13383,11 @@ table.table-4.-border-bottom tbody>tr {
   background-color: white;
   padding: 10px 0;
   min-width: 220px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   box-shadow: 0px 10px 40px 0px #0000000D;
   opacity: 0;
   pointer-events: none;
@@ -13256,7 +13438,11 @@ table.table-4.-border-bottom tbody>tr {
   background-color: white;
   padding: 10px 0;
   min-width: 220px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   box-shadow: 0px 10px 40px 0px #0000000D;
   opacity: 0;
   pointer-events: none;
@@ -13305,7 +13491,11 @@ table.table-4.-border-bottom tbody>tr {
   width: 370px;
   max-width: 100%;
   padding: 12px;
+<<<<<<< HEAD
   border-radius: 200px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   background-color: white;
   border: 1px solid #E7E6E6;
 }
@@ -13319,7 +13509,11 @@ table.table-4.-border-bottom tbody>tr {
 .testimonialsPagination.-type-1 .testimonialsPagination__item img {
   width: 70px;
   height: 70px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   -o-object-fit: cover;
   object-fit: cover;
   flex-shrink: 0;
@@ -13343,7 +13537,11 @@ table.table-4.-border-bottom tbody>tr {
 .testimonialsPagination.-type-2 .testimonialsPagination__item img {
   width: 70px;
   height: 70px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   -o-object-fit: cover;
   object-fit: cover;
   flex-shrink: 0;
@@ -13357,7 +13555,11 @@ table.table-4.-border-bottom tbody>tr {
   bottom: -11px;
   right: -11px;
   left: -11px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   border: 2px solid var(--color-accent-1);
 }
 
@@ -13407,7 +13609,11 @@ table.table-4.-border-bottom tbody>tr {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .specialCard__content {
@@ -13510,7 +13716,11 @@ table.table-4.-border-bottom tbody>tr {
   line-height: 1.2;
   background-color: var(--color-dark-1);
   color: white;
+<<<<<<< HEAD
   border-radius: 8px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   opacity: 0;
 }
@@ -13572,7 +13782,11 @@ table.table-4.-border-bottom tbody>tr {
 .progressBar__bg {
   width: 100%;
   height: 4px;
+<<<<<<< HEAD
   border-radius: 4px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .progressBar__bar {
@@ -13581,7 +13795,11 @@ table.table-4.-border-bottom tbody>tr {
   left: 0;
   z-index: 5;
   height: 100%;
+<<<<<<< HEAD
   border-radius: 4px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .progressBar__bar span {
@@ -13605,7 +13823,11 @@ table.table-4.-border-bottom tbody>tr {
 }
 
 .noUi-handle {
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   width: 30px !important;
   height: 30px !important;
   top: 50% !important;
@@ -13651,7 +13873,11 @@ table.table-4.-border-bottom tbody>tr {
   content: "";
   width: 5px;
   height: 5px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   background-color: currentColor;
   margin-right: 5px;
 }
@@ -13664,7 +13890,11 @@ table.table-4.-border-bottom tbody>tr {
   position: absolute;
   top: 10px;
   right: 10px;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13675,7 +13905,11 @@ table.table-4.-border-bottom tbody>tr {
 
 .iconList {
   border: 1px solid var(--Border, #E7E6E6);
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .iconList__item {
@@ -13699,7 +13933,11 @@ table.table-4.-border-bottom tbody>tr {
   display: inline-block;
   width: 3px;
   height: 3px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   background-color: black;
   vertical-align: middle;
   margin-right: 10px;
@@ -13715,7 +13953,11 @@ table.table-4.-border-bottom tbody>tr {
   display: inline-block;
   width: 3px;
   height: 3px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   background-color: var(--color-accent-1);
   vertical-align: middle;
   margin-right: 10px;
@@ -13755,7 +13997,11 @@ table.table-4.-border-bottom tbody>tr {
   flex-shrink: 0;
   width: 30px;
   height: 30px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius:0;
+>>>>>>> origin/main
   background-color: var(--color-accent-1);
   color: white;
   font-size: 16px;
@@ -13765,7 +14011,11 @@ table.table-4.-border-bottom tbody>tr {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   border: 3px solid var(--color-accent-1);
   background-color: white;
   margin-top: 6px;
@@ -13790,7 +14040,11 @@ table.table-4.-border-bottom tbody>tr {
 
 .overallRating {
   overflow: hidden;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
 }
 
 .overallRating__list {
@@ -13879,7 +14133,11 @@ table.table-4.-border-bottom tbody>tr {
 
 .dbSearch input {
   background-color: var(--color-light-1);
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 0px;
+>>>>>>> origin/main
   height: 50px;
   padding: 0 48px;
 }
@@ -13934,7 +14192,11 @@ table.table-4.-border-bottom tbody>tr {
   z-index: 100;
   width: 30px;
   height: 30px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   background-color: white;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
   transition: 0.2s;
@@ -14001,7 +14263,11 @@ table.table-4.-border-bottom tbody>tr {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   background-color: black;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius:0;
+>>>>>>> origin/main
   width: rem(52px);
   height: rem(52px);
   display: flex;
@@ -14111,7 +14377,11 @@ button.gm-ui-hover-effect::after {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
   z-index: -1;
 }
 
@@ -14121,7 +14391,11 @@ button.gm-ui-hover-effect::after {
 
 .gm-style-iw.gm-style-iw-c {
   padding: 0 !important;
+<<<<<<< HEAD
   border-radius: 12px !important;
+=======
+  border-radius: 0px !important;
+>>>>>>> origin/main
   max-width: 300px !important;
 }
 
@@ -14195,7 +14469,11 @@ button.gm-ui-hover-effect::after {
   flex-direction: column;
   width: 45px;
   height: 45px;
+<<<<<<< HEAD
   border-radius: 100%;
+=======
+  border-radius: 0;
+>>>>>>> origin/main
 }
 
 @media (max-width: 767px) {

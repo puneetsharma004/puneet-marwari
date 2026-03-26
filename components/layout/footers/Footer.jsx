@@ -25,6 +25,7 @@ export default function Footer() {
                       </Link>
                     </div>
                   </div>
+<<<<<<< HEAD
 
                   {/* <div className="col-auto">
                     <div className="text-20 fw-500 text-white text-white">
@@ -34,6 +35,8 @@ export default function Footer() {
                       </span>
                     </div>
                   </div> */}
+=======
+>>>>>>> origin/main
                 </div>
               </div>
 
@@ -87,6 +90,7 @@ export default function Footer() {
                     <input type="Email" placeholder="Your email address" />
                     <button>Send</button>
                   </div>
+<<<<<<< HEAD
 
                   {/* <h4 className="text-20 fw-500 text-white mt-30">
                     Mobile Apps
@@ -106,6 +110,8 @@ export default function Footer() {
                       Android App
                     </a>
                   </div> */}
+=======
+>>>>>>> origin/main
                 </div>
               </div>
             </div>

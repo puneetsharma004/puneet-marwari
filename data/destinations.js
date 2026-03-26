@@ -102,6 +102,7 @@ export const destinationOffers = [
 export const destinationsTwo = [
   {
     id: 1,
+<<<<<<< HEAD
     imgSrc: "/home/trip11.webp",
     title: "Greece",
     tours: "Athens -> Mykonos -> Paros -> Santorini",
@@ -123,6 +124,41 @@ export const destinationsTwo = [
     imgSrc: "/home/trip42.webp",
     title: "Antarctica Cruise",
     tours: "Athens -> Mykonos -> Paros -> Santorini",
+=======
+    imgSrc: "/home/s09.png",
+    title: "Paris",
+    tours: 100,
+  },
+  {
+    id: 2,
+    imgSrc: "/home/s10.jpg",
+    title: "Singapore",
+    tours: 300,
+  },
+  {
+    id: 3,
+    imgSrc: "/home/s11.jpg",
+    title: "Roma",
+    tours: 400,
+  },
+  {
+    id: 4,
+    imgSrc: "/home/s12.jpg",
+    title: "Bangkok",
+    tours: 100,
+  },
+  {
+    id: 5,
+    imgSrc: "/home/s13.jpg",
+    title: "Bali",
+    tours: 600,
+  },
+  {
+    id: 6,
+    imgSrc: "/home/s14.jpg",
+    title: "Phuket",
+    tours: 200,
+>>>>>>> origin/main
   },
   // {
   //   id: 5,

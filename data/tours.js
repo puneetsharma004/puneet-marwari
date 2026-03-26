@@ -1,8 +1,13 @@
 export const tourData = [
   {
     id: 1,
+<<<<<<< HEAD
     imageSrc: "/home/trip11.webp",
     location: "Greece",
+=======
+    imageSrc: "/home/s05.png",
+    location: "Paris, France",
+>>>>>>> origin/main
     title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
     ratingCount: 243,
     rating: 4.8,
@@ -13,8 +18,13 @@ export const tourData = [
   },
   {
     id: 2,
+<<<<<<< HEAD
     imageSrc: "/home/trip21.webp",
     location: "Southeast Asia",
+=======
+    imageSrc: "/home/s02.png",
+    location: "New York, USA",
+>>>>>>> origin/main
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     ratingCount: 243,
     rating: 4.8,
@@ -25,8 +35,13 @@ export const tourData = [
   },
   {
     id: 3,
+<<<<<<< HEAD
     imageSrc: "/home/trip31.webp",
     location: "African Safari",
+=======
+    imageSrc: "/home/s03.png",
+    location: "London, UK",
+>>>>>>> origin/main
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     ratingCount: 243,
     rating: 4.8,
@@ -37,15 +52,74 @@ export const tourData = [
   },
   {
     id: 4,
+<<<<<<< HEAD
     imageSrc: "/home/trip41.webp",
     location: "Antarctica Cruise",
+=======
+    imageSrc: "/home/s04.png",
+    location: "New York, USA",
+>>>>>>> origin/main
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     ratingCount: 243,
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
+<<<<<<< HEAD
     spead: 'Furious',
     feature: 'Advanture'
+=======
+    spead:'Furious',
+    feature:'Advanture'
+  },
+  {
+    id: 5,
+    imageSrc: "/home/s05.png",
+    location: "Paris, France",
+    title: "Space Center Houston Admission Ticket",
+    ratingCount: 243,
+    rating: 4.8,
+    duration: "4 days",
+    price: 189.25,
+    spead:'Furious',
+    feature:'Food'
+  },
+  {
+    id: 6,
+    imageSrc: "/home/s06.png",
+    location: "New York, USA",
+    title: "Clear Kayak Tour of Shell Key Preserve and Tampa Bay Area",
+    ratingCount: 243,
+    rating: 4.8,
+    duration: "4 days",
+    price: 225.0,
+    spead:'Furious',
+    feature:'Food'
+  },
+  {
+    id: 7,
+    imageSrc: "/home/s07.png",
+    location: "London, UK",
+    title: "History and Hauntings of Salem Guided Walking Tour",
+    ratingCount: 243,
+    rating: 4.8,
+    duration: "4 days",
+    price: 943.0,
+    spead:'Steady',
+    feature:'Nature'
+  },
+  {
+    id: 8,
+    imageSrc: "/home/s09.png",
+    location: "New York, USA",
+    title:
+      "Mauna Kea Summit Sunset and Stars Free Astro Photos Hilo Kona Waikoloa Pick Up",
+    ratingCount: 243,
+    rating: 4.8,
+    duration: "4 days",
+    price: 771.0,
+    spead:'Steady',
+    feature:'Food'
+>>>>>>> origin/main
   },
   // {
   //   id: 5,

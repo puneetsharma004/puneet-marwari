@@ -15,12 +15,20 @@ export default function Faq() {
         </div>
 
         <div className="row justify-center pt-30">
+<<<<<<< HEAD
           <div className="col-xl-8 col-lg-10">
+=======
+          <div className="">
+>>>>>>> origin/main
             <div className="accordion -simple row y-gap-20 js-accordion">
               {faqData.map((elm, i) => (
                 <div key={i} className="col-12">
                   <div
+<<<<<<< HEAD
                     className={`accordion__item px-20 py-15 border-1 rounded-12 ${
+=======
+                    className={`accordion__item px-20 py-15 border-1 ${
+>>>>>>> origin/main
                       currentActiveFaq == i ? "is-active" : ""
                     } `}
                   >
@@ -34,7 +42,11 @@ export default function Faq() {
                         {elm.question}
                       </div>
 
+<<<<<<< HEAD
                       <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+=======
+                      <div className="accordion__icon size-30 flex-center bg-light-2">
+>>>>>>> origin/main
                         <i className="icon-plus"></i>
                         <i className="icon-minus"></i>
                       </div>

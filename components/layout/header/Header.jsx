@@ -97,7 +97,11 @@ export default function Header() {
 
             <Link
               href="/login"
+<<<<<<< HEAD
               className="button -sm -outline-white text-white rounded-200 ml-30"
+=======
+              className="button -sm -outline-white text-white ml-30"
+>>>>>>> origin/main
             >
               Log in
             </Link>

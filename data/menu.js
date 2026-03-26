@@ -4,6 +4,7 @@ export const homes = [
 ];
 
 export const tours = [
+<<<<<<< HEAD
   {
     id: 21,
     title: "Tour List Style",
@@ -34,6 +35,15 @@ export const tours = [
     title: "Booking Pages",
     links: [{ id: 231, title: "Booking pages", href: "/booking-pages" }],
   },
+=======
+
+  { id: 211, title: "Trip Calendar", href: "/trip-calender" },
+  { id: 221, title: "Greece", href: "/tour-single-1/3" },
+  { id: 222, title: "Southeast Asia", href: "/tour-single-2/3" },
+  { id: 223, title: "African Safari", href: "/tour-single-3/3" },
+  { id: 224, title: "Antarctica Cruise", href: "/tour-single-4/3" },
+
+>>>>>>> origin/main
 ];
 
 export const pages = [
@@ -70,3 +80,27 @@ export const pages = [
   { id: 510, title: "Invoice", href: "/invoice" },
   { id: 511, title: "UI elements", href: "/ui-elements" },
 ];
+<<<<<<< HEAD
+=======
+
+
+
+export const whyMawari = [
+  { id: 1, title: "Our Travel Concept", href: "/our-travel-concept" },
+  { id: 2, title: "Trip Reviews", href: "/trip-reviews" },
+  { id: 3, title: "Who is Mawari?", href: "/about-mawari" },
+  { id: 4, title: "Community", href: "/community" },
+];
+
+
+
+export const tripMenu = [
+  { id: 2, title: "Register Now", href: "/trip-registration" },
+  { id: 3, title: "Your Trip - Login", href: "/login" }, // or "/your-trip" after auth
+  { id: 4, title: "Flights", href: "/flights" },
+  { id: 5, title: "Insurance", href: "/insurance" },
+  { id: 6, title: "Making Payments", href: "/payments" },
+  { id: 7, title: "Health & Safety", href: "/health-safety" },
+  { id: 8, title: "Booking Conditions", href: "/booking-conditions" },
+];
+>>>>>>> origin/main

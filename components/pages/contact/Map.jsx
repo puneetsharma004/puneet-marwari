@@ -209,6 +209,7 @@ function MyComponent() {
     setMap(null);
   }, []);
   return (
+<<<<<<< HEAD
     <div className="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0">
       {isLoaded ? (
         <GoogleMap
@@ -271,6 +272,36 @@ function MyComponent() {
         </svg>
       </div>
     </div>
+=======
+    <section className="contactMapSection layout-pb-xl">
+      {/* Section heading between hero and map */}
+      <div className="container">
+        <div className="row justify-center text-center mb-30">
+            <p className="text-15 md:text-24 mb-15">Our Locations</p>
+            <h2 className="text-18 md:text-24">Where to <span className="mapHeading__accent">Find Us</span></h2>
+        </div>
+      </div>
+
+      <div className="map relative ml-60 mr-60 md:ml-0 md:mr-0 z-0">
+        {isLoaded ? (
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={12}
+            options={option}
+          >
+            <></>
+          </GoogleMap>
+        ) : (
+          <></>
+        )}
+
+
+     
+
+      </div>
+    </section>
+>>>>>>> origin/main
   );
 }
 export default React.memo(MyComponent);

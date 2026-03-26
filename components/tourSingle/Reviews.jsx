@@ -1,12 +1,24 @@
+<<<<<<< HEAD
 import { reviews } from "@/data/tourSingleContent";
 import React from "react";
 import Stars from "../common/Stars";
 import Image from "next/image";
+=======
+
+import React from "react";
+import Stars from "../common/Stars";
+import Image from "next/image";
+import { tripReviews } from "@/data/trips";
+>>>>>>> origin/main
 
 export default function Reviews() {
   return (
     <>
+<<<<<<< HEAD
       {reviews.map((elm, i) => (
+=======
+      {tripReviews.map((elm, i) => (
+>>>>>>> origin/main
         <div key={i} className="pt-30">
           <div className="row justify-between">
             <div className="col-auto">
