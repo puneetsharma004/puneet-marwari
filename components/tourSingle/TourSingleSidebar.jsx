@@ -36,15 +36,15 @@ export default function TourSingleSidebar() {
   return (
     <div className="tourSingleSidebar">
       <div className="d-flex items-center">
-        <div>From</div>
-        <div className="text-20 fw-500 ml-10">$1,200</div>
+        <div>Starting from</div>
+        <h1 className="text-16 fw-500 ml-10">$1,200</h1>
       </div>
 
       <div className="searchForm -type-1 -sidebar mt-20">
         <div className="searchForm__form">
           <div className="searchFormItem js-select-control js-form-dd js-calendar">
             <div className="searchFormItem__button" data-x-click="calendar">
-              <div className="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
+              <div className="searchFormItem__icon size-50 bg-light-1 flex-center">
                 <i className="text-20 icon-calendar"></i>
               </div>
               <div className="searchFormItem__content">
@@ -68,7 +68,7 @@ export default function TourSingleSidebar() {
               onClick={() => setActiveTimeDD((pre) => !pre)}
               data-x-click="time"
             >
-              <div className="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
+              <div className="searchFormItem__icon size-50 bg-light-1 flex-center">
                 <i className="text-20 icon-clock"></i>
               </div>
               <div className="searchFormItem__content">
@@ -112,11 +112,11 @@ export default function TourSingleSidebar() {
         </div>
       </div>
 
-      <h5 className="text-18 fw-500 mb-20 mt-20">Tickets</h5>
+      <h5 className=" fw-500 mb-20 mt-20">Tickets</h5>
 
       <div>
         <div className="d-flex items-center justify-between">
-          <div className="text-14">
+          <div className="">
             Adult (18+ years){" "}
             <span className="fw-500">
               ${(prices.adultPrice * adultNumber).toFixed(2)}
@@ -132,7 +132,7 @@ export default function TourSingleSidebar() {
             </button>
 
             <div className="flex-center ml-10 mr-10">
-              <div className="text-14 size-20 js-count">{adultNumber}</div>
+              <div className="size-20 js-count">{adultNumber}</div>
             </div>
 
             <button
@@ -147,7 +147,7 @@ export default function TourSingleSidebar() {
 
       <div className="mt-15">
         <div className="d-flex items-center justify-between">
-          <div className="text-14">
+          <div className="">
             Youth (13-17 years){" "}
             <span className="fw-500">
               ${(prices.youthPrice * youthNumber).toFixed(2)}
@@ -163,7 +163,7 @@ export default function TourSingleSidebar() {
             </button>
 
             <div className="flex-center ml-10 mr-10">
-              <div className="text-14 size-20 js-count">{youthNumber}</div>
+              <div className=" size-20 js-count">{youthNumber}</div>
             </div>
 
             <button
@@ -178,7 +178,7 @@ export default function TourSingleSidebar() {
 
       <div className="mt-15">
         <div className="d-flex items-center justify-between">
-          <div className="text-14">
+          <div className="">
             Children (0-12 years){" "}
             <span className="fw-500">
               ${(prices.childrenPrice * childrenNumber).toFixed(2)}
@@ -196,7 +196,7 @@ export default function TourSingleSidebar() {
             </button>
 
             <div className="flex-center ml-10 mr-10">
-              <div className="text-14 size-20 js-count">{childrenNumber}</div>
+              <div className=" size-20 js-count">{childrenNumber}</div>
             </div>
 
             <button
@@ -209,7 +209,7 @@ export default function TourSingleSidebar() {
         </div>
       </div>
 
-      <h5 className="text-18 fw-500 mb-20 mt-20">Add Extra</h5>
+      <h5 className=" fw-500 mb-20 mt-20">Add Extra</h5>
 
       <div className="d-flex items-center justify-between">
         <div className="d-flex items-center">
@@ -233,7 +233,7 @@ export default function TourSingleSidebar() {
           <div className="ml-10">Add Service per booking</div>
         </div>
 
-        <div className="text-14">$40</div>
+        <div className="">$40</div>
       </div>
 
       <div className="d-flex justify-between mt-20">
@@ -265,14 +265,14 @@ export default function TourSingleSidebar() {
           </div>
         </div>
 
-        <div className="text-14">$40</div>
+        <div className="t">$40</div>
       </div>
 
       <div className="line mt-20 mb-20"></div>
 
       <div className="d-flex items-center justify-between">
-        <div className="text-18 fw-500">Total:</div>
-        <div className="text-18 fw-500">
+        <h1 className="text-20 fw-600">Total:</h1>
+        <h1 className="text-20 fw-600">
           $
           {(
             prices.adultPrice * adultNumber +
@@ -280,7 +280,7 @@ export default function TourSingleSidebar() {
             prices.childrenPrice * childrenNumber +
             extraCharge * 1
           ).toFixed(2)}
-        </div>
+        </h1>
       </div>
 
       <button className="button -md -dark-1 col-12 bg-accent-1 text-white mt-20">

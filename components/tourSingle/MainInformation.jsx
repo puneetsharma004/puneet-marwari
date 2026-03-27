@@ -8,18 +8,18 @@ export default function MainInformation({ tour }) {
         <div className="col-auto">
           <div className="row x-gap-10 y-gap-10 items-center">
             <div className="col-auto">
-              <button className="button -accent-1 text-14 py-5 px-15 bg-accent-1-05 text-accent-1 rounded-200">
+              <button className="button -accent-1 py-5 px-15 bg-accent-1-05 text-accent-1">
                 Bestseller
               </button>
             </div>
             <div className="col-auto">
-              <button className="button -accent-1 text-14 py-5 px-15 bg-light-1 rounded-200">
+              <button className="button -accent-1 py-5 px-15 bg-light-1">
                 Free cancellation
               </button>
             </div>
           </div>
 
-          <h2 className="text-40 sm:text-30 lh-14 mt-20">
+          <h2 className="text-30 sm:text-30 lh-14 mt-20">
             {tour?.title.split(" ").slice(0, 7).join(" ")}
 
             <br />

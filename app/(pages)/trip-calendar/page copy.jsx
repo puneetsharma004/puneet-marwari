@@ -110,32 +110,45 @@ export default function TripCalender() {
   return (
     <>
       {/* Hero */}
-      <CommonHero title="Trip Calendar" subtitle="Plan Your Next Adventure" breadcrumb="Trip Calendar" image="/heroimg/trip-calendar.jpg" />
+      <CommonHero
+        title="Trip Calendar"
+        subtitle="Plan Your Next Adventure"
+        breadcrumb="Trip Calendar"
+        image="/heroimg/trip-calendar.jpg"
+      />
 
       {/* Calendar */}
-      <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
+      <section
+        className="layout-pt-lg layout-pb-lg"
+        style={{ backgroundColor: "#fef7f4" }}
+      >
         <div className="container">
           {trips.map((group) => (
             <div key={group.month} className="mb-60">
-
               {/* Month heading */}
               <div className="d-flex items-center x-gap-20 mb-30">
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                <h2 className="text-20 fw-600 uppercase text-dark-1"
+                <span
+                  style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }}
+                />
+                <h2
+                  className="text-20 fw-600 uppercase text-dark-1"
                   style={{
-                    letterSpacing: "6px", whiteSpace: "nowrap",
-                    fontFamily: "var(--font-caslon), serif"
-                  }}>
+                    letterSpacing: "6px",
+                    whiteSpace: "nowrap",
+                    fontFamily: "var(--font-caslon), serif",
+                  }}
+                >
                   {group.month}
                 </h2>
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
+                <span
+                  style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }}
+                />
               </div>
 
               {/* Trip cards */}
               <div className="d-flex flex-column y-gap-20">
                 {group.items.map((trip) => (
                   <div key={trip.id} className="tourCard -type-2">
-
                     {/* Image */}
                     <div className="tourCard__image">
                       <Image
@@ -148,31 +161,44 @@ export default function TripCalender() {
 
                     {/* Content */}
                     <div className="tourCard__content">
-                      <h3 className="tourCard__title text-dark-1 uppercase"
+                      <h3
+                        className="tourCard__title text-dark-1 uppercase"
                         style={{
                           fontFamily: "var(--font-caslon), serif",
-                          letterSpacing: "3px", fontSize: "20px"
-                        }}>
+                          letterSpacing: "3px",
+                          fontSize: "20px",
+                        }}
+                      >
                         {trip.title}
                       </h3>
 
                       <div className="d-flex flex-column y-gap-8 mt-15">
                         <p className="text-13 text-light-2">
                           <span className="fw-600 text-dark-1">Starts</span> in{" "}
-                          <span className="fw-600 text-dark-1">{trip.startCity}</span> on {trip.startDate}
+                          <span className="fw-600 text-dark-1">
+                            {trip.startCity}
+                          </span>{" "}
+                          on {trip.startDate}
                         </p>
                         <p className="text-13 text-light-2">
-                          <span className="fw-600 text-dark-1">Finishes</span> in{" "}
-                          <span className="fw-600 text-dark-1">{trip.endCity}</span> on {trip.endDate}
+                          <span className="fw-600 text-dark-1">Finishes</span>{" "}
+                          in{" "}
+                          <span className="fw-600 text-dark-1">
+                            {trip.endCity}
+                          </span>{" "}
+                          on {trip.endDate}
                         </p>
                       </div>
 
                       <div className="d-flex items-center x-gap-10 mt-20">
-                        <span className="text-11 uppercase fw-600 text-light-2"
+                        <span
+                          className="text-11 uppercase fw-600 text-light-2"
                           style={{
-                            letterSpacing: "2px", border: "1px solid #E7E6E6",
-                            padding: "4px 12px"
-                          }}>
+                            letterSpacing: "2px",
+                            border: "1px solid #E7E6E6",
+                            padding: "4px 12px",
+                          }}
+                        >
                           {trip.duration}
                         </span>
                       </div>
@@ -183,40 +209,48 @@ export default function TripCalender() {
                       <div>
                         {trip.status === "sold_out" ? (
                           <>
-                            <p className="text-13 fw-600 uppercase text-center mb-15"
-                              style={{ letterSpacing: "2px", color: "#888" }}>
+                            <p
+                              className="text-13 fw-600 uppercase text-center mb-15"
+                              style={{ letterSpacing: "2px", color: "#888" }}
+                            >
                               Sold Out
                             </p>
-                            <a href="#"
+                            <a
+                              href="#"
                               className="button -sm -outline-black text-dark-1 uppercase fw-600"
-                              style={{ letterSpacing: "2px", fontSize: "11px" }}>
+                              style={{ letterSpacing: "2px", fontSize: "11px" }}
+                            >
                               Join Waitlist
                             </a>
                           </>
                         ) : (
                           <>
-                            <p className="text-13 fw-600 uppercase text-center mb-5"
-                              style={{ letterSpacing: "2px" }}>
+                            <p
+                              className="text-13 fw-600 uppercase text-center mb-5"
+                              style={{ letterSpacing: "2px" }}
+                            >
                               {trip.spots} Spots Left
                             </p>
-                            <p className="text-11 text-light-2 text-center mb-15"
-                              style={{ letterSpacing: "1px" }}>
+                            <p
+                              className="text-11 text-light-2 text-center mb-15"
+                              style={{ letterSpacing: "1px" }}
+                            >
                               Limited availability
                             </p>
-                            <a href="#"
+                            <a
+                              href="#"
                               className="button -sm -black bg-dark-1 text-white uppercase fw-600"
-                              style={{ letterSpacing: "2px", fontSize: "11px" }}>
+                              style={{ letterSpacing: "2px", fontSize: "11px" }}
+                            >
                               Book Now
                             </a>
                           </>
                         )}
                       </div>
                     </div>
-
                   </div>
                 ))}
               </div>
-
             </div>
           ))}
         </div>

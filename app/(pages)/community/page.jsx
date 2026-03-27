@@ -1,96 +1,154 @@
-import CommonHero from "@/components/common/CommonHero";
-import Square from "@/components/common/icons/Square";
-import SquareFaded from "@/components/common/icons/SquareFaded";
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { clients } from "@/data/clients";
+import HeroBanner from "@/components/common/HeroBanner";
 
 const partners = [
-    "Out In Schools",
-    "Atrius Health Foundation",
-    "Travelers Against Plastic",
-    "Memorial Sloan Kettering Cancer Center",
-    "National Multiple Sclerosis Society",
-    "Food For The Poor (Caribbean / Latin America)",
-    "Rainbow Railroad",
-    "Camillus House — Miami",
+  "Out In Schools",
+  "Atrius Health Foundation",
+  "Travelers Against Plastic",
+  "Memorial Sloan Kettering Cancer Center",
+  "National Multiple Sclerosis Society",
+  "Food For The Poor (Caribbean / Latin America)",
+  "Rainbow Railroad",
+  "Camillus House — Miami",
 ];
 
 export default function Community() {
-    return (
-        <>
-            {/* Hero */}
-            <CommonHero
-                title="Our Community"
-                subtitle="Giving Back"
-                image="/heroimg/community.jpg"
-                breadcrumb="Community"
+  return (
+    <>
+      <HeroBanner
+        title="Our Community"
+        description="Giving Back"
+        imageSrc="/heroimg/community.jpg"
+      />
+
+      <section className="cta -type-2">
+        <div className="cta__bg" style={{ marginTop: "-88px" }}>
+          <Image
+            src="/img/cta/7/bg.png"
+            width={1093}
+            height={600}
+            alt="image"
+          />
+
+          <div className="cta__image">
+            <Image
+              src="/heroimg/community-2.png"
+              width={750}
+              height={600}
+              alt="image"
             />
+            <Image
+              src="/img/cta/7/shape.svg"
+              width="40"
+              height="600"
+              alt="image"
+            />
+            <Image
+              src="/img/cta/7/shape2.svg"
+              width="600"
+              height="40"
+              alt="image"
+            />
+          </div>
+        </div>
 
-            {/* Body */}
-            <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
-                <div className="container">
-                    <div className="row justify-center">
-                        <div className="">
+        <div className="container">
+          <div className="row">
+            <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-7">
+              <div className="cta__content">
+                <h2 data-aos="fade-up" data-aos-delay="" className="lh-13">
+                  <span className="text-accent-2">Community, Naturally.</span>
+                  <br className="lg:d-none" />
+                  More Than a Group.
+                  <br className="lg:d-none" />
+                  More Than a Trip.
+                </h2>
 
-                            {/* Intro */}
-                            <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                                Ever since we opened our doors to the world in 2012, we've made community a
-                                priority. We believe it's all of our responsibility to give back and leave the
-                                world a better place. Starting with funding local charities when Detours was
-                                just two weeks old, then expanding our reach to assist international non-profit
-                                organizations — we are proud to have donated thousands of dollars, several group
-                                trips, and many hours of time into helping our local and global community.
-                            </p>
+                <p data-aos="fade-up" data-aos-delay="" className="mt-10">
+                  Like Detours, community is at the core of Mawari. Our
+                  travelers often arrive solo but never stay that way for long.
+                  Smaller group sizes create the perfect space for genuine
+                  connection over shared meals, conversations, and those
+                  unplanned moments that end up being the most memorable and the
+                  stories we share.
+                  <br />
+                  <br />
+                  There’s no pressure to be “on” all the time. Some moments are
+                  shared, others are yours alone. By the end, you’ve not only
+                  experienced an incredible destination but you’ve shared it
+                  with people who feel like they belong there with you.
+                </p>
 
-                            {/* Pull quote */}
-                            <div style={{ borderLeft: "3px solid #1a1715", paddingLeft: "24px" }}
-                                className="mt-30 mb-40">
-                                <p className="text-18 italic text-dark-1"
-                                    style={{ lineHeight: "1.75", fontFamily: "var(--font-caslon), serif" }}>
-                                    "We hope you'll join us in continuing our community endeavors."
-                                </p>
-                            </div>
-
-                            {/* Partners heading */}
-                            <div className="d-flex items-center x-gap-20 mt-30 mb-30">
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                <h2 className="text-13 fw-700 uppercase text-dark-1"
-                                    style={{
-                                        letterSpacing: "4px", whiteSpace: "nowrap",
-                                        fontFamily: "var(--font-caslon), serif"
-                                    }}>
-                                    Non-Profit Community Partners
-                                </h2>
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                            </div>
-
-                            {/* Partners list */}
-                            <div className="d-flex flex-column y-gap-12 mb-30">
-                                {partners.map((partner, i) => (
-                                    <div key={i} className="d-flex items-center x-gap-15">
-                                        <Square/>
-                                        <p className="text-14 text-dark-1 fw-500">{partner}</p>
-                                    </div>
-                                ))}
-                                <div className="d-flex items-center x-gap-15">
-                                    <SquareFaded/>
-                                    <p className="text-14 text-light-2 italic">and more...</p>
-                                </div>
-                            </div>
-
-                            {/* Footer note */}
-                            <p className="text-14 text-light-2" style={{ lineHeight: "1.8" }}>
-                                For registered non-profit donation requests please{" "}
-                                <a href="/contact" className="text-dark-1 fw-600"
-                                    style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                    contact us
-                                </a>
-                                .
-                            </p>
-
-                        </div>
-                    </div>
+                <div
+                  data-aos="fade-right"
+                  data-aos-delay=""
+                  className="mt-30 md:mt-20"
+                >
+                  <button className="button -md -dark-1 bg-accent-2 text-white">
+                    <Link href="/trip-calendar">
+                      Book Now
+                      <i className="icon-arrow-top-right ml-10 text-16"></i>
+                    </Link>
+                  </button>
                 </div>
-            </section>
-        </>
-    );
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="layout-pt-xl layout-pb-xl">
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-auto">
+              <h2 data-aos="fade-up" data-aos-delay="">
+                NON-PROFIT COMMUNITY PARTNERS
+              </h2>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="" className="pt-40 sm:pt-20">
+            <Swiper
+              spaceBetween={30}
+              className="w-100"
+              modules={[Autoplay]}
+              autoplay
+              loop={true}
+              breakpoints={{
+                300: {
+                  slidesPerView: 2,
+                },
+                500: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+                1200: {
+                  slidesPerView: 6,
+                },
+              }}
+            >
+              {clients.map((elm, i) => (
+                <SwiperSlide key={i}>
+                  <div key={i} className=" d-flex justify-center items-center ">
+                    <Image width={100} height={30} src={elm} alt="image" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

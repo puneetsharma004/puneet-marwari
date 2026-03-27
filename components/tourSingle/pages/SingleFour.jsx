@@ -13,6 +13,8 @@ import Rating from "../Rating";
 import Reviews from "../Reviews";
 import CommentBox from "../CommentBox";
 import TourSingleSidebar from "../TourSingleSidebar";
+import MainInformation2 from "./MainInformation2";
+import Gallery3 from "../Galleries/Gallery3";
 
 export default function SingleFour({ tour }) {
   const [activeAcorditions, setActiveAcorditions] = useState([]);
@@ -20,9 +22,9 @@ export default function SingleFour({ tour }) {
     <>
       <section className="">
         <div className="container">
-          <MainInformation tour={tour} />
+          <MainInformation2 tour={tour} />
 
-          <Gallery1 />
+          <Gallery3 />
         </div>
       </section>
 

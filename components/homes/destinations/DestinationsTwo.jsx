@@ -34,7 +34,10 @@ export default function DestinationsTwo() {
         >
           {tripsData.map((trip, i) => (
             <div key={i} className="col-xl-3 col-lg-3 col-md-4 col-6">
-              <Link href={`/trips/${trip.slug}`} className="-hover-image-scale d-block">
+              <Link
+                href={`/trips/${trip.slug}`}
+                className="-hover-image-scale d-block"
+              >
                 {/* Image */}
                 {console.log("trip slug:", trip.slug)}
                 <div className="ratio ratio-3:4 -hover-image-scale__image">

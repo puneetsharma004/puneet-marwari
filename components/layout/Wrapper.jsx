@@ -12,9 +12,11 @@ export default function Wrapper({ children }) {
       once: true,
     });
   }, []);
-  return <>
-  <Header/>
-  {children}
-  <Footer/>
-  </>;
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
 }

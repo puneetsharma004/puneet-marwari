@@ -4,6 +4,11 @@ import React from "react";
 
 export default function Features6() {
   return (
+<<<<<<< HEAD
+    <section className="student-section">
+      {/* Abstract Background Layer */}
+      <div className="abstract-bg"></div>
+=======
     <section className="relative">
       <div className="sectionBg -type-1">
         <div className="bg-accent-1-05 rounded-24"></div>
@@ -15,12 +20,17 @@ export default function Features6() {
           className="rounded-24"
         />
       </div>
+>>>>>>> origin/main
       <div className="container student-content">
         {/* Heading */}
         <div className="student-heading">
           <h2 className="text-white">
             Why choose <span className="highlight">MAWARI</span>
           </h2>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
           <p className="text-white">
             Every trip is thoughtfully designed from start to finish, so the
             logistics are handled and the experience flows seamlessly with

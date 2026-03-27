@@ -44,8 +44,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
-    spead:'Furious',
-    feature:'Advanture'
+    spead: 'Furious',
+    feature: 'Advanture'
   },
   {
     id: 5,
@@ -56,8 +56,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 189.25,
-    spead:'Furious',
-    feature:'Food'
+    spead: 'Furious',
+    feature: 'Food'
   },
   {
     id: 6,
@@ -68,8 +68,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 225.0,
-    spead:'Furious',
-    feature:'Food'
+    spead: 'Furious',
+    feature: 'Food'
   },
   {
     id: 7,
@@ -80,8 +80,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 943.0,
-    spead:'Steady',
-    feature:'Nature'
+    spead: 'Steady',
+    feature: 'Nature'
   },
   {
     id: 8,
@@ -93,8 +93,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
-    spead:'Steady',
-    feature:'Food'
+    spead: 'Steady',
+    feature: 'Food'
   },
   // {
   //   id: 5,
@@ -151,7 +151,7 @@ export const tourData = [
 export const tourDataTwo = [
   {
     id: 9,
-    imageSrc: "/img/tourCards/3/1.png",
+    imageSrc: "/home/trip11.webp",
     badgeText: "20 % OFF",
     location: "Paris, France",
     title:
@@ -177,7 +177,7 @@ export const tourDataTwo = [
   },
   {
     id: 10,
-    imageSrc: "/img/tourCards/3/2.png",
+    imageSrc: "/home/trip21.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -203,7 +203,7 @@ export const tourDataTwo = [
   },
   {
     id: 11,
-    imageSrc: "/img/tourCards/3/3.png",
+    imageSrc: "/home/trip31.webp",
     featured: true,
     location: "Paris, France",
     title:
@@ -229,7 +229,7 @@ export const tourDataTwo = [
   },
   {
     id: 12,
-    imageSrc: "/img/tourCards/3/4.png",
+    imageSrc: "/home/trip41.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -255,7 +255,7 @@ export const tourDataTwo = [
   },
   {
     id: 13,
-    imageSrc: "/img/tourCards/3/5.png",
+    imageSrc: "/home/trip11.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -281,7 +281,7 @@ export const tourDataTwo = [
   },
   {
     id: 14,
-    imageSrc: "/img/tourCards/3/6.png",
+    imageSrc: "/home/trip21.webp",
     badgeText: "",
     location: "Paris, France",
     title:

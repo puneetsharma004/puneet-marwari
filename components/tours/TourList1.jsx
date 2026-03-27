@@ -122,7 +122,7 @@ export default function TourList1() {
 
                       {elm.badgeText && (
                         <div className="tourCard__badge">
-                          <div className="bg-accent-1 rounded-12 text-white lh-11 text-13 px-15 py-10">
+                          <div className="bg-accent-1 text-white lh-11 px-15 py-10">
                             {elm.badgeText}
                           </div>
                         </div>
@@ -130,29 +130,36 @@ export default function TourList1() {
 
                       {elm.featured && (
                         <div className="tourCard__badge">
-                          <div className="bg-accent-2 rounded-12 text-white lh-11 text-13 px-15 py-10">
+                          <div className="bg-accent-2 text-white lh-11 px-15 py-10">
                             FEATURED
                           </div>
                         </div>
                       )}
 
-                      <div className="tourCard__favorite">
+                      {/* <div className="tourCard__favorite">
                         <button className="button -accent-1 size-35 bg-white rounded-full flex-center">
                           <i className="icon-heart text-15"></i>
                         </button>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="tourCard__content">
                       <div className="tourCard__location">
-                        <i className="icon-pin"></i>
+                        <i className="icon-pin mr-2"></i>
                         {elm.location}
                       </div>
 
-                      <h3 className="tourCard__title mt-5">
-                        <span>{elm.title}</span>
-                      </h3>
+                      <Link href={`/trip-details/${elm.id}`}>
+                        <h3 className="tourCard__title mt-5 mb-3">
+                          <span style={{ letterSpacing: "4px" }}>
+                            {elm.title}
+                          </span>
+                        </h3>
+                      </Link>
 
+                      <p className="tourCard__text mt-5 pb-30">
+                        {elm.description}
+                      </p>
                       <div className="d-flex items-center mt-5">
                         <div className="d-flex items-center x-gap-5">
                           <Stars star={elm.rating} font={12} />
@@ -164,12 +171,10 @@ export default function TourList1() {
                         </div>
                       </div>
 
-                      <p className="tourCard__text mt-5">{elm.description}</p>
-
                       <div className="row x-gap-20 y-gap-5 pt-30">
                         {elm.features?.map((elm2, i2) => (
                           <div key={i2} className="col-auto">
-                            <div className="text-14 text-accent-1">
+                            <div className=" text-accent-1">
                               <i className={`${elm2.icon} mr-10`}></i>
                               {elm2.name}
                             </div>
@@ -180,7 +185,7 @@ export default function TourList1() {
 
                     <div className="tourCard__info">
                       <div>
-                        <div className="d-flex items-center text-14">
+                        <div className="d-flex items-center ">
                           <i className="icon-clock mr-10"></i>
                           {elm.duration}
                         </div>
@@ -198,7 +203,8 @@ export default function TourList1() {
                       </div>
 
                       <button className="button -outline-accent-1 text-accent-1">
-                        <Link href={`/tour-single-1/${elm.id}`}>
+                        {/* <Link href={`/tour-single-1/${elm.id}`}> */}
+                        <Link href={`/trip-details/${elm.id}`}>
                           View Details
                           <i className="icon-arrow-top-right ml-10"></i>
                         </Link>

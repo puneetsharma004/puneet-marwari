@@ -35,6 +35,12 @@ export default function Hero8() {
 
   return (
     <section className="hero -type-8">
+<<<<<<< HEAD
+      <div className="hero__vbg overflow-hidden object-fit-cover">
+        <video loop autoPlay muted playsInline className="opacity-25">
+          <source src="/home/paris.mp4" />
+        </video>
+=======
       <div className="hero__bg">
         <Image
           width={1920}
@@ -43,6 +49,7 @@ export default function Hero8() {
             src="/home/s01.jpg"
           alt="background"
         />
+>>>>>>> origin/main
       </div>
 
       <div className="container">

@@ -1,13 +1,12 @@
-
 import React from "react";
 import Stars from "../common/Stars";
 import Image from "next/image";
-import { tripReviews } from "@/data/trips";
+import { reviews } from "@/data/tourSingleContent";
 
 export default function Reviews() {
   return (
     <>
-      {tripReviews.map((elm, i) => (
+      {reviews.map((elm, i) => (
         <div key={i} className="pt-30">
           <div className="row justify-between">
             <div className="col-auto">
@@ -22,12 +21,12 @@ export default function Reviews() {
                   />
                 </div>
 
-                <div className="text-16 fw-500 ml-20">{elm.name}</div>
+                <h1 className=" fw-600 ml-20">{elm.name}</h1>
               </div>
             </div>
 
             <div className="col-auto">
-              <div className="text-14 text-light-2">{elm.date}</div>
+              <div className=" text-light-2">{elm.date}</div>
             </div>
           </div>
 
@@ -35,7 +34,7 @@ export default function Reviews() {
             <div className="d-flex x-gap-5">
               <Stars star={elm.stars} />
             </div>
-            <div className="text-16 fw-500 ml-10">{elm.reviewText}</div>
+            <div className="fw-500 ml-10">{elm.reviewText}</div>
           </div>
 
           <p className="mt-10">{elm.desc}</p>

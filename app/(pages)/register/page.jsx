@@ -1,23 +1,23 @@
-
-
 import Register from "@/components/pages/Register";
 import React from "react";
 import Footer from "@/components/layout/footers/Footer";
 import Header from "@/components/layout/header/Header";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const metadata = {
-  title: "Register || ViaTour - Travel & Tour React NextJS Template",
-  description: "ViaTour - Travel & Tour React NextJS Template",
+  title: "Register || Register Now",
+  description: "Mawari - Travel & Tour Registration",
 };
 
 export default function page() {
   return (
     <>
-      <main>
-          <Header />
-        <Register />
-          <Footer />
-      </main>
+      <HeroBanner
+        title="Register Now"
+        description="Let's create your account!"
+        imageSrc="/heroimg/registration.jpg"
+      />
+      <Register />
     </>
   );
 }

@@ -6,13 +6,12 @@ export default function Features10() {
   return (
     <section className="relative layout-pt-xl layout-pb-xl lg:pt-0">
       <div className="sectionBg -type-2">
-        <div className="bg-accent-1-05 rounded-24"></div>
+        <div className=""></div>
         <Image
           width={717}
           height={700}
-          src="/img/about/3/1.jpg"
+          src="/heroimg/travel-concept-2.jpg"
           alt="image"
-          className="rounded-24"
           data-aos="fade-up"
           data-aos-delay=""
         />
@@ -20,14 +19,9 @@ export default function Features10() {
 
       <div className="container">
         <div className="row">
-          <div className="col-xl-4 offset-xl-1 col-lg-5">
-            <h2
-              data-aos="fade-up"
-              data-aos-delay=""
-              className="text-30 md:text-24"
-            >
-              Why choose
-              <br /> Tourz
+          <div className="col-xl-6 col-lg-5">
+            <h2 data-aos="fade-up" data-aos-delay="" className="">
+              THE MAWARI EXPERIENCE
             </h2>
 
             <div
@@ -40,8 +34,8 @@ export default function Features10() {
                   <div className="featureIcon -type-1 d-flex">
                     <div className="featureIcon__icon size-50">
                       <Image
-                        width="60"
-                        height="60"
+                        width="25"
+                        height="25"
                         src={elm.iconSrc}
                         alt="icon"
                       />

@@ -1,154 +1,184 @@
-import CommonHero from "@/components/common/CommonHero";
-import Square from "@/components/common/icons/Square";
+"use client";
+
+import { featureCards3, featureCards4 } from "@/data/destinations";
+import { featureCards } from "@/data/destinations";
+import HeroBanner from "@/components/common/HeroBanner";
 import Image from "next/image";
 
-const govLinks = [
-    { label: "USA Travel Advice", href: "https://travel.state.gov" },
-    { label: "Canada Travel Advice", href: "https://travel.gc.ca" },
-    { label: "UK Travel Advice", href: "https://www.gov.uk/foreign-travel-advice" },
-    { label: "Australia Travel Advice", href: "https://www.smartraveller.gov.au" },
-];
-
-const safetyTips = [
-    { title: "Don't flash wealth", desc: "Be discreet with cash and valuables." },
-    { title: "Leave unnecessary valuables behind", desc: "No need to bring all of your most prized possessions every time you leave the hotel room." },
-    { title: "Transport safely", desc: "Road rules and safety differ greatly around the world. Always wear a seatbelt and use reputable operators." },
-    { title: "Keep emergency contacts handy", desc: "If you find yourself without your phone, make sure you know your way back to the hotel and how to contact someone." },
-    { title: "Get comprehensive travel insurance", desc: "You never know when you may need a travel insurance policy with more beefed-up coverage." },
-    { title: "Learn common local scams", desc: "You're bound to meet friendly locals, but it's smart to know how to spot a local scam." },
-    { title: "Blend in", desc: "The less you scream \"tourist\" the less you'll be a target for potential thieves and scammers." },
-    { title: "Travel in numbers", desc: "Especially at night, join your fellow group members when exploring rather than hitting the streets solo." },
-];
-
 export default function HealthSafety() {
-    return (
-        <>
-            {/* Hero */}
-            <CommonHero
-                title="Health & Safety"
-                subtitle="Your Safety Is Our Priority"
-                image="/heroimg/health-safety.jpg"
-                breadcrumb="Health & Safety"
-            />
+  return (
+    <>
+      <HeroBanner
+        title="Health & Safety"
+        description="Your Safety Is Our Priority"
+        imageSrc="/heroimg/health-safety.jpg"
+      />
 
-            {/* Body */}
-            <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
-                <div className="container">
-                    <div className="row justify-center">
-                        <div className="">
+      <section
+        className="layout-pt-xl layout-pb-xl"
+        style={{ marginTop: "-88px" }}
+      >
+        <div className="container">
+          <div className="row y-gap-30 items-center justify-between">
+            <div className="col-xl-4 col-lg-5">
+              <h2 data-aos="fade-up" data-aos-delay="">
+                MAWARI — HEALTH & SAFETY
+              </h2>
 
-                            {/* Intro */}
-                            <p className="text-14 text-light-2 mb-30" style={{ lineHeight: "1.85" }}>
-                                Behind all the fun, we take our travelers' health and safety very seriously.
-                                We're constantly monitoring local situations with the assistance of our large
-                                network of local partners and friends, in addition to official government
-                                information sources. We also work with our local partners in every destination
-                                to ensure we've done what we can to provide you a safe and enjoyable experience
-                                — but it's also important to prepare yourself before you head out too.
-                            </p>
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-30 md:mt-10"
+              >
+                Behind every Mawari journey is a strong commitment to traveler
+                health and safety. We continuously monitor local conditions
+                through our trusted network of destination partners and friends,
+                alongside official government information sources. In every
+                location we operate, we work closely with on-the-ground experts
+                to ensure we have taken all reasonable steps to create a safe
+                and rewarding travel experience.
+                <br />
+                <br />
+                That said, thoughtful preparation on your part is equally
+                important. To move beyond headlines and speculation, we
+                recommend consulting your own government’s official travel
+                advisory websites, which provide the most reliable, up-to-date
+                guidance for travelers:
+              </p>
+            </div>
 
-                            <p className="text-14 text-light-2 mb-30" style={{ lineHeight: "1.85" }}>
-                                To get past all the dramatic headlines and rumors, we feel the best sources of
-                                information for travelers are provided by your own government's travel advice
-                                websites. Check out the following helpful links:
-                            </p>
+            <div className="col-xl-6 col-lg-7">
+              <div
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="row y-gap-30"
+              >
+                {featureCards3.map((elm, i) => (
+                  <a
+                    href={elm.url}
+                    target="_blank"
+                    key={i}
+                    className="col-md-6 col-12 lg:col-6 md:col-6"
+                  >
+                    <div className="featureCard -type-5 -hover-accent-1">
+                      <div className="featureCard__icon">
+                        <Image
+                          width="60"
+                          height="60"
+                          src={elm.imgSrc}
+                          alt="image"
+                        />
+                      </div>
 
-                            {/* Gov links */}
-                            <div className="d-flex flex-column y-gap-12 mb-50">
-                                {govLinks.map((link, i) => (
-                                    <div key={i} className="d-flex items-center x-gap-15">
-                                        <Square/>
-                                        <a href={link.href} target="_blank" rel="noreferrer"
-                                            className="text-14 fw-600 text-dark-1"
-                                            style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                            {link.label}
-                                        </a>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* General tips heading */}
-                            <div className="d-flex items-center x-gap-20 mb-30">
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                <h2 className="text-13 fw-700 uppercase text-dark-1"
-                                    style={{
-                                        letterSpacing: "4px", whiteSpace: "nowrap",
-                                        fontFamily: "var(--font-caslon), serif"
-                                    }}>
-                                    General Safety Tips
-                                </h2>
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                            </div>
-
-                            <p className="text-14 text-light-2 mb-30" style={{ lineHeight: "1.85" }}>
-                                Whether you're in Paris, Pittsburgh, Phnom Penh, or some lovely place in
-                                between, there are some general tips you should consider when traveling anywhere:
-                            </p>
-
-                            {/* Tips list */}
-                            <div className="d-flex flex-column y-gap-0 mb-50">
-                                {safetyTips.map((tip, i) => (
-                                    <div key={i} className="d-flex x-gap-20"
-                                        style={{ padding: "16px 0", borderBottom: "1px solid #E7E6E6" }}>
-                                        <p className="text-14 text-light-2" style={{ lineHeight: "1.8" }}>
-                                            {i + 1}.{" "}<span className="fw-700 text-dark-1">{tip.title}</span>
-                                            {" — "}{tip.desc}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Serious situations */}
-                            <div className="d-flex items-center x-gap-20 mb-30">
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                <h2 className="text-13 fw-700 uppercase text-dark-1"
-                                    style={{
-                                        letterSpacing: "4px", whiteSpace: "nowrap",
-                                        fontFamily: "var(--font-caslon), serif"
-                                    }}>
-                                    Serious Situations
-                                </h2>
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                            </div>
-
-                            <p className="text-14 text-light-2 mb-30" style={{ lineHeight: "1.85" }}>
-                                But what if a serious situation occurs in one of our destinations? We make our
-                                travel decisions based on the advice of the above governmental sources as well
-                                as our local partners and friends. We're committed to making decisions that keep
-                                our travelers safe — whether it requires a cancellation prior to departure, or
-                                repatriation during a trip.
-                            </p>
-
-                            {/* Pull quote */}
-                            <div style={{ borderLeft: "3px solid #1a1715", paddingLeft: "24px" }}
-                                className="mb-30">
-                                <p className="text-14 text-dark-1"
-                                    style={{ lineHeight: "1.75", fontFamily: "var(--font-caslon), serif" }}>
-                                    "We'll take every opportunity to mention comprehensive travel insurance
-                                    if you're concerned a destination may become unsafe to visit."
-                                </p>
-                            </div>
-
-                            <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                                As local events and safety are always changing over time, we encourage you
-                                to{" "}
-                                <a href="/contact" className="text-dark-1 fw-600"
-                                    style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                    contact us
-                                </a>
-                                {" "}(or refer to the governmental sources above) if you have a current
-                                concern, and be aware of the{" "}
-                                <a href="/booking-conditions" className="text-dark-1 fw-600"
-                                    style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                    booking conditions
-                                </a>
-                                {" "}that relate to your travel with us.
-                            </p>
-
-                        </div>
+                      <h4 className=" fw-500 mt-20">{elm.title}</h4>
                     </div>
-                </div>
-            </section>
-        </>
-    );
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className=" layout-pb-lg">
+        <div className="container">
+          <div className="row y-gap-30">
+            <div className="col-lg-6">
+              <Image
+                width={717}
+                height={700}
+                src="/heroimg/emergency.jpg"
+                alt="image"
+                data-aos="fade-up"
+                data-aos-delay=""
+              />
+            </div>
+            <div
+              className="col-xl-6 col-lg-5"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
+              <h2 data-aos="fade-up" data-aos-delay="" className="fw-700">
+                IN THE EVENT OF A SERIOUS SITUATION
+              </h2>
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-30 md:mt-10"
+              >
+                Should a significant safety concern arise in one of our
+                destinations, Mawari makes decisions based on guidance from
+                official government advisories and our local partners. Our
+                priority is always traveler wellbeing—whether that requires a
+                cancellation prior to departure or repatriation during a trip.
+                <br />
+                <br />
+                Once again, comprehensive travel insurance is strongly
+                recommended, particularly if you are concerned about the
+                possibility of changing conditions at your destination.
+                <br />
+                <br />
+                As local circumstances can evolve, we encourage you to reach out
+                to us directly with any current concerns or to consult the
+                official travel advisories listed above. We also recommend
+                familiarizing yourself with the booking conditions that apply to
+                your journey with Mawari.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="layout-pt-md layout-pb-xl">
+        <div className="container">
+          <div className="row y-gap-30 items-center justify-between">
+            <div className="col-xl-12 col-lg-5">
+              <h2 data-aos="fade-up" data-aos-delay="" className="">
+                GENERAL TRAVEL GUIDANCE
+              </h2>
+
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-30 md:mt-10"
+              >
+                Whether you find yourself in Paris, Pittsburgh, Phnom Penh, or
+                anywhere in between, the following principles are worth keeping
+                in mind wherever you travel:
+              </p>
+            </div>
+
+            <div className="col-xl-12 col-lg-7">
+              <div
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="row y-gap-30"
+              >
+                {featureCards4.map((elm, i) => (
+                  <div key={i} className="col-md-3 col-12 lg:col-6 md:col-6">
+                    <div className="featureCard -type-5 -hover-accent-1">
+                      <div className="featureCard__icon">
+                        <Image
+                          width="30"
+                          height="30"
+                          src={elm.imgSrc}
+                          alt="image"
+                        />
+                      </div>
+
+                      <h4 className=" fw-500 mt-20">{elm.title}</h4>
+                      <div className="lh-13 mt-20">{elm.description}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

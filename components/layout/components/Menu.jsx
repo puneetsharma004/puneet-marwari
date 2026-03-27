@@ -17,7 +17,6 @@ export default function Menu() {
             <Link href="/">Home</Link>
           </div>
 
-
           <div className="desktopNav__item">
             <Link href="#">
               Tours <i className="icon-chevron-down"></i>
@@ -25,7 +24,6 @@ export default function Menu() {
 
             <div className="desktopNavSubnav">
               <div className="desktopNavSubnav__content">
-
                 {/* ✅ Section Title */}
                 <div className="desktopNavSubnav__item text-dark-1 fw-600">
                   General Information
@@ -33,9 +31,7 @@ export default function Menu() {
 
                 {/* ✅ Static Link */}
                 <div className="desktopNavSubnav__item text-dark-1">
-                  <Link href="/trip-calender">
-                    Trip Calendar
-                  </Link>
+                  <Link href="/trip-calender">Trip Calendar</Link>
                 </div>
 
                 {/* ✅ Section Title */}
@@ -46,12 +42,10 @@ export default function Menu() {
                 {/* ✅ Dynamic Trips */}
                 {tripsData.map((trip, i) => (
                   <div key={i} className="desktopNavSubnav__item text-dark-1">
-                    <Link href={`/trips/${trip.slug}`}>
-                      {trip.title}
-                    </Link>
+                    <Link href={`/trip-details/9`}>{trip.title}</Link>
+                    {/* <Link href={`/trips/${trip.slug}`}>{trip.title}</Link> */}
                   </div>
                 ))}
-
               </div>
             </div>
           </div>

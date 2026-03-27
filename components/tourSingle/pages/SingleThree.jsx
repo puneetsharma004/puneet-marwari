@@ -45,7 +45,9 @@ export default function SingleThree({ tour }) {
                     <i className="icon-pin"></i>
                   </div>
                   <div className="roadmap__wrap">
-                    <div className="roadmap__title">Day 1: Airport Pick Up</div>
+                    <div className="roadmap__title">
+                      Day 1: Airport Pick Ups
+                    </div>
                   </div>
                 </div>
 

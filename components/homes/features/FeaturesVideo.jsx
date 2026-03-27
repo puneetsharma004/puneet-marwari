@@ -12,7 +12,7 @@ export default function FeaturesVideo() {
       <div className="container">
         <div className="sectionBg">
           <video className="img-ratio" autoPlay muted loop playsInline>
-            <source src="/home/paris.mp4" type="video/mp4" />
+            <source src="/home/vid.mp4" type="video/mp4" />
           </video>
         </div>
 

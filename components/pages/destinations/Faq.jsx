@@ -6,11 +6,11 @@ import React, { useState } from "react";
 export default function Faq() {
   const [currentActiveFaq, setCurrentActiveFaq] = useState(0);
   return (
-    <section className="layout-pt-xl layout-pb-xl">
+    <section className="layout-pt-md layout-pb-xl">
       <div className="container">
         <div className="row justify-center text-center">
           <div className="col-auto">
-            <h2 className="text-30 md:text-24">FAQs about Phuket</h2>
+            <h2 className="fw-600">FAQs about Phuket</h2>
           </div>
         </div>
 
@@ -30,9 +30,7 @@ export default function Faq() {
                         setCurrentActiveFaq((pre) => (pre == i ? -1 : i))
                       }
                     >
-                      <div className="button text-16 text-dark-1">
-                        {elm.question}
-                      </div>
+                      <h1 className=" fw-500">{elm.question}</h1>
 
                       <div className="accordion__icon size-30 flex-center bg-light-2">
                         <i className="icon-plus"></i>

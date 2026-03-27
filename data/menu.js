@@ -5,7 +5,7 @@ export const homes = [
 
 export const tours = [
 
-  { id: 211, title: "Trip Calendar", href: "/trip-calender" },
+  { id: 211, title: "Trip Calendar", href: "/trip-calendar" },
   { id: 221, title: "Greece", href: "/tour-single-1/3" },
   { id: 222, title: "Southeast Asia", href: "/tour-single-2/3" },
   { id: 223, title: "African Safari", href: "/tour-single-3/3" },
@@ -60,7 +60,7 @@ export const whyMawari = [
 
 
 export const tripMenu = [
-  { id: 2, title: "Register Now", href: "/trip-registration" },
+  { id: 2, title: "Register Now", href: "/register" },
   { id: 3, title: "Your Trip - Login", href: "/login" }, // or "/your-trip" after auth
   { id: 4, title: "Flights", href: "/flights" },
   { id: 5, title: "Insurance", href: "/insurance" },

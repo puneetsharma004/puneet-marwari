@@ -1,129 +1,218 @@
-import CommonHero from '@/components/common/CommonHero'
-import Link from 'next/link'
-import React from 'react'
+"use client";
+
+import { featureCards2 } from "@/data/destinations";
+import { faqData2 } from "@/data/tourSingleContent";
+import Image from "next/image";
+import HeroBanner from "@/components/common/HeroBanner";
+import Link from "next/link";
+import React, { useState } from "react";
 
 export default function InsurancePage() {
+  const [currentActiveFaq, setCurrentActiveFaq] = useState(0);
+
   return (
     <>
-    <CommonHero
-    title="Travel Insurance"
-    subtitle="Travel With confidence"
-    image="/heroimg/insurance.jpg"
-    breadcrumb="Insurance"
-    />
+      <HeroBanner
+        title="Travel Insurance"
+        description="Travel With confidence"
+        imageSrc="/heroimg/insurance.jpg"
+      />
 
-      {/* Body */}
-      <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
+      <section className=" layout-pb-xl">
         <div className="container">
-          <div className="row justify-center">
-            <div className="">
+          <div className="row y-gap-20 justify-between">
+            <div className="col-lg-6">
+              <h2 className=" fw-700">MAWARI - TRAVEL INSURANCE</h2>
+            </div>
 
-              {/* Section heading */}
-              <div className="d-flex items-center x-gap-20 mb-40">
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                <h2 className="text-14 fw-700 uppercase text-dark-1"
-                  style={{
-                    letterSpacing: "5px", whiteSpace: "nowrap",
-                    fontFamily: "var(--font-caslon), serif"
-                  }}>
-                  Travel Medical Insurance
-                </h2>
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
+            <div className="col-lg-5">
+              <p>
+                At Mawari, your wellbeing is a priority. For every journey we
+                offer, travel medical insurance is mandatory for all travelers.
+                <br />
+                <br />
+                In addition to this essential coverage, we strongly recommend
+                purchasing a more comprehensive travel policy that includes
+                protections such as trip cancellation, baggage delay, and other
+                unforeseen events.
+              </p>
+              <Link href={"https://www.visitorscoverage.com/"}>
+                <button className="button -md -dark-1 bg-accent-1 text-white mt-30">
+                  Get a Quote
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="layout-pt-xl layout-pb-xl bg-accent-1-05">
+        <div className="container">
+          <div className="row y-gap-30 items-center justify-between">
+            <div className="col-xl-4 col-lg-5">
+              <h2 data-aos="fade-up" data-aos-delay="">
+                WHY TRAVEL INSURANCE MATTERS
+              </h2>
+
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-30 md:mt-10"
+              >
+                Travel insurance offers peace of mind by helping protect you
+                against unexpected costs that can arise while abroad.
+                <br />
+                <br />
+                These protections help ensure that your experience is both
+                secure and enjoyable, even when the unexpected occurs.
+              </p>
+            </div>
+
+            <div className="col-xl-6 col-lg-7">
+              <div
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="row y-gap-30"
+              >
+                {featureCards2.map((elm, i) => (
+                  <div key={i} className="col-md-6 col-12 lg:col-6 md:col-6">
+                    <div className="featureCard -type-5 -hover-accent-1">
+                      <div className="featureCard__icon">
+                        <Image
+                          width="30"
+                          height="30"
+                          src={elm.imgSrc}
+                          alt="image"
+                        />
+                      </div>
+
+                      <h4 className=" fw-500 mt-20">{elm.title}</h4>
+                    </div>
+                  </div>
+                ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Info paragraphs */}
-              <div className="d-flex flex-column y-gap-20 mb-40">
-                <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                  Basic travel medical insurance is mandatory for all travelers on any of our
-                  trips. A more comprehensive policy — covering things like baggage delay,
-                  flight cancellation, and trip interruption — is strongly suggested, though
-                  optional.
-                </p>
-                <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                  First, check to see if you are already covered under a plan from work or
-                  through a credit card. If not, you can use the banner below to get a quote
-                  within seconds of filling out the form.
-                </p>
-              </div>
+      <section className="layout-pt-xl layout-pb-xl">
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-auto">
+              <h2 className="fw-600 uppercase letter-1">
+                Frequently Asked Questions
+              </h2>
+            </div>
+          </div>
 
-              {/* What's covered */}
-              <div className="d-flex items-center x-gap-20 mb-30">
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                <p className="text-12 fw-600 uppercase text-dark-1"
-                  style={{ letterSpacing: "3px", whiteSpace: "nowrap" }}>
-                  What To Look For
-                </p>
-                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-              </div>
+          <div className="row justify-center pt-40">
+            <div className="col-xl-8 col-lg-10">
+              <div className="accordion -simple row y-gap-20 js-accordion">
+                {faqData2.map((elm, i) => (
+                  <div key={i} className="col-12">
+                    <div
+                      className={`accordion__item px-20 py-15 border-1 ${
+                        currentActiveFaq === i ? "is-active" : ""
+                      }`}
+                    >
+                      {/* --- THE QUESTION BUTTON --- */}
+                      <div
+                        className="accordion__button d-flex items-center justify-between cursor-pointer"
+                        onClick={() =>
+                          setCurrentActiveFaq((pre) => (pre === i ? -1 : i))
+                        }
+                      >
+                        <h1 className="text-dark-1 fw-500">{elm.question}</h1>
 
-              <div className="row y-gap-15 mb-50">
-                {[
-                  { label: "Emergency Medical", desc: "Covers hospital and doctor costs abroad." },
-                  { label: "Medical Evacuation", desc: "Transport to the nearest adequate facility." },
-                  { label: "Trip Cancellation", desc: "Reimbursement if you need to cancel." },
-                  { label: "Baggage Delay", desc: "Compensation for delayed or lost luggage." },
-                  { label: "Flight Cancellation", desc: "Coverage for disrupted flights." },
-                  { label: "24/7 Assistance", desc: "Round-the-clock emergency support line." },
-                ].map((item, i) => (
-                  <div key={i} className="col-md-6 col-12">
-                    <div className="d-flex items-start x-gap-15"
-                      style={{
-                        padding: "16px 20px", border: "1px solid #E7E6E6",
-                        backgroundColor: "#fff"
-                      }}>
-                      <div>
-                        <p className="text-12 fw-600 uppercase text-dark-1"
-                          style={{ letterSpacing: "1.5px" }}>
-                          {item.label}
-                        </p>
-                        <p className="text-12 text-light-2 mt-3">{item.desc}</p>
+                        <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                          <i className="icon-plus"></i>
+                          <i className="icon-minus"></i>
+                        </div>
+                      </div>
+
+                      {/* --- THE ANSWER CONTENT --- */}
+                      <div
+                        className="accordion__content"
+                        style={{
+                          maxHeight: currentActiveFaq === i ? "800px" : "0px",
+                          overflow: "hidden",
+                          transition:
+                            "max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                        }}
+                      >
+                        <div className="pt-20 pb-10">
+                          {/* Main Answer */}
+                          <p className="">{elm.answer}</p>
+
+                          {/* Conditional List Header */}
+                          {elm.listHeader && (
+                            <p className="mt-15 fw-500 ">{elm.listHeader}</p>
+                          )}
+
+                          {/* Conditional Bullet Points */}
+                          {elm.points && elm.points.length > 0 && (
+                            <ul
+                              className="ulList mt-10 pl-20"
+                              style={{ listStyleType: "disc" }}
+                            >
+                              {elm.points.map((point, index) => (
+                                <li key={index} className=" mb-5">
+                                  {point}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+
+                          {/* Conditional Footer */}
+                          {elm.footer && (
+                            <p className="mt-15 border-1-top pt-10">
+                              {elm.footer}
+                            </p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* Pull quote */}
-              <div style={{ borderLeft: "3px solid #1a1715", paddingLeft: "24px" }}
-                className="mb-50">
-                <p className="text-18 italic text-dark-1"
-                  style={{ lineHeight: "1.75", fontFamily: "var(--font-caslon), serif" }}>
-                  "Travel well, travel protected — peace of mind is the best thing
-                  you can pack."
-                </p>
-              </div>
-
-              {/* CTA banner */}
-              <Link href="#get-quote"
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "space-between",
-                  backgroundColor: "#1a1715", padding: "28px 36px",
-                  textDecoration: "none",
-                }}>
-                <div>
-                  <p className="text-white fw-700 uppercase"
-                    style={{
-                      fontFamily: "var(--font-caslon), serif",
-                      fontSize: "14px", letterSpacing: "3px"
-                    }}>
-                    Get Your Insurance Quote
-                  </p>
-                  <p className="text-white text-11 mt-5" style={{ opacity: 0.6 }}>
-                    Takes less than 60 seconds to fill out
-                  </p>
-                </div>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  style={{ color: "white", flexShrink: 0 }}>
-                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor"
-                    strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-
             </div>
           </div>
         </div>
       </section>
-    
+
+      <section className="cta -type-4 layout-pb-xl">
+        <div className="container">
+          <div className="cta__content">
+            <div className="row justify-between">
+              <div className="col-xl-6 col-lg-8">
+                <h2 data-aos="fade-up" data-aos-delay="" className=" lh-13">
+                  FINAL NOTE
+                </h2>
+
+                <p data-aos="fade-up" data-aos-delay="" className="mt-10">
+                  Insurance requirements are designed to support your safety and
+                  to protect your investment in travel. We encourage all
+                  travelers to explore coverage options early in their planning
+                  process to ensure adequate protection is in place well before
+                  departure.
+                </p>
+              </div>
+
+              <div className="col-lg-6">
+                <div className="cta__image">
+                  <Image
+                    src="/img/cta/11/2.jpg"
+                    width={730}
+                    height={375}
+                    alt="image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
-  )
+  );
 }

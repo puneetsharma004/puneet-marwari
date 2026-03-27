@@ -1,16 +1,15 @@
 import CommonHero from "@/components/common/CommonHero";
+import HeroBanner from "@/components/common/HeroBanner";
 import BookingConditionsBody from "@/components/pages/booking-conditions/BookingConditionsBody";
-
 
 export default function page() {
   return (
     <>
-      <CommonHero
+      <HeroBanner
         title="Booking Conditions"
-        subtitle="Booking Conditions"
-        image="/heroimg/registration.jpg"
-        breadcrumb="Booking Conditions"
-      />  
+        description="Booking Conditions"
+        imageSrc="/heroimg/registration.jpg"
+      />
 
       <BookingConditionsBody />
     </>
