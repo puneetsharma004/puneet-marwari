@@ -41,7 +41,7 @@ export default function Philosophy() {
                 data-aos-delay=""
                 className="button -md -dark-1 bg-white text-accent-1 mt-60 md:mt-30"
               >
-                <Link href={"/trip-calender"}>
+                <Link href={"/trip-calendar"}>
                   Explore Our Tours
                   <i className="icon-arrow-top-right ml-10"></i>
                 </Link>

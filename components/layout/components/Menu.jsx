@@ -31,7 +31,7 @@ export default function Menu() {
 
                 {/* ✅ Static Link */}
                 <div className="desktopNavSubnav__item text-dark-1">
-                  <Link href="/trip-calender">Trip Calendar</Link>
+                  <Link href="/trip-calendar">Trip Calendar</Link>
                 </div>
 
                 {/* ✅ Section Title */}
