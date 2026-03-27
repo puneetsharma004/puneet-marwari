@@ -4,46 +4,13 @@ export const homes = [
 ];
 
 export const tours = [
-<<<<<<< HEAD
-  {
-    id: 21,
-    title: "Tour List Style",
-    links: [
-      { id: 211, title: "Tour list 1", href: "/tour-list-1" },
-      { id: 212, title: "Tour list 2", href: "/tour-list-2" },
-      { id: 213, title: "Tour list 3", href: "/tour-list-3" },
-      { id: 214, title: "Tour list 4", href: "/tour-list-4" },
-      { id: 215, title: "Tour list 5", href: "/tour-list-5" },
-      { id: 216, title: "Tour list 6", href: "/tour-list-6" },
-      { id: 217, title: "Tour list 7", href: "/tour-list-7" },
 
-    ],
-  },
-  {
-    id: 22,
-    title: "Tour Single Style",
-    links: [
-      { id: 221, title: "Tour single 1", href: "/tour-single-1/3" },
-      { id: 222, title: "Tour single 2", href: "/tour-single-2/3" },
-      { id: 223, title: "Tour single 3", href: "/tour-single-3/3" },
-      { id: 224, title: "Tour single 4", href: "/tour-single-4/3" },
-      { id: 225, title: "Tour single 5", href: "/tour-single-5/3" },
-    ],
-  },
-  {
-    id: 23,
-    title: "Booking Pages",
-    links: [{ id: 231, title: "Booking pages", href: "/booking-pages" }],
-  },
-=======
-
-  { id: 211, title: "Trip Calendar", href: "/trip-calender" },
+  { id: 211, title: "Trip Calendar", href: "/trip-calendar" },
   { id: 221, title: "Greece", href: "/tour-single-1/3" },
   { id: 222, title: "Southeast Asia", href: "/tour-single-2/3" },
   { id: 223, title: "African Safari", href: "/tour-single-3/3" },
   { id: 224, title: "Antarctica Cruise", href: "/tour-single-4/3" },
 
->>>>>>> origin/main
 ];
 
 export const pages = [
@@ -80,8 +47,6 @@ export const pages = [
   { id: 510, title: "Invoice", href: "/invoice" },
   { id: 511, title: "UI elements", href: "/ui-elements" },
 ];
-<<<<<<< HEAD
-=======
 
 
 
@@ -95,7 +60,7 @@ export const whyMawari = [
 
 
 export const tripMenu = [
-  { id: 2, title: "Register Now", href: "/trip-registration" },
+  { id: 2, title: "Register Now", href: "/register" },
   { id: 3, title: "Your Trip - Login", href: "/login" }, // or "/your-trip" after auth
   { id: 4, title: "Flights", href: "/flights" },
   { id: 5, title: "Insurance", href: "/insurance" },
@@ -103,4 +68,3 @@ export const tripMenu = [
   { id: 7, title: "Health & Safety", href: "/health-safety" },
   { id: 8, title: "Booking Conditions", href: "/booking-conditions" },
 ];
->>>>>>> origin/main

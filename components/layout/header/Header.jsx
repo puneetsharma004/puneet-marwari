@@ -55,7 +55,7 @@ export default function Header() {
                 <Image
                   width="125"
                   height="32"
-                  src="/home/Mawari-logo-white.webp"
+                  src="/home/mawari-logo-final.png"
                   alt="logo icon"
                 />
               </Link>
@@ -97,11 +97,7 @@ export default function Header() {
 
             <Link
               href="/login"
-<<<<<<< HEAD
-              className="button -sm -outline-white text-white rounded-200 ml-30"
-=======
               className="button -sm -outline-white text-white ml-30"
->>>>>>> origin/main
             >
               Log in
             </Link>

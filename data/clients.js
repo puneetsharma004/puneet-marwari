@@ -1,16 +1,11 @@
 export const clients = [
-  "/img/clients/1/1.svg",
-  "/img/clients/1/2.svg",
-  // "/img/clients/1/3.svg",
-  "/img/clients/1/4.svg",
-  "/img/clients/1/5.svg",
-  "/img/clients/1/6.svg",
-  "/img/clients/1/1.svg",
-  "/img/clients/1/2.svg",
-  // "/img/clients/1/3.svg",
-  "/img/clients/1/4.svg",
-  "/img/clients/1/5.svg",
-  "/img/clients/1/6.svg",
+  "/img/clients/partners/1.png",
+  "/img/clients/partners/2.png",
+  "/img/clients/partners/4.png",
+  "/img/clients/partners/5.png",
+  "/img/clients/partners/6.png",
+  "/img/clients/partners/7.png",
+  "/img/clients/partners/8.png",
 ];
 
 export const clients2 = [

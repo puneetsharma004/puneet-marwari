@@ -9,18 +9,18 @@ export default function Rating() {
           <div key={i} className="overallRating__item">
             <div className="overallRating__content">
               <div className="overallRating__icon">
-                <i className={`${elm.icon} text-30 text-accent-1`}></i>
+                <i className={`${elm.icon} text-20 text-accent-1`}></i>
               </div>
 
               <div className="overallRating__info">
-                <h5 className="text-16 fw-500">{elm.category}</h5>
+                <h5 className=" fw-500">{elm.category}</h5>
                 <div className="lh-15">{elm.comment}</div>
               </div>
             </div>
 
             <div className="overallRating__rating d-flex items-center">
-              <i className="icon-star text-yellow-2 text-16"></i>
-              <div className="text-16 fw-500 ml-10">{elm.rating}</div>
+              <i className="icon-star text-yellow-2 "></i>
+              <div className=" fw-500 ml-10">{elm.rating}</div>
             </div>
           </div>
         ))}

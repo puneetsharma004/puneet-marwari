@@ -1,13 +1,8 @@
 export const tourData = [
   {
     id: 1,
-<<<<<<< HEAD
-    imageSrc: "/home/trip11.webp",
-    location: "Greece",
-=======
     imageSrc: "/home/s05.png",
     location: "Paris, France",
->>>>>>> origin/main
     title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
     ratingCount: 243,
     rating: 4.8,
@@ -18,13 +13,8 @@ export const tourData = [
   },
   {
     id: 2,
-<<<<<<< HEAD
-    imageSrc: "/home/trip21.webp",
-    location: "Southeast Asia",
-=======
     imageSrc: "/home/s02.png",
     location: "New York, USA",
->>>>>>> origin/main
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     ratingCount: 243,
     rating: 4.8,
@@ -35,13 +25,8 @@ export const tourData = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    imageSrc: "/home/trip31.webp",
-    location: "African Safari",
-=======
     imageSrc: "/home/s03.png",
     location: "London, UK",
->>>>>>> origin/main
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     ratingCount: 243,
     rating: 4.8,
@@ -52,24 +37,15 @@ export const tourData = [
   },
   {
     id: 4,
-<<<<<<< HEAD
-    imageSrc: "/home/trip41.webp",
-    location: "Antarctica Cruise",
-=======
     imageSrc: "/home/s04.png",
     location: "New York, USA",
->>>>>>> origin/main
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     ratingCount: 243,
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
-<<<<<<< HEAD
     spead: 'Furious',
     feature: 'Advanture'
-=======
-    spead:'Furious',
-    feature:'Advanture'
   },
   {
     id: 5,
@@ -80,8 +56,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 189.25,
-    spead:'Furious',
-    feature:'Food'
+    spead: 'Furious',
+    feature: 'Food'
   },
   {
     id: 6,
@@ -92,8 +68,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 225.0,
-    spead:'Furious',
-    feature:'Food'
+    spead: 'Furious',
+    feature: 'Food'
   },
   {
     id: 7,
@@ -104,8 +80,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 943.0,
-    spead:'Steady',
-    feature:'Nature'
+    spead: 'Steady',
+    feature: 'Nature'
   },
   {
     id: 8,
@@ -117,9 +93,8 @@ export const tourData = [
     rating: 4.8,
     duration: "4 days",
     price: 771.0,
-    spead:'Steady',
-    feature:'Food'
->>>>>>> origin/main
+    spead: 'Steady',
+    feature: 'Food'
   },
   // {
   //   id: 5,
@@ -176,7 +151,7 @@ export const tourData = [
 export const tourDataTwo = [
   {
     id: 9,
-    imageSrc: "/img/tourCards/3/1.png",
+    imageSrc: "/home/trip11.webp",
     badgeText: "20 % OFF",
     location: "Paris, France",
     title:
@@ -202,7 +177,7 @@ export const tourDataTwo = [
   },
   {
     id: 10,
-    imageSrc: "/img/tourCards/3/2.png",
+    imageSrc: "/home/trip21.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -228,7 +203,7 @@ export const tourDataTwo = [
   },
   {
     id: 11,
-    imageSrc: "/img/tourCards/3/3.png",
+    imageSrc: "/home/trip31.webp",
     featured: true,
     location: "Paris, France",
     title:
@@ -254,7 +229,7 @@ export const tourDataTwo = [
   },
   {
     id: 12,
-    imageSrc: "/img/tourCards/3/4.png",
+    imageSrc: "/home/trip41.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -280,7 +255,7 @@ export const tourDataTwo = [
   },
   {
     id: 13,
-    imageSrc: "/img/tourCards/3/5.png",
+    imageSrc: "/home/trip11.webp",
     badgeText: "",
     location: "Paris, France",
     title:
@@ -306,7 +281,7 @@ export const tourDataTwo = [
   },
   {
     id: 14,
-    imageSrc: "/img/tourCards/3/6.png",
+    imageSrc: "/home/trip21.webp",
     badgeText: "",
     location: "Paris, France",
     title:

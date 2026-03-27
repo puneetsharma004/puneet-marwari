@@ -47,11 +47,7 @@ export default function BrandsOne() {
               <SwiperSlide key={i}>
                 <div key={i} className=" d-flex justify-center items-center ">
                   <Image
-<<<<<<< HEAD
-                    width={140}
-=======
                     width={1000}
->>>>>>> origin/main
                     height={90}
                     style={{
                       height: "30px",

@@ -1,17 +1,11 @@
 import { destinationsTwo } from "@/data/destinations";
-<<<<<<< HEAD
-=======
 import { tripsData } from "@/data/trips";
->>>>>>> origin/main
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function DestinationsTwo() {
-<<<<<<< HEAD
-=======
   console.log("trips data:", tripsData);
->>>>>>> origin/main
   return (
     <section className="layout-pt-xl layout-pb-xl">
       <div className="container">
@@ -24,11 +18,7 @@ export default function DestinationsTwo() {
 
           <div className="col-auto">
             <Link
-<<<<<<< HEAD
-              href={"/tour-list-1"}
-=======
               href={"trip-registration"}
->>>>>>> origin/main
               data-aos="fade-right"
               className="buttonArrow d-flex items-center "
             >
@@ -42,27 +32,19 @@ export default function DestinationsTwo() {
           data-aos="fade-up"
           className="row y-gap-30 justify-around xl:justify-start sm:justify-start pt-40 sm:pt-20 mobile-css-slider -w-160"
         >
-<<<<<<< HEAD
-          {destinationsTwo.map((elm, i) => (
-            <div key={i} className="col-xl-3 col-lg-3 col-md-4 col-6">
-              <Link href="/tour-list-1" className="-hover-image-scale d-block">
-                {/* Image */}
-=======
           {tripsData.map((trip, i) => (
             <div key={i} className="col-xl-3 col-lg-3 col-md-4 col-6">
-              <Link href={`/trips/${trip.slug}`} className="-hover-image-scale d-block">
+              <Link
+                href={`/trips/${trip.slug}`}
+                className="-hover-image-scale d-block"
+              >
                 {/* Image */}
                 {console.log("trip slug:", trip.slug)}
->>>>>>> origin/main
                 <div className="ratio ratio-3:4 -hover-image-scale__image">
                   <Image
                     width={2000}
                     height={2000}
-<<<<<<< HEAD
-                    src={elm.imgSrc}
-=======
                     src={trip.heroImage}
->>>>>>> origin/main
                     alt="image"
                     className="img-ratio"
                   />
@@ -77,21 +59,13 @@ export default function DestinationsTwo() {
 
                 {/* Title */}
                 <h3 className="fw-600 mt-10 font-heading trip__title">
-<<<<<<< HEAD
-                  {elm.title}
-=======
                   {trip.title}
->>>>>>> origin/main
                 </h3>
 
                 {/* Location */}
                 <div className="d-flex items-start sub-caps mt-5 trip__location">
                   <i className="icon-pin mr-5 mt-1"></i>
-<<<<<<< HEAD
-                  <span>{elm.tours}</span>
-=======
                   <span>{trip.tours}</span>
->>>>>>> origin/main
                 </div>
 
                 {/* Dates */}

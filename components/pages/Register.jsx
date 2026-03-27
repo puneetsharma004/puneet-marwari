@@ -5,13 +5,13 @@ import React from "react";
 
 export default function Register() {
   return (
-    <section className="mt-header layout-pt-lg layout-pb-lg">
+    <section className="mt-header layout-pb-lg">
       <div className="container">
         <div className="row justify-center">
           <div className="col-xl-6 col-lg-7 col-md-9">
             <div className="text-center mb-60 md:mb-30">
-              <h1 className="text-30">Register</h1>
-              <div className="text-18 fw-500 mt-20 md:mt-15">
+              <h1>Register</h1>
+              <div className=" fw-500 mt-20 md:mt-15">
                 Let's create your account!
               </div>
               <div className="mt-5">
@@ -24,33 +24,31 @@ export default function Register() {
 
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="contactForm border-1 rounded-12 px-60 py-60 md:px-25 md:py-30"
+              className="contactForm border-1 px-40 py-40 md:px-25 md:py-30"
             >
               <div className="form-input ">
                 <input type="text" required />
-                <label className="lh-1 text-16 text-light-1">Username</label>
+                <label className="lh-1 text-light-1">Username</label>
               </div>
 
               <div className="form-input mt-30">
                 <input type="text" required />
-                <label className="lh-1 text-16 text-light-1">First Name</label>
+                <label className="lh-1 text-light-1">First Name</label>
               </div>
 
               <div className="form-input mt-30">
                 <input type="text" required />
-                <label className="lh-1 text-16 text-light-1">Last Name</label>
+                <label className="lh-1 text-light-1">Last Name</label>
               </div>
 
               <div className="form-input mt-30">
                 <input type="email" required />
-                <label className="lh-1 text-16 text-light-1">Your Email</label>
+                <label className="lh-1 text-light-1">Your Email</label>
               </div>
 
               <div className="form-input mt-30">
                 <input type="email" required />
-                <label className="lh-1 text-16 text-light-1">
-                  Confirm email
-                </label>
+                <label className="lh-1 text-light-1">Confirm email</label>
               </div>
 
               <button className="button -md -dark-1 bg-accent-1 text-white col-12 mt-30">

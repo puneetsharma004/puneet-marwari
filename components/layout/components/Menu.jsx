@@ -1,11 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-import { homes, pages, tours } from "@/data/menu";
-=======
 import { homes, pages, tours, tripMenu, whyMawari } from "@/data/menu";
 import { tripsData } from "@/data/trips";
->>>>>>> origin/main
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,86 +17,6 @@ export default function Menu() {
             <Link href="/">Home</Link>
           </div>
 
-<<<<<<< HEAD
-          <div className="desktopNav__item">
-            <Link href="/tour-list-1">
-              Tour <i className="icon-chevron-down"></i>
-            </Link>
-
-            <div className="desktopNavMega">
-              <div className="desktopNavMega__container">
-                <div className="desktopNavMega__lists">
-                  {tours.map((elm, i) => (
-                    <div key={i} className="desktopNavMega-list">
-                      <div className="desktopNavMega-list__item">
-                        <div className="desktopNavMega-list__title">
-                          {elm.title}
-                        </div>
-
-                        <div className="desktopNavMega-list__list">
-                          {elm.links.map((elm2, i2) => (
-                            <div key={i2} className="desktopNavMega-list__link">
-                              <Link href={elm2.href}>{elm2.title}</Link>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="desktopNavMega__info">
-                  <div className="specialCardGrid row y-gap-30">
-                    <div className="col-12">
-                      <div className="specialCard">
-                        <div className="specialCard__image">
-                          <Image
-                            width={615}
-                            height={300}
-                            src="/home/t2.jpg"
-                            alt="image"
-                          />
-                        </div>
-
-                        <div className="specialCard__content">
-                          <div className="specialCard__subtitle">
-                            Enjoy Upto
-                          </div>
-                          <h3 className="specialCard__title">60 % OFF</h3>
-                          <div className="specialCard__text">
-                            on Your Booking
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="col-12">
-                      <div className="specialCard">
-                        <div className="specialCard__image">
-                          <Image
-                            width={615}
-                            height={300}
-                            src="/home/t1.jpg"
-                            alt="image"
-                          />
-                        </div>
-
-                        <div className="specialCard__content">
-                          <div className="specialCard__subtitle">
-                            80% Discount
-                          </div>
-                          <h3 className="specialCard__title">
-                            Are You Ready
-                            <br /> To Turkey Tour
-                          </h3>
-                          <div className="specialCard__text"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-=======
-
           <div className="desktopNav__item">
             <Link href="#">
               Tours <i className="icon-chevron-down"></i>
@@ -108,7 +24,6 @@ export default function Menu() {
 
             <div className="desktopNavSubnav">
               <div className="desktopNavSubnav__content">
-
                 {/* ✅ Section Title */}
                 <div className="desktopNavSubnav__item text-dark-1 fw-600">
                   General Information
@@ -116,9 +31,7 @@ export default function Menu() {
 
                 {/* ✅ Static Link */}
                 <div className="desktopNavSubnav__item text-dark-1">
-                  <Link href="/trip-calender">
-                    Trip Calendar
-                  </Link>
+                  <Link href="/trip-calender">Trip Calendar</Link>
                 </div>
 
                 {/* ✅ Section Title */}
@@ -129,55 +42,29 @@ export default function Menu() {
                 {/* ✅ Dynamic Trips */}
                 {tripsData.map((trip, i) => (
                   <div key={i} className="desktopNavSubnav__item text-dark-1">
-                    <Link href={`/trips/${trip.slug}`}>
-                      {trip.title}
-                    </Link>
+                    <Link href={`/trip-details/9`}>{trip.title}</Link>
+                    {/* <Link href={`/trips/${trip.slug}`}>{trip.title}</Link> */}
                   </div>
                 ))}
-
->>>>>>> origin/main
               </div>
             </div>
           </div>
 
           <div className="desktopNav__item">
-<<<<<<< HEAD
-            <Link href="/destinations">Destination</Link>
-          </div>
-
-          <div className="desktopNav__item">
-            <Link href="#">Activities</Link>
-          </div>
-
-          <div className="desktopNav__item">
-            <Link href="#">
-              Pages <i className="icon-chevron-down"></i>
-=======
             <Link href="#">
               Why Mawari <i className="icon-chevron-down"></i>
->>>>>>> origin/main
             </Link>
 
             <div className="desktopNavSubnav">
               <div className="desktopNavSubnav__content">
-<<<<<<< HEAD
-                {pages.map((elm, i) => (
-=======
                 {whyMawari.map((elm, i) => (
->>>>>>> origin/main
                   <div key={i} className="desktopNavSubnav__item text-dark-1">
                     {elm.href ? (
                       <Link href={elm.href}>{elm.title}</Link>
                     ) : (
-<<<<<<< HEAD
-                      <a href="#">
-                        {elm.title} <i className="icon-chevron-right"></i>
-                      </a>
-=======
                       <Link href="#">
                         {elm.title} <i className="icon-chevron-right"></i>
                       </Link>
->>>>>>> origin/main
                     )}
 
                     {elm.subnav && (
@@ -198,8 +85,6 @@ export default function Menu() {
           </div>
 
           <div className="desktopNav__item">
-<<<<<<< HEAD
-=======
             <Link href="#">
               Trip Registration <i className="icon-chevron-down"></i>
             </Link>
@@ -238,7 +123,6 @@ export default function Menu() {
           </div>
 
           <div className="desktopNav__item">
->>>>>>> origin/main
             <Link href="/contact">Contact</Link>
           </div>
         </div>

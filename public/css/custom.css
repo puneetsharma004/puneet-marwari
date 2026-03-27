@@ -579,11 +579,7 @@
 
 .hero__title,
 .hero__subtitle {
-<<<<<<< HEAD
-  opacity: 0;
-=======
   opacity: 1;
->>>>>>> origin/main
   transform: translateY(40px);
 }
 
@@ -618,7 +614,7 @@
 }
 
 .swiper-slide {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.5s ease;
 }
 
@@ -683,8 +679,4 @@
   .trip__location {
     min-height: 85px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main

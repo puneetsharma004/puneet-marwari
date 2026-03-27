@@ -25,18 +25,6 @@ export default function Footer() {
                       </Link>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-                  {/* <div className="col-auto">
-                    <div className="text-20 fw-500 text-white text-white">
-                      Speak to our expert at
-                      <span className="text-white">
-                        <a href="tel:+18006808066"> 800-680-8066</a>{" "}
-                      </span>
-                    </div>
-                  </div> */}
-=======
->>>>>>> origin/main
                 </div>
               </div>
 
@@ -90,28 +78,6 @@ export default function Footer() {
                     <input type="Email" placeholder="Your email address" />
                     <button>Send</button>
                   </div>
-<<<<<<< HEAD
-
-                  {/* <h4 className="text-20 fw-500 text-white mt-30">
-                    Mobile Apps
-                  </h4>
-
-                  <div className="mt-10">
-                    <a className="d-flex items-center text-white" href="#">
-                      <i className="icon-apple text-16 mr-10"></i>
-                      iOS App
-                    </a>
-
-                    <a
-                      className="d-flex items-center text-white mt-10"
-                      href="#"
-                    >
-                      <i className="icon-android text-16 mr-10"></i>
-                      Android App
-                    </a>
-                  </div> */}
-=======
->>>>>>> origin/main
                 </div>
               </div>
             </div>

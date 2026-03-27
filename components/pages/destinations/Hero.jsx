@@ -11,13 +11,13 @@ export default function Hero() {
           src="/img/pageHeader/1.jpg"
           alt="image"
         />
-        <Image
+        {/* <Image
           width="1800"
           height="40"
           style={{ height: "auto" }}
           src="/img/hero/1/shape.svg"
           alt="image"
-        />
+        /> */}
       </div>
 
       <div className="container">

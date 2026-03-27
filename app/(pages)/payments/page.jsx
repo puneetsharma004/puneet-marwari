@@ -1,284 +1,228 @@
-import CommonHero from "@/components/common/CommonHero";
-import Image from "next/image";
+"use client";
 
-const paymentOptions = [
-    {
-        id: 1,
-        title: "Credit Card",
-        content: (
-            <>
-                <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                    Easy! The remaining balance on your account will be automatically charged to your
-                    credit card on file 90 days prior to your trip's start.
-                </p>
-                <p className="text-14 text-light-2 mt-15" style={{ lineHeight: "1.85" }}>
-                    You can also log into your{" "}
-                    <a href="/login" className="text-dark-1 fw-600"
-                        style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                        Your Trip
-                    </a>{" "}
-                    account any time and click the "Make Payment" button. Your payment will be
-                    automatically posted to your account. We don't charge any additional fees
-                    for credit card payments.
-                </p>
-            </>
-        ),
-    },
-    {
-        id: 2,
-        title: "Cheque or Money Order",
-        content: (
-            <>
-                <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                    Cheques (personal or registered) or money orders can be sent to the following
-                    address. We will send you a confirmation of receipt as soon as it arrives.
-                </p>
-                <p className="text-14 fw-600 text-dark-1 mt-20 mb-5">
-                    Please allow up to 3 weeks for confirmation of receipt for regular-paced mail.
-                </p>
-                <div className="mt-15"
-                    style={{ borderLeft: "3px solid #1a1715", paddingLeft: "20px" }}>
-                    <p className="text-15 fw-600 text-dark-1"
-                        style={{ fontFamily: "var(--font-caslon), serif", letterSpacing: "1px" }}>
-                        Detours Travel
-                    </p>
-                    <p className="text-14 text-light-2 mt-8" style={{ lineHeight: "1.8" }}>
-                        15388 24th Avenue, Unit 202<br />
-                        Surrey, BC V4A 2J2<br />
-                        Canada
-                    </p>
-                </div>
-            </>
-        ),
-    },
-    {
-        id: 3,
-        title: "ACH Bank Payment",
-        subtitle: "USA or UK Travelers",
-        content: (
-            <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                ACH bank transfer is an easy way to pay for your trip directly from your bank
-                account. Simply select this option during your trip registration and follow the
-                prompts. It's as easy as using your credit card — and it comes with a{" "}
-                <span className="fw-600 text-dark-1">$50 USD discount</span> if you make your
-                full payment at the time of booking.
-            </p>
-        ),
-    },
-    {
-        id: 4,
-        title: "Interac E-Transfer",
-        subtitle: "Canada Only",
-        content: (
-            <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-                Just log in to your online banking and send an Interac E-transfer to{" "}
-                <a href="mailto:travel@detourstravel.com" className="text-dark-1 fw-600"
-                    style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                    travel@detourstravel.com
-                </a>
-                . The official day's exchange rate at{" "}
-                <a href="https://www.xe.com" target="_blank" rel="noreferrer"
-                    className="text-dark-1 fw-600"
-                    style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                    xe.com
-                </a>{" "}
-                will be used to credit your account.
-            </p>
-        ),
-    },
-];
+import HeroBanner from "@/components/common/HeroBanner";
+import { faqData2, faqData3 } from "@/data/tourSingleContent";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function MakingPayments() {
-    return (
-        <>
-            {/* Hero */}
-            <CommonHero
-                title="Making Payments"
-                subtitle="Flexible & Convenient"
-                image="/heroimg/payments.jpg"
-                breadcrumb="Making Payments"
+  const [currentActiveFaq, setCurrentActiveFaq] = useState(0);
+
+  return (
+    <>
+      <HeroBanner
+        title="Making Payments"
+        description="Flexible & Convenient"
+        imageSrc="/heroimg/payments.jpg"
+      />
+
+      <section className=" layout-pb-xl">
+        <div className="container">
+          <div className="row y-gap-20 justify-between">
+            <div className="col-lg-6">
+              <h2 className=" fw-700">MAWARI - PAYMENT OPTIONS</h2>
+            </div>
+
+            <div className="col-lg-5">
+              <p>
+                At Mawari, we aim to make the administrative aspects of booking
+                as seamless and transparent as the journey itself.
+                <br />
+                <br />
+                Below you will find our standard payment schedule and the
+                available methods for settling your balance.
+              </p>
+              <Link href={"/contact"}>
+                <button className="button -md -dark-1 bg-accent-1 text-white mt-30">
+                  Consult Us
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className=" relative"
+        style={{
+          minHeight: "600px",
+          display: "flex",
+          alignItems: "center",
+          //   marginTop: "100px",
+        }}
+      >
+        <div className="container">
+          <div className="sectionBg">
+            <Image
+              width={1920}
+              height={690}
+              src="/img/about/3/4.jpg"
+              alt="image"
+              className="img-ratio"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              priority
             />
+          </div>
 
-            {/* Body */}
-            <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
-                <div className="container">
-                    <div className="row justify-center">
-                        <div className="">
+          <div className="row y-gap-30 justify-between items-center">
+            <div className="col-lg-4 col-md-6">
+              <h2
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="font-heading lh-13 text-white"
+              >
+                PAYMENT SCHEDULE
+                <br className="md:d-none" />
+              </h2>
 
-                            {/* Payment Schedule */}
-                            <div className="d-flex items-center x-gap-20 mb-30">
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                <h2 className="text-14 fw-700 uppercase text-dark-1"
-                                    style={{
-                                        letterSpacing: "5px", whiteSpace: "nowrap",
-                                        fontFamily: "var(--font-caslon), serif"
-                                    }}>
-                                    Payment Schedule
-                                </h2>
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                            </div>
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="text-white mt-10"
+              >
+                To confirm your participation on a Mawari journey, a deposit of
+                $500 USD per person is due within 7 days of registration. Your
+                remaining trip balance is then due 90 days prior to departure.
+                <br />
+                <br />
+                This schedule allows you to secure your place early while
+                managing your investment with clarity and simplicity. Should you
+                choose to complete your balance earlier, you are welcome to do
+                so.
+              </p>
 
-                            <p className="text-14 text-light-2 mb-30" style={{ lineHeight: "1.85" }}>
-                                There's no need to pay for the entire trip all at once! Below is a simple
-                                schedule of payments required prior to your adventure. Keep in mind, these
-                                are minimum payments — if you'd like to fast-track your way to "fully paid"
-                                you're completely welcome to. We also offer several payment options for
-                                your convenience.
-                            </p>
+              <button
+                data-aos="fade-right"
+                data-aos-delay=""
+                className="button -md -dark-1 bg-white text-accent-1 mt-60 md:mt-30"
+              >
+                <Link href={"/faq"}>
+                  Know More
+                  <i className="icon-arrow-top-right ml-10"></i>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                            <p className="text-14 fw-600 text-dark-1 mb-25">
-                                First,{" "}
-                                <a href="/trip-registration"
-                                    className="text-dark-1 fw-700 uppercase"
-                                    style={{
-                                        textDecoration: "underline", textUnderlineOffset: "3px",
-                                        letterSpacing: "1px"
-                                    }}>
-                                    Register
-                                </a>{" "}
-                                for your adventure, then:
-                            </p>
+      <section className="layout-pt-xl layout-pb-xl">
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-xl-8">
+              <h2 className="fw-600 uppercase letter-1">METHODS OF PAYMENT</h2>
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-20 md:mt-10"
+              >
+                We offer a range of convenient payment options to suit your
+                preferences. All amounts are processed in U.S. dollars, with
+                foreign currency receipts converted at prevailing market rates
+                at the time of processing.
+              </p>
+            </div>
+          </div>
 
-                            {/* Schedule steps */}
-                            <div className="d-flex flex-column y-gap-0 mb-40">
-                                {[
-                                    {
-                                        step: "Within 7 Days",
-                                        desc: "$500 USD deposit due.",
-                                    },
-                                    {
-                                        step: "90 Days Prior to Trip Start",
-                                        desc: "Balance due. Automatically charged to your credit card on file on this date for all bookings made after September 23, 2025. Registrations received before this date must make payments on your Your Trip page.",
-                                    },
-                                ].map((item, i) => (
-                                    <div key={i} className="d-flex x-gap-20"
-                                        style={{
-                                            padding: "20px 0",
-                                            borderBottom: "1px solid #E7E6E6"
-                                        }}>
-                                        <div style={{
-                                            flexShrink: 0, width: 20, height: 20,
-                                            borderRadius: "0%", backgroundColor: "#1a1715",
-                                            display: "flex", alignItems: "center", justifyContent: "center",
-                                            marginTop: 2,
-                                        }}>
-                                            <span className="text-white text-12 fw-600">{i + 1}</span>
-                                        </div>
-                                        <div>
-                                            <p className="text-14 fw-700 text-dark-1 uppercase mb-5"
-                                                style={{
-                                                    letterSpacing: "1.5px",
-                                                    fontFamily: "var(--font-caslon), serif"
-                                                }}>
-                                                {item.step}
-                                            </p>
-                                            <p className="text-13 text-light-2" style={{ lineHeight: "1.8" }}>
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+          <div className="row justify-center pt-40">
+            <div className="col-xl-8 col-lg-10">
+              <div className="accordion -simple row y-gap-20 js-accordion">
+                {faqData3.map((elm, i) => (
+                  <div key={i} className="col-12">
+                    <div
+                      className={`accordion__item px-20 py-15 border-1 ${
+                        currentActiveFaq === i ? "is-active" : ""
+                      }`}
+                    >
+                      {/* --- THE QUESTION BUTTON --- */}
+                      <div
+                        className="accordion__button d-flex items-center justify-between cursor-pointer"
+                        onClick={() =>
+                          setCurrentActiveFaq((pre) => (pre === i ? -1 : i))
+                        }
+                      >
+                        <h1 className="text-dark-1 fw-500">{elm.question}</h1>
 
-                            {/* Currency note */}
-                            <div style={{
-                                backgroundColor: "#fff", border: "1px solid #E7E6E6",
-                                padding: "18px 24px", marginBottom: "60px"
-                            }}>
-                                <p className="text-13 italic text-light-2" style={{ lineHeight: "1.75" }}>
-                                    Please note: payments received in non-USD currency will be converted to
-                                    USD using current market rates available at{" "}
-                                    <a href="https://www.xe.com" target="_blank" rel="noreferrer"
-                                        className="text-dark-1 fw-500"
-                                        style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                        xe.com
-                                    </a>{" "}
-                                    on date of receipt.
-                                </p>
-                            </div>
-
-                            {/* Payment Options heading */}
-                            <div className="d-flex items-center x-gap-20 mb-30">
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                <h2 className="text-14 fw-700 uppercase text-dark-1"
-                                    style={{
-                                        letterSpacing: "5px", whiteSpace: "nowrap",
-                                        fontFamily: "var(--font-caslon), serif"
-                                    }}>
-                                    Payment Options
-                                </h2>
-                                <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                            </div>
-
-                            {/* Options quick list */}
-                            <div className="d-flex flex-column y-gap-10 mb-50">
-                                {paymentOptions.map((opt) => (
-                                    <div key={opt.id} className="d-flex items-center x-gap-15">
-                                        <span style={{
-                                            flexShrink: 0, width: 24, height: 24,
-                                            border: "1px solid #1a1715", borderRadius: "0%",
-                                            display: "flex", alignItems: "center", justifyContent: "center",
-                                        }}>
-                                            <span className="text-11 fw-600 text-dark-1">{opt.id}</span>
-                                        </span>
-                                        <p className="text-14 fw-600 text-dark-1 uppercase"
-                                            style={{ letterSpacing: "1.5px" }}>
-                                            {opt.title}
-                                            {opt.subtitle && (
-                                                <span className="text-light-2 fw-400 ml-5"
-                                                    style={{
-                                                        textTransform: "none", letterSpacing: "0px",
-                                                        fontSize: "12px"
-                                                    }}>
-                                                    — {opt.subtitle}
-                                                </span>
-                                            )}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Individual option sections */}
-                            <div className="d-flex flex-column y-gap-50">
-                                {paymentOptions.map((opt) => (
-                                    <div key={opt.id}>
-                                        <div className="d-flex items-center py-20 mt-30 x-gap-20 mb-15">
-                                            <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                            <h3 className="text-13 fw-700 uppercase text-dark-1 text-center"
-                                                style={{
-                                                    letterSpacing: "3px", whiteSpace: "nowrap",
-                                                    fontFamily: "var(--font-caslon), serif"
-                                                }}>
-                                                {opt.id}) {opt.title}
-                                                {opt.subtitle && ` (${opt.subtitle})`}
-                                            </h3>
-                                            <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                                        </div>
-                                        <p className="text-14">
-                                            {opt.content}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Footer note */}
-                            <div className="mt-60" style={{ borderLeft: "3px solid #1a1715", paddingLeft: "24px" }}>
-                                <p className="text-15 text-dark-1"
-                                    style={{ lineHeight: "1.75", fontFamily: "var(--font-caslon), serif" }}>
-                                    If none of these options work for you, or for more information on any
-                                    of the above payment methods —{" "}
-                                    <a href="/contact" className="text-dark-1 fw-600"
-                                        style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                                        please contact us here
-                                    </a>
-                                    .
-                                </p>
-                            </div>
-
+                        <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                          <i className="icon-plus"></i>
+                          <i className="icon-minus"></i>
                         </div>
+                      </div>
+
+                      {/* --- THE ANSWER CONTENT --- */}
+                      <div
+                        className="accordion__content"
+                        style={{
+                          maxHeight: currentActiveFaq === i ? "800px" : "0px",
+                          overflow: "hidden",
+                          transition:
+                            "max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                        }}
+                      >
+                        <div className="pt-20 pb-10">
+                          {/* Main Answer */}
+                          <p className="">{elm.answer}</p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                ))}
+              </div>
+              <p
+                data-aos="fade-up"
+                data-aos-delay=""
+                className="mt-30 md:mt-10 fw-600 text-center"
+              >
+                If you require alternative arrangements, please contact us so we
+                can assist in finding a suitable solution
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta -type-4 layout-pb-xl">
+        <div className="container">
+          <div className="cta__content">
+            <div className="row justify-between">
+              <div className="col-xl-6 col-lg-8">
+                <h2 data-aos="fade-up" data-aos-delay="" className=" lh-13">
+                  NEXT STEPS
+                </h2>
+
+                <p data-aos="fade-up" data-aos-delay="" className="mt-10">
+                  Once your deposit is received, our team will begin
+                  coordinating your complete travel arrangements, including
+                  flights, accommodations, and destination logistics. In the
+                  weeks leading up to departure, you will receive detailed
+                  communications to guide you through every remaining step of
+                  your journey preparation.
+                  <br />
+                  <br />
+                  For any questions about payment timing or methods, the Mawari
+                  team is here to help. Please reach out to us at your
+                  convenience.
+                </p>
+              </div>
+
+              <div className="col-lg-6">
+                <div className="cta__image">
+                  <Image
+                    src="/img/cta/11/3.jpeg"
+                    width={730}
+                    height={375}
+                    alt="image"
+                  />
                 </div>
-            </section>
-        </>
-    );
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

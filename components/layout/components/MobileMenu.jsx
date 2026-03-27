@@ -31,7 +31,7 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
 
       <div className="menu__container">
         <div className="menu__header">
-          <h4>Main Menu</h4>
+          <h4>Mawari</h4>
 
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -48,7 +48,7 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
           >
             <li className="menuNav__item">
               <Link href="/home-8">Home</Link>
-            </li> 
+            </li>
             {menuData.map((elm, i) => (
               <li key={i} className="menuNav__item -has-submenu js-has-submenu">
                 <a
@@ -103,6 +103,10 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
                 </ul>
               </li>
             ))}
+
+            <li className="menuNav__item">
+              <Link href="/faq">FAQ</Link>
+            </li>
 
             <li className="menuNav__item">
               <Link href="/contact">Contact</Link>

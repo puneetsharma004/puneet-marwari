@@ -6,29 +6,21 @@ import React, { useState } from "react";
 export default function Faq() {
   const [currentActiveFaq, setCurrentActiveFaq] = useState(0);
   return (
-    <section className="layout-pt-xl layout-pb-xl">
+    <section className="layout-pt-md layout-pb-xl">
       <div className="container">
         <div className="row justify-center text-center">
           <div className="col-auto">
-            <h2 className="text-30 md:text-24">FAQs about Phuket</h2>
+            <h2 className="fw-600">FAQs about Phuket</h2>
           </div>
         </div>
 
         <div className="row justify-center pt-30">
-<<<<<<< HEAD
-          <div className="col-xl-8 col-lg-10">
-=======
           <div className="">
->>>>>>> origin/main
             <div className="accordion -simple row y-gap-20 js-accordion">
               {faqData.map((elm, i) => (
                 <div key={i} className="col-12">
                   <div
-<<<<<<< HEAD
-                    className={`accordion__item px-20 py-15 border-1 rounded-12 ${
-=======
                     className={`accordion__item px-20 py-15 border-1 ${
->>>>>>> origin/main
                       currentActiveFaq == i ? "is-active" : ""
                     } `}
                   >
@@ -38,15 +30,9 @@ export default function Faq() {
                         setCurrentActiveFaq((pre) => (pre == i ? -1 : i))
                       }
                     >
-                      <div className="button text-16 text-dark-1">
-                        {elm.question}
-                      </div>
+                      <h1 className=" fw-500">{elm.question}</h1>
 
-<<<<<<< HEAD
-                      <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
-=======
                       <div className="accordion__icon size-30 flex-center bg-light-2">
->>>>>>> origin/main
                         <i className="icon-plus"></i>
                         <i className="icon-minus"></i>
                       </div>

@@ -102,29 +102,6 @@ export const destinationOffers = [
 export const destinationsTwo = [
   {
     id: 1,
-<<<<<<< HEAD
-    imgSrc: "/home/trip11.webp",
-    title: "Greece",
-    tours: "Athens -> Mykonos -> Paros -> Santorini",
-  },
-  {
-    id: 2,
-    imgSrc: "/home/trip21.webp",
-    title: "Southeast Asia",
-    tours: "Hanoi -> Luang Prabang -> Siem Reap -> Cruise down the Tonle Sap -> Phnom Penh",
-  },
-  {
-    id: 3,
-    imgSrc: "/home/trip31.webp",
-    title: "African Safari",
-    tours: "Cape Town -> Victoria Falls -> Chobe National Park -> Okavango Delta",
-  },
-  {
-    id: 4,
-    imgSrc: "/home/trip42.webp",
-    title: "Antarctica Cruise",
-    tours: "Athens -> Mykonos -> Paros -> Santorini",
-=======
     imgSrc: "/home/s09.png",
     title: "Paris",
     tours: 100,
@@ -158,7 +135,6 @@ export const destinationsTwo = [
     imgSrc: "/home/s14.jpg",
     title: "Phuket",
     tours: 200,
->>>>>>> origin/main
   },
   // {
   //   id: 5,
@@ -528,39 +504,186 @@ export const destinationCards2 = [
 export const featureCards = [
   {
     id: 1,
-    title: "City Tours",
+    title: "Elevated service, always ",
     imgSrc: "/img/icons/5/1.svg",
     tourCount: 100,
+    description: "Attentive, responsive, and quietly exceptional from planning to return."
   },
   {
     id: 2,
-    title: "Cultural Tours",
+    title: "Refined accommodations",
     imgSrc: "/img/icons/5/2.svg",
     tourCount: 100,
+    description: "Hand-selected 4- and 5-star hotels, boutique properties, and distinctive stays chosen for comfort, design, and location."
   },
   {
     id: 3,
-    title: "Day Cruises",
+    title: "Curated experiences",
     imgSrc: "/img/icons/5/3.svg",
     tourCount: 100,
+    description: "Thoughtfully chosen activities that reflect culture, place, and quality—never filler."
   },
   {
     id: 4,
-    title: "Bus Tours",
+    title: "Intentional pacing",
     imgSrc: "/img/icons/5/4.svg",
     tourCount: 100,
+    description: "More time enjoying destinations, less time in transit."
   },
   {
     id: 5,
-    title: "Beach Tours",
+    title: "Seamless logistics",
     imgSrc: "/img/icons/5/5.svg",
     tourCount: 100,
+    description: "Flights, transfers, accommodations, and on-trip coordination handled by Mawari."
   },
   {
     id: 6,
-    title: "Food Tours",
+    title: "Small, well-matched groups",
     imgSrc: "/img/icons/5/6.svg",
     tourCount: 100,
+    description: "Creating space for connection without crowding the experience."
+  },
+  {
+    id: 7,
+    title: "Designed for return travelers",
+    imgSrc: "/img/icons/5/2.svg",
+    tourCount: 100,
+    description: "Many guests travel with us more than once, drawn back by the ease, trust, and consistency of the experience."
+  },
+  {
+    id: 8,
+    title: "Luxury without pretension",
+    imgSrc: "/img/icons/5/5.svg",
+    tourCount: 100,
+    description: "Elevated, relaxed, and welcoming but never rigid or showy."
+  },
+];
+
+export const featureCards2 = [
+  {
+    id: 1,
+    title: "Emergency medical care and evacuation",
+    imgSrc: "/img/icons/5/1.svg",
+    tourCount: 100,
+    description: "Attentive, responsive, and quietly exceptional from planning to return."
+  },
+  {
+    id: 2,
+    title: "Trip cancellation and interruption",
+    imgSrc: "/img/icons/5/2.svg",
+    tourCount: 100,
+    description: "Hand-selected 4- and 5-star hotels, boutique properties, and distinctive stays chosen for comfort, design, and location."
+  },
+  {
+    id: 3,
+    title: "Baggage delay or loss",
+    imgSrc: "/img/icons/5/3.svg",
+    tourCount: 100,
+    description: "Thoughtfully chosen activities that reflect culture, place, and quality—never filler."
+  },
+  {
+    id: 4,
+    title: "Travel delays and other unforeseen expenses",
+    imgSrc: "/img/icons/5/4.svg",
+    tourCount: 100,
+    description: "More time enjoying destinations, less time in transit."
+  },
+
+];
+
+export const featureCards3 = [
+  {
+    id: 1,
+    title: "USA Travel Advice",
+    imgSrc: "/img/clients/countries/united-states.png",
+    tourCount: 100,
+    description: "Attentive, responsive, and quietly exceptional from planning to return.",
+    url: "https://travel.state.gov"
+  },
+  {
+    id: 2,
+    title: "Canada Travel Advice ",
+    imgSrc: "/img/clients/countries/canada.png",
+    tourCount: 100,
+    description: "Hand-selected 4- and 5-star hotels, boutique properties, and distinctive stays chosen for comfort, design, and location.",
+    url: "https://travel.gc.ca"
+  },
+  {
+    id: 3,
+    title: "UK Travel Advice ",
+    imgSrc: "/img/clients/countries/united-kingdom.png",
+    tourCount: 100,
+    description: "Thoughtfully chosen activities that reflect culture, place, and quality—never filler.",
+    url: "https://www.gov.uk/foreign-travel-advice"
+  },
+  {
+    id: 4,
+    title: "Australia Travel Advice",
+    imgSrc: "/img/clients/countries/australia.png",
+    tourCount: 100,
+    description: "More time enjoying destinations, less time in transit.",
+    url: "https://www.smartraveller.gov.au"
+  },
+
+];
+
+export const featureCards4 = [
+  {
+    id: 1,
+    title: "Be discreet with valuables",
+    imgSrc: "/img/icons/5/1.svg",
+    tourCount: 100,
+    description: "Avoid displaying large amounts of cash or expensive items."
+  },
+  {
+    id: 2,
+    title: "Leave unnecessary valuables behind ",
+    imgSrc: "/img/icons/5/2.svg",
+    tourCount: 100,
+    description: "There is rarely a need to carry everything with you when leaving the hotel."
+  },
+  {
+    id: 3,
+    title: "Use safe, reputable transportation ",
+    imgSrc: "/img/icons/5/3.svg",
+    tourCount: 100,
+    description: "Road rules and safety standards vary widely. Always wear a seatbelt and rely on trusted operators."
+  },
+  {
+    id: 4,
+    title: "Keep emergency information accessible ",
+    imgSrc: "/img/icons/5/4.svg",
+    tourCount: 100,
+    description: "Know how to return to your accommodation and contact help, even without your phone."
+  },
+  {
+    id: 5,
+    title: "Carry comprehensive travel insurance ",
+    imgSrc: "/img/icons/5/5.svg",
+    tourCount: 100,
+    description: "Robust coverage offers protection and peace of mind when the unexpected arises."
+  },
+  {
+    id: 6,
+    title: "Be aware of common local scams ",
+    imgSrc: "/img/icons/5/6.svg",
+    tourCount: 100,
+    description: "Most encounters will be genuine, but awareness helps prevent avoidable issues."
+  },
+  {
+    id: 7,
+    title: "Blend in where possible ",
+    imgSrc: "/img/icons/5/2.svg",
+    tourCount: 100,
+    description: "Drawing less attention to yourself can reduce the risk of theft or unwanted attention."
+  },
+  {
+    id: 8,
+    title: "Travel together ",
+    imgSrc: "/img/icons/5/5.svg",
+    tourCount: 100,
+    description: "Particularly in the evenings, exploring with fellow travelers is always advisable."
   },
 ];
 

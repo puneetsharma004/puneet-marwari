@@ -3,7 +3,7 @@ import React from "react";
 export default function CommentBox() {
   return (
     <>
-      <h2 className="text-30 pt-60">Leave a Reply</h2>
+      <h2 className=" pt-60">Leave a Reply</h2>
       <p className="mt-30">
         Your email address will not be published. Required fields are marked *
       </p>

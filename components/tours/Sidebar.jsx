@@ -16,9 +16,9 @@ import Image from "next/image";
 export default function Sidebar() {
   const [ddActives, setDdActives] = useState(["tourtype"]);
   return (
-    <div className="sidebar -type-1 rounded-12">
+    <div className="sidebar -type-1">
       <div className="sidebar__header bg-accent-1">
-        <div className="text-15 text-white fw-500">When are you traveling?</div>
+        <div className=" text-white fw-500">When are you traveling?</div>
 
         <div className="mt-10">
           <div
@@ -58,11 +58,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("tourtype")
                       ? [...pre.filter((elm) => elm != "tourtype")]
-                      : [...pre, "tourtype"]
+                      : [...pre, "tourtype"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Tour Type</h5>
+                <h5 className=" fw-500">Tour Type</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
@@ -101,10 +101,7 @@ export default function Sidebar() {
                     ))}
                   </div>
 
-                  <a
-                    href="#"
-                    className="d-flex text-15 fw-500 text-accent-2 mt-15"
-                  >
+                  <a href="#" className="d-flex fw-500 text-accent-2 mt-15">
                     See More
                   </a>
                 </div>
@@ -126,11 +123,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("pricerange")
                       ? [...pre.filter((elm) => elm != "pricerange")]
-                      : [...pre, "pricerange"]
+                      : [...pre, "pricerange"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Filter Price</h5>
+                <h5 className="fw-500">Filter Price</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
@@ -165,11 +162,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("duration")
                       ? [...pre.filter((elm) => elm != "duration")]
-                      : [...pre, "duration"]
+                      : [...pre, "duration"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Duration</h5>
+                <h5 className="fw-500">Duration</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
@@ -226,11 +223,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("language")
                       ? [...pre.filter((elm) => elm != "language")]
-                      : [...pre, "language"]
+                      : [...pre, "language"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Language</h5>
+                <h5 className="fw-500">Language</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
@@ -287,11 +284,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("rating")
                       ? [...pre.filter((elm) => elm != "rating")]
-                      : [...pre, "rating"]
+                      : [...pre, "rating"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Rating</h5>
+                <h5 className="fw-500">Rating</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
@@ -347,11 +344,11 @@ export default function Sidebar() {
                   setDdActives((pre) =>
                     pre.includes("features")
                       ? [...pre.filter((elm) => elm != "features")]
-                      : [...pre, "features"]
+                      : [...pre, "features"],
                   )
                 }
               >
-                <h5 className="text-18 fw-500">Specials</h5>
+                <h5 className="fw-500">Specials</h5>
 
                 <div className="accordion__icon flex-center">
                   <i className="icon-chevron-down"></i>
