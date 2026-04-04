@@ -70,7 +70,7 @@ export default function HealthSafety() {
                         />
                       </div>
 
-                      <h4 className=" fw-500 mt-20">{elm.title}</h4>
+                      <h6 className=" fw-600 mt-20 uppercase">{elm.title}</h6>
                     </div>
                   </a>
                 ))}
@@ -162,14 +162,14 @@ export default function HealthSafety() {
                     <div className="featureCard -type-5 -hover-accent-1">
                       <div className="featureCard__icon">
                         <Image
-                          width="30"
-                          height="30"
+                          width="40"
+                          height="40"
                           src={elm.imgSrc}
                           alt="image"
                         />
                       </div>
 
-                      <h4 className=" fw-500 mt-20">{elm.title}</h4>
+                      <h6 className=" fw-600 mt-20 uppercase">{elm.title}</h6>
                       <div className="lh-13 mt-20">{elm.description}</div>
                     </div>
                   </div>

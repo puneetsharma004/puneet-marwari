@@ -14,15 +14,16 @@ export default function Footer() {
               <div className="col-auto">
                 <div className="row y-gap-20 items-center">
                   <div className="header__left">
-                    <div className="header__logo">
+                    <div className="header__logo d-flex">
                       <Link href="/" className="header__logo">
                         <Image
                           width="125"
                           height="32"
-                          src="/home/Mawari-logo-final.png"
+                          src="/home/mawari-logo-final.png"
                           alt="logo icon"
                         />
                       </Link>
+                      <p className="text-white pl-10">by Detours</p>
                     </div>
                   </div>
                 </div>
@@ -48,6 +49,21 @@ export default function Footer() {
             <div className="footer__content">
               <div className="row y-gap-40 justify-between">
                 <div className="col-lg-4 col-md-6">
+                  <div className="y-gap-10 text-white">
+                    <a className="d-block">
+                      Mawari is a more refined way to travel, built on the same
+                      community, expertise, and small-group spirit that define
+                      Detours. With thoughtfully designed itineraries, elevated
+                      accommodations, and a more seamless pace, Mawari is about
+                      experiencing the world with intention, comfort, and
+                      connection. It is a natural evolution of Detours, created
+                      for travelers who want the same sense of community and
+                      discovery, just with a different rhythm of travel.
+                    </a>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6">
                   <h4 className="fw-500 text-white">Contact</h4>
 
                   <div className="y-gap-10 mt-20 text-white">
@@ -95,6 +111,12 @@ export default function Footer() {
 
               <div className="col-auto">
                 <div className="footer__images d-flex items-center x-gap-10">
+                  <a className="d-block text-white mr-20" href="/terms">
+                    Terms & Conditions
+                  </a>
+                  <a className="d-block text-white" href="/privacy">
+                    Privacy Policy
+                  </a>
                   {/* <Paymentcards /> */}
                 </div>
               </div>

@@ -8,7 +8,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const images = ["/home/trip11.webp", "/home/trip21.webp", "/home/trip31.webp"];
+const images = [
+  "/img/greece/1.webp",
+  "/img/greece/2.webp",
+  "/img/greece/3.webp",
+  "/img/greece/4.webp",
+  "/img/greece/5.webp",
+  "/img/greece/6.webp",
+  "/img/greece/7.webp",
+  "/img/greece/8.webp",
+  "/img/greece/9.webp",
+];
 
 export default function Gallery3() {
   return (
@@ -26,7 +36,7 @@ export default function Gallery3() {
               nextEl: ".js-slider1-next8",
             }}
             // 2. FIXED: Apply the height directly to the Swiper container
-            style={{ height: "510px", width: "100%" }}
+            style={{ height: "610px", width: "100%" }}
             className=""
           >
             {images.map((elm, i) => (

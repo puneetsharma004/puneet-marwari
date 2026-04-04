@@ -1,222 +1,265 @@
-import CommonHero from "@/components/common/CommonHero";
-import Image from "next/image";
-import Link from "next/link";
+import HeroBanner from "@/components/common/HeroBanner";
+import React from "react";
 
-const trips = [
-    {
-        id: 1,
-        title: "12 Days in Peru",
-        imgSrc: "/home/trip11.webp",
-        location: "Lima → Cusco → Machu Picchu",
-        duration: "12 Days",
-        dates: "Apr 18 – Apr 30, 2026",
-        price: "$4,360 USD",
-        priceLocal: "≈ ₹4,05,765 INR",
-        rating: 5.0,
-        reviews: 38,
-        status: "available",
-        spots: 6,
-        slug: "12-days-peru",
-    },
-    {
-        id: 2,
-        title: "8 Days in Peru",
-        imgSrc: "/home/trip21.webp",
-        location: "Lima → Sacred Valley → Cusco",
-        duration: "8 Days",
-        dates: "May 10 – May 18, 2026",
-        price: "$3,990 USD",
-        priceLocal: "≈ ₹3,71,331 INR",
-        rating: 5.0,
-        reviews: 24,
-        status: "available",
-        spots: 8,
-        slug: "8-days-peru",
-    },
-    {
-        id: 3,
-        title: "12 Days in Spain",
-        imgSrc: "/home/trip31.webp",
-        location: "Madrid → Seville → Barcelona",
-        duration: "12 Days",
-        dates: "Jun 6 – Jun 18, 2026",
-        price: "$4,470 USD",
-        priceLocal: "≈ ₹4,16,002 INR",
-        rating: 5.0,
-        reviews: 31,
-        status: "available",
-        spots: 4,
-        slug: "12-days-spain",
-    },
-    {
-        id: 4,
-        title: "10 Days in Japan",
-        imgSrc: "/home/trip42.webp",
-        location: "Tokyo → Kyoto → Osaka",
-        duration: "10 Days",
-        dates: "Mar 21 – Mar 30, 2026",
-        price: "$4,100 USD",
-        priceLocal: "≈ ₹3,81,800 INR",
-        rating: 5.0,
-        reviews: 57,
-        status: "sold_out",
-        spots: 0,
-        slug: "10-days-japan",
-    },
-    {
-        id: 5,
-        title: "9 Days in Greece",
-        imgSrc: "/home/trip41.webp",
-        location: "Athens → Mykonos → Santorini",
-        duration: "9 Days",
-        dates: "Jul 4 – Jul 13, 2026",
-        price: "$3,850 USD",
-        priceLocal: "≈ ₹3,58,200 INR",
-        rating: 5.0,
-        reviews: 19,
-        status: "available",
-        spots: 10,
-        slug: "9-days-greece",
-    },
-];
+const TripRegistration = () => {
+  return (
+    <>
+      <HeroBanner
+        title="Trip Registration"
+        description="Journey Through the Greek Islands"
+        imageSrc="/heroimg/greece.png"
+      />
+      <div className="registration-page">
+        {/* 1. TOP STEPPER - 5px Radius applied to active state */}
+        <nav className="form-steps">
+          <div className="step-item active">1. Your Details</div>
+          <div className="step-item">2. Additional Guest</div>
+          <div className="step-item">3. Pay Deposit</div>
+          <div className="step-item">4. Confirmation</div>
+        </nav>
 
-export default function TripRegistration() {
-    return (
-        <>
-            {/* Hero */}
-            <CommonHero
-                title="Registration"
-                subtitle="Reserve Your Spot"
-                image="/heroimg/registration.jpg"
-                breadcrumb="Trip Registration"
-            />
+        <div className="main-layout">
+          <div className="form-column">
+            <h1 className="page-title">Trip Registration</h1>
 
-            {/* Trip listing */}
-            <section className="layout-pt-lg layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
-                <div className="container">
+            {/* URGENCY ALERTS */}
+            <div className="alert-container">
+              <div className="alert-item warning">
+                <strong>
+                  Only 1 available space remains on this departure.
+                </strong>
+              </div>
+              <div className="alert-item info">
+                This trip begins in less than 90 days and, as a result, cannot
+                be immediately confirmed. Please contact us directly to confirm
+                availability.
+              </div>
+            </div>
 
-                    {/* Section label */}
-                    <div className="d-flex items-center  x-gap-20 mb-50">
-                        <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                        <p className="text-13 fw-600 uppercase text-dark-1"
-                            style={{ letterSpacing: "4px", whiteSpace: "nowrap" }}>
-                            Available Trips
-                        </p>
-                        <span style={{ flex: 1, height: 1, backgroundColor: "#E7E6E6" }} />
-                    </div>
-
-                    {/* Cards grid */}
-                    <div className="row y-gap-40">
-                        {trips.map((trip) => (
-                            <div key={trip.id} className="col-xl-3 col-lg-4 col-md-6 col-12">
-                                <div style={{ opacity: trip.status === "sold_out" ? 0.6 : 1 }}>
-                                    <Link href={`/trips/${trip.slug}`}
-                                        className="-hover-image-scale d-block"
-                                        style={{ textDecoration: "none" }}>
-
-                                        {/* Image */}
-                                        <div className="ratio ratio-3:4 -hover-image-scale__image"
-                                            style={{ position: "relative" }}>
-                                            <Image
-                                                width={600}
-                                                height={800}
-                                                src={trip.imgSrc}
-                                                alt={trip.title}
-                                                className="img-ratio"
-                                                style={{ borderRadius: "4px" }}
-                                            />
-                                            {/* Sold out badge */}
-                                            {trip.status === "sold_out" && (
-                                                <div style={{
-                                                    position: "absolute", top: 16, left: 16,
-                                                    backgroundColor: "#1a1715", color: "white",
-                                                    fontSize: "10px", fontWeight: 600,
-                                                    letterSpacing: "2px", padding: "5px 12px",
-                                                    textTransform: "uppercase",
-                                                }}>
-                                                    Sold Out
-                                                </div>
-                                            )}
-                                            {/* Spots left badge */}
-                                            {trip.status === "available" && trip.spots <= 6 && (
-                                                <div style={{
-                                                    position: "absolute", top: 16, left: 16,
-                                                    backgroundColor: "#fef7f4", color: "#1a1715",
-                                                    fontSize: "10px", fontWeight: 600,
-                                                    letterSpacing: "2px", padding: "5px 12px",
-                                                    textTransform: "uppercase",
-                                                    border: "1px solid #1a1715",
-                                                }}>
-                                                    {trip.spots} Spots Left
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        {/* Rating */}
-                                        <div className="d-flex items-center mt-15 x-gap-5">
-                                            {Array.from({ length: trip.rating }).map((_, i) => (
-                                                <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#1a1715">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                                </svg>
-                                            ))}
-                                            <span className="text-12 text-light-2 ml-5">({trip.reviews})</span>
-                                        </div>
-
-                                        {/* Title */}
-                                        <h3 className="text-16 fw-600 mt-10 uppercase text-dark-1 trip__title"
-                                            style={{ fontFamily: "var(--font-caslon), serif", letterSpacing: "2px" }}>
-                                            {trip.title}
-                                        </h3>
-
-                                        {/* Location */}
-                                        <div className="d-flex items-start sub-caps mt-5 trip__location text-light-2">
-                                            <i className="icon-pin mr-5 mt-1" />
-                                            <span>{trip.location}</span>
-                                        </div>
-
-                                        {/* Duration + dates */}
-                                        <div className="d-flex items-center sub-caps mt-5 text-light-2">
-                                            <i className="icon-calendar mr-5" />
-                                            {trip.duration} · {trip.dates}
-                                        </div>
-
-                                        {/* Divider */}
-                                        <div className="mt-15 pt-15"
-                                            style={{ borderTop: "1px solid #E7E6E6" }} />
-
-                                        {/* Price + CTA */}
-                                        <div className="d-flex justify-between items-center">
-                                            <div>
-                                                <p className="text-11 text-light-2 uppercase"
-                                                    style={{ letterSpacing: "1px" }}>Starting at</p>
-                                                <p className="text-15 fw-700 text-dark-1 mt-2">{trip.price}</p>
-                                                <p className="text-11 text-light-2">{trip.priceLocal}</p>
-                                            </div>
-
-                                            {trip.status === "sold_out" ? (
-                                                <span className="button -sm -outline-black text-dark-1 text-11 uppercase fw-600"
-                                                    style={{ letterSpacing: "1.5px", pointerEvents: "none" }}>
-                                                    Waitlist
-                                                </span>
-                                            ) : (
-                                                <span className="button -sm bg-dark-1 text-white text-11 uppercase fw-600"
-                                                    style={{
-                                                        letterSpacing: "1.5px",
-                                                        backgroundColor: "#1a1715", padding: "10px 16px"
-                                                    }}>
-                                                    Learn More
-                                                </span>
-                                            )}
-                                        </div>
-
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
+            <form className="structured-form">
+              {/* CONTACT DETAILS */}
+              <fieldset className="form-group">
+                <legend>Contact Details</legend>
+                <div className="row">
+                  <div className="field full">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="example@mail.com" />
+                  </div>
                 </div>
-            </section>
-        </>
-    );
-}
+                <div className="row two-col">
+                  <div className="field">
+                    <label>Primary Phone Number</label>
+                    <input type="tel" />
+                  </div>
+                  <div className="field">
+                    <label>Secondary Phone Number</label>
+                    <input type="tel" />
+                  </div>
+                </div>
+                <div className="row two-col">
+                  <div className="field">
+                    <label>Travel Agent Email</label>
+                    <input type="email" />
+                    <span className="helper">
+                      Registered travel agents, enter your email here.
+                    </span>
+                  </div>
+                  <div className="field">
+                    <label>Referral Code</label>
+                    <input type="text" />
+                    <span className="helper">
+                      If you received a referral code, enter it here.
+                    </span>
+                  </div>
+                </div>
+              </fieldset>
+
+              {/* YOUR DETAILS */}
+              <fieldset className="form-group">
+                <legend>Your Details</legend>
+                <div className="row two-col">
+                  <div className="field">
+                    <label>First Name</label>
+                    <input type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Middle Name</label>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div className="row two-col">
+                  <div className="field">
+                    <label>Last Name</label>
+                    <input type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Preferred First Name</label>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div className="row three-col">
+                  <div className="field">
+                    <label>Citizenship</label>
+                    <select>
+                      <option>Select...</option>
+                    </select>
+                  </div>
+                  <div className="field">
+                    <label>Date of Birth</label>
+                    <input type="date" />
+                  </div>
+                  <div className="field">
+                    <label>Gender</label>
+                    <div className="radio-set">
+                      <label>
+                        <input type="radio" name="gender" /> Male
+                      </label>
+                      <label>
+                        <input type="radio" name="gender" /> Female
+                      </label>
+                      <label>
+                        <input type="radio" name="gender" /> X / Other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="field full mt-10">
+                  <label>Street Address</label>
+                  <input type="text" className="mb-10" />
+                  <input type="text" />
+                </div>
+                <div className="row three-col mt-10">
+                  <div className="field">
+                    <label>City</label>
+                    <input type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Zip/Postal</label>
+                    <input type="text" />
+                  </div>
+                  <div className="field">
+                    <label>Country</label>
+                    <select>
+                      <option>Select...</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              {/* PREFERENCES */}
+              <fieldset className="form-group">
+                <legend>Rooming & Travel Preferences</legend>
+                <div className="radio-list">
+                  <label className="radio-box">
+                    <input type="radio" name="room" /> One bed. Traveling with
+                    my partner.
+                  </label>
+                  <label className="radio-box">
+                    <input type="radio" name="room" /> One bed. Traveling solo.
+                    (private room upgrade applicable)
+                  </label>
+                  <label className="radio-box">
+                    <input type="radio" name="room" /> Two beds. Traveling with
+                    a friend.
+                  </label>
+                  <label className="radio-box">
+                    <input type="radio" name="room" /> Two beds. Please pair me
+                    with another solo traveler.
+                  </label>
+                </div>
+
+                <div className="checkbox-area mt-20">
+                  <label className="check-label">
+                    <input type="checkbox" /> <strong>Book Flight</strong>
+                  </label>
+                  <p className="helper-text">
+                    Check this box if you would like Detours to book your flight
+                    for an additional $50 fee...
+                  </p>
+                </div>
+
+                <div className="field full mt-20">
+                  <label>Traveling Partners</label>
+                  <input type="text" />
+                  <span className="helper">
+                    Names of traveler(s) you would like to be grouped with.
+                  </span>
+                </div>
+
+                <div className="field full mt-20">
+                  <label>Dietary Requirements</label>
+                  <input type="text" />
+                  <span className="helper">
+                    We'll communicate these, but it's a good idea to chat with
+                    your leader.
+                  </span>
+                </div>
+              </fieldset>
+
+              {/* ADDITIONAL DETAILS */}
+              <fieldset className="form-group">
+                <legend>Additional Details</legend>
+                <div className="field full">
+                  <label>Where did you FIRST hear about Detours?</label>
+                  <textarea rows="3"></textarea>
+                  <span className="helper">
+                    On a search engine? Social media?
+                  </span>
+                </div>
+                <div className="field full mt-20">
+                  <label>Comments</label>
+                  <textarea rows="4"></textarea>
+                </div>
+              </fieldset>
+
+              <div className="form-footer">
+                <label className="terms">
+                  <input type="checkbox" /> I agree to the{" "}
+                  <a href="#">Terms & Conditions</a>
+                </label>
+                <div className="button-row">
+                  <button type="button" className="btn-back">
+                    BACK
+                  </button>
+                  <button type="submit" className="btn-continue">
+                    CONTINUE
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          {/* 2. STICKY SIDEBAR */}
+          <aside className="sticky-sidebar">
+            <div className="summary-card">
+              <h3 className="summary-title">Booking Details</h3>
+              <img
+                src="/images/greece.jpg"
+                alt="Greece"
+                className="summary-img"
+              />
+              <div className="summary-content">
+                <h4>11 Days In Greece</h4>
+                <ul className="trip-specs">
+                  <li>
+                    <strong>From:</strong> May 31, 2026 Athens
+                  </li>
+                  <li>
+                    <strong>To:</strong> June 10, 2026 Mykonos
+                  </li>
+                </ul>
+                <div className="price-box">
+                  <span className="label">Total:</span>
+                  <span className="usd">$4,380 USD</span>
+                  <span className="inr">( ≈ ₹4,08,450 INR )</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TripRegistration;

@@ -134,7 +134,7 @@ export default function ContactForm() {
                 className="row y-gap-20"
               >
                 <div className="col-md-6 col-12">
-                  <label className="d-block mb-8">Name</label>
+                  <label className="d-block mb-8 text-16">Name</label>
                   <input
                     type="text"
                     placeholder="Your full name"
@@ -154,7 +154,7 @@ export default function ContactForm() {
 
                 <div className="col-md-6 col-12">
                   <label
-                    className="d-block mb-8"
+                    className="d-block mb-8 text-16"
                     style={{ letterSpacing: "2px" }}
                   >
                     Phone
@@ -177,7 +177,7 @@ export default function ContactForm() {
 
                 <div className="col-12">
                   <label
-                    className="d-block mb-8"
+                    className="d-block mb-8 text-16"
                     style={{ letterSpacing: "2px" }}
                   >
                     Email
@@ -201,7 +201,7 @@ export default function ContactForm() {
 
                 <div className="col-12">
                   <label
-                    className="d-block mb-8"
+                    className="d-block mb-8 text-16"
                     style={{ letterSpacing: "2px" }}
                   >
                     Which Trip Are You Interested In?
@@ -229,7 +229,7 @@ export default function ContactForm() {
 
                 <div className="col-12">
                   <label
-                    className="d-block mb-8"
+                    className="d-block mb-8 text-16"
                     style={{ letterSpacing: "2px" }}
                   >
                     Message

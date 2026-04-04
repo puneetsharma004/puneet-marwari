@@ -18,7 +18,7 @@ export default function Faq() {
               className="accordion__button d-flex items-center justify-between"
               onClick={() => setCurrentActiveFaq((pre) => (pre == i ? -1 : i))}
             >
-              <h1 className="button text-dark-1">{elm.question}</h1>
+              <h6 className=" text-dark-1">{elm.question}</h6>
 
               <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
                 <i className="icon-plus"></i>

@@ -10,7 +10,7 @@ export default function Faq() {
       <div className="container">
         <div className="row justify-center text-center">
           <div className="col-auto">
-            <h2 className="fw-600">FAQs about Phuket</h2>
+            <h2 className="fw-600">FAQs</h2>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function Faq() {
                         setCurrentActiveFaq((pre) => (pre == i ? -1 : i))
                       }
                     >
-                      <h1 className=" fw-500">{elm.question}</h1>
+                      <h5 className=" fw-500">{elm.question}</h5>
 
                       <div className="accordion__icon size-30 flex-center bg-light-2">
                         <i className="icon-plus"></i>

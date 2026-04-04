@@ -57,7 +57,7 @@ export default function SingleFive({ tour }) {
                       activeTab == "Overview" ? "is-tab-el-active" : ""
                     }`}
                   >
-                    <div className="row y-gap-20 justify-between items-center layout-pb-md">
+                    <div className="row y-gap-20 justify-start items-center layout-pb-md">
                       <OthersInformation />
                     </div>
 

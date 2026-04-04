@@ -7,10 +7,10 @@ export default function FeaturesVideo() {
   return (
     <section
       className="layout-pt-xl layout-pb-xl relative text-center"
-      style={{ minHeight: "1000px", display: "flex", alignItems: "end" }}
+      style={{ minHeight: "1000px", display: "flex", alignItems: "center" }}
     >
       <div className="container">
-        <div className="sectionBg">
+        <div className="sectionBg hero-overlay">
           <video className="img-ratio" autoPlay muted loop playsInline>
             <source src="/home/vid.mp4" type="video/mp4" />
           </video>
@@ -21,7 +21,7 @@ export default function FeaturesVideo() {
             <h2
               data-aos="fade-up"
               data-aos-delay=""
-              className="font-heading lh-13 text-white"
+              className="font-heading lh-13 text-white uppercase"
             >
               Where Adventure Meets Belonging
               {/* <br className="md:d-none" /> */}
@@ -30,7 +30,7 @@ export default function FeaturesVideo() {
             <p
               data-aos="fade-up"
               data-aos-delay=""
-              className="text-white mt-10"
+              className="text-white mt-10 lh-1.5"
             >
               Traveling under your own power and at your own pace, you'll
               connect more meaningfully with your destination and have more fun!

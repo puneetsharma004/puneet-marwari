@@ -8,12 +8,12 @@ export default function TestimonialOne() {
   return (
     <section className="relative layout-pt-xl layout-pb-xl">
       <div className="sectionBg md:d-none">
-        <Image
+        {/* <Image
           width={1920}
           height={871}
           src="/img/testimonials/1/1.png"
           alt="image"
-        />
+        /> */}
       </div>
 
       <div className="container">

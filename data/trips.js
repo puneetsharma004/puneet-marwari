@@ -1,4 +1,3 @@
-import { images } from "@/next.config";
 
 export const tripsData = [
     {
@@ -548,7 +547,6 @@ export const tripsData = [
 
 ]
 
-// add at the very bottom of data/trips.js
 export function getTripBySlug(slug) {
     return tripsData.find((t) => t.slug === slug);
 }
@@ -607,6 +605,51 @@ export const tripReviews = [
             "/img/gallery/antarctica-cruise-7.jpg",
             "/img/gallery/antarctica-cruise-8.jpg",
             "/img/gallery/antarctica-cruise-9.jpg",
+        ],
+    },
+];
+
+export const departureGroups = [
+    {
+        price: "$4070.00",
+        convertedPrice: "(≈ $9,541 CAD)",
+        currency: "USD",
+        departures: [
+            {
+                id: 1,
+                date: "May 31, 2026 - Jun 9, 2026",
+                status: "full",
+                cta: "Join Waitlist",
+                link: "/waitlist",
+            },
+            {
+                id: 2,
+                date: "Jun 5, 2026 - Jun 14, 2026",
+                status: "available",
+                cta: "Book Now",
+                link: "/booking-form",
+            },
+            {
+                id: 3,
+                date: "Aug 21, 2026 - Aug 30, 2026",
+                status: "available",
+                cta: "Book Now",
+                link: "/booking-form",
+            },
+        ],
+    },
+    {
+        price: "$4340.00",
+        convertedPrice: "(≈ $4,720 CAD)",
+        currency: "USD",
+        departures: [
+            {
+                id: 4,
+                date: "May 30, 2027 - Jun 8, 2027",
+                status: "available",
+                cta: "Book Now",
+                link: "/booking-form",
+            },
         ],
     },
 ];

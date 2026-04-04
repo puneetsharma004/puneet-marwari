@@ -149,11 +149,11 @@ export default function TripReviews() {
                   <StarRating count={5} />
                 </div>
 
-                <h1 className="fw-600 uppercase text-dark-1 text-center sm:text-center mt-10">
+                <h5 className="fw-500 uppercase text-dark-1 text-center sm:text-center mt-10">
                   4.8 out of 5.0 <span className="hidden sm:inline">—</span>
                   <br className="sm:hidden" />
                   {reviews.length}+ verified reviews
-                </h1>
+                </h5>
               </div>
 
               {/* Divider */}
@@ -177,9 +177,9 @@ export default function TripReviews() {
                 {paginated.map((review) => (
                   <div key={review.id}>
                     {/* Reviewer name + meta */}
-                    <h2 className="fw-700 uppercase text-dark-1 mb-5">
+                    <h4 className="fw-500 uppercase text-dark-1 mb-5">
                       {review.name} — {review.country}
-                    </h2>
+                    </h4>
 
                     <div className="d-flex items-start x-gap-15 mb-15">
                       <StarRating count={review.rating} />

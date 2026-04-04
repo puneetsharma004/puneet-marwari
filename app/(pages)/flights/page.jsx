@@ -71,9 +71,9 @@ export default function FlightsPage() {
                               setCurrentActiveFaq((pre) => (pre == i ? -1 : i))
                             }
                           >
-                            <h1 className=" fw-500 text-dark-1">
+                            <h5 className=" fw-500 text-dark-1">
                               {elm.question}
-                            </h1>
+                            </h5>
 
                             <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
                               <i className="icon-plus"></i>

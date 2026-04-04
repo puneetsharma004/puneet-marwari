@@ -65,9 +65,9 @@ export default function Philosophy() {
                       src={elm.iconSrc}
                       alt="icon"
                     />
-                    <h1 className=" fw-600 text-accent-1 mt-4 mb-3 lh-10">
+                    <h6 className=" fw-600 text-accent-1 mb-3 mt-3 lh-10 uppercase">
                       {elm.value}
-                    </h1>
+                    </h6>
                     <div>{elm.label}</div>
                   </div>
                 ))}

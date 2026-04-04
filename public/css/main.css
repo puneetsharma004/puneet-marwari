@@ -34,15 +34,32 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-body {
+/* body {
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.5px;
   background-color: #fef7f4;
+} */
+
+body {
+  /* 1. The Bridge: Link variables where they are accessible */
+  --font-body: var(--font-lato), sans-serif;
+  --font-heading: var(--font-josefin), sans-serif;
+
+  /* 2. Style Requirements */
+  background-color: #F9F4EE !important;
+  /* Alabaster */
+  color: #2E2E2E !important;
+  /* Light Black */
+  font-family: var(--font-body);
+  font-weight: 400;
+  /* Lato Regular */
+  margin: 0;
+  line-height: 1.5;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -55,12 +72,38 @@ h6 {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 6px;
+} */
+
+h1 {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+}
+
+/* Sub Headers (H2): Josefin Sans Regular */
+h2 {
+  font-family: var(--font-heading) !important;
+  font-weight: 400 !important;
+  /* Explicitly Regular */
+}
+
+/* Small Headers (H3): Lato Bold */
+h3 {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure other headers don't default to old fonts */
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: #2E2E2E;
 }
 
 /* Headings */
 .font-heading {
   font-family: var(--font-heading);
-  color: #383839;
+  color: #2E2E2E;
 }
 
 .ratio {
@@ -148,9 +191,14 @@ h6 {
   --font-heading: "JosefinSansVar", sans-serif;
 } */
 
-:root {
+/* :root {
   --font-body: "Euclid", sans-serif;
   --font-heading: "Adobe Caslon Pro", serif;
+} */
+
+:root {
+  --font-body: var(--font-lato), sans-serif;
+  --font-heading: var(--font-josefin), sans-serif;
 }
 
 :root {
@@ -195,6 +243,7 @@ h6 {
   --color-accent-2: #000000;
   --color-dark-1: #000000;
   --color-dark-black: #000000;
+  --color-dark-2: #2e2e2e;
   --color-blue-1: #000000;
   --color-red-1: #D93025;
   --color-red-2: #F64E60;
@@ -656,8 +705,8 @@ li {
 }
 
 p {
-  font-size: 12px;
-  color: #666;
+  font-size: 14px;
+  color: #2E2E2E;
   margin: 0;
   letter-spacing: 1.5px;
 }
@@ -680,7 +729,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 28px;
   border-radius: 0px;
@@ -1644,7 +1693,7 @@ input.text-white::placeholder {
   padding: 15px 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -1654,7 +1703,7 @@ h6 {
   font-weight: 700;
   color: var(--color-dark-black);
   margin: 0;
-}
+} */
 
 .text-8 {
   font-size: var(--text-8) !important;
@@ -2282,7 +2331,8 @@ h6 {
 }
 
 .headerDropdown .headerDropdown__container {
-  background-color: white;
+  font-family: var(--font-body);
+  background-color: #F9F4EE;
   border-radius: 0px;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--Border, #E7E6E6);
@@ -2291,10 +2341,10 @@ h6 {
 }
 
 .headerDropdown .headerDropdown__item {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 266.667%;
-  color: var(--color-primary, #000);
+  color: var(--color-primary, #2e2e2e);
 }
 
 .headerDropdown .headerDropdown__item button:hover {
@@ -2514,6 +2564,7 @@ h6 {
 }
 
 .header .desktopNav .desktopNavSubnav {
+  font-family: --font-body;
   position: absolute;
   top: 100%;
   left: 0;
@@ -2525,7 +2576,7 @@ h6 {
 
 .header .desktopNav .desktopNavSubnav__content {
   border-radius: 0px;
-  background-color: white;
+  background-color: #F9F4EE;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--border, #E7E6E6);
   min-width: 260px;
@@ -2645,15 +2696,15 @@ h6 {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0);
   /* translucent */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  /* transition: background 0.3s ease, backdrop-filter 0.3s ease; */
 }
 
 .header.-type-8.-is-sticky {
-  background-color: #1b1212;
+  background-color: #F9F4EE;
 }
 
 .header.-type-8 .header__container {
@@ -2815,7 +2866,7 @@ h6 {
 }
 
 .footer.-type-1 .footerSocials__title {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   margin-right: 10px;
 }
@@ -3671,33 +3722,35 @@ h6 {
 }
 
 .hero.-type-7 .hero__title {
-  font-size: 13px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
   .hero.-type-7 .hero__title {
-    font-size: 13px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 767px) {
+  .hero.-type-7 .hero__title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
   .hero.-type-7 .hero__title {
     font-size: 12px;
   }
 }
 
-@media (max-width: 575px) {
-  .hero.-type-7 .hero__title {
-    font-size: 10px;
-  }
-}
-
 .hero.-type-7 .hero__subtitle {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.2;
+  letter-spacing: 1.5px;
 }
 
 @media (max-width: 991px) {
@@ -3714,7 +3767,7 @@ h6 {
 
 @media (max-width: 575px) {
   .hero.-type-7 .hero__subtitle {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 
@@ -6453,7 +6506,7 @@ h6 {
   position: relative;
 }
 
-.tabs__pane {
+/* .tabs__pane {
   position: absolute;
   top: 0;
   visibility: hidden;
@@ -6466,6 +6519,20 @@ h6 {
   position: relative;
   opacity: 1;
   visibility: visible;
+} */
+
+.tabs__pane {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tabs__pane.is-tab-el-active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .tabs.-terms .tabs__controls .tabs__button {
@@ -11013,6 +11080,10 @@ h6 {
   color: var(--color-dark-black);
 }
 
+.text-dark-2 {
+  color: var(--color-dark-2);
+}
+
 .text-blue-1 {
   color: var(--color-blue-1);
 }
@@ -12944,7 +13015,7 @@ table.table-4.-border-bottom tbody>tr {
 .tourSingleSidebar {
   position: relative;
   width: 360px;
-  padding: 30px;
+  /* padding: 30px; */
   border-radius: 0px;
   border: 1px solid var(--border, #E7E6E6);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
@@ -13776,12 +13847,12 @@ table.table-4.-border-bottom tbody>tr {
 }
 
 .roadmap__title {
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 .roadmap__content {
-  width: 580px;
+  width: 900px;
   margin-top: 15px;
 }
 

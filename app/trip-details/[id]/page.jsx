@@ -1,4 +1,3 @@
-import SingleFour from "@/components/tourSingle/pages/SingleFour";
 import { allTour } from "@/data/tours";
 import React from "react";
 import HeroBanner from "@/components/common/HeroBanner";
@@ -18,8 +17,8 @@ export default async function page(props) {
     <>
       <HeroBanner
         title="GREECE"
-        description="Explore deals, travel guides and things to do in Greece"
-        imageSrc="/heroimg/about-us.jpg"
+        description="Journey Through the Greek Islands"
+        imageSrc="/heroimg/greece.png"
       />
 
       <Single tour={tour} />

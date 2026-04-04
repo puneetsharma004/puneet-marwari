@@ -19,14 +19,14 @@ export default function Activity() {
             <div key={i} className="col-lg-3 col-md-6">
               <div className="px-50 py-45 border-1 bg-white">
                 <Image
-                  width="20"
-                  height="20"
+                  width="30"
+                  height="30"
                   src={elm.imgSrc}
                   alt="image"
                   className="mb-20"
                 />
 
-                <h3 className=" fw-500">{elm.title}</h3>
+                <h5 className="uppercase fw-500">{elm.title}</h5>
 
                 <div className="mt-10">{elm.content}</div>
               </div>

@@ -1,13 +1,13 @@
 const socialMediaLinks = [
   {
     id: 1,
-    class: "icon-facebook",
+    class: "icon-facebook text-14",
     href: "https://www.facebook.com/DetoursTravel",
   },
   // { id: 2, class: "icon-twitter", href: "#" },
   {
     id: 3,
-    class: "icon-instagram",
+    class: "icon-instagram text-14",
     href: "https://www.instagram.com/detourstravel",
   },
   // { id: 4, class: "icon-linkedin", href: "#" },
