@@ -10,7 +10,7 @@ export default function Register() {
         <div className="row justify-center">
           <div className="col-xl-6 col-lg-7 col-md-9">
             <div className="text-center mb-60 md:mb-30">
-              <h1>Register</h1>
+              <h2>Register</h2>
               <div className=" fw-500 mt-20 md:mt-15">
                 Let's create your account!
               </div>
@@ -56,7 +56,7 @@ export default function Register() {
                 <i className="icon-arrow-top-right ml-10"></i>
               </button>
 
-              <div className="relative line mt-50 mb-30">
+              {/* <div className="relative line mt-50 mb-30">
                 <div className="line__word fw-500">OR</div>
               </div>
 
@@ -77,7 +77,7 @@ export default function Register() {
                     Continue Google
                   </button>
                 </div>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>

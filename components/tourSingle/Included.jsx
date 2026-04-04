@@ -7,7 +7,7 @@ export default function Included() {
       <div className="col-lg-6">
         <div className="y-gap-15">
           {included.map((elm, i) => (
-            <div key={i} className="d-flex">
+            <div key={i} className="d-flex items-center">
               <i className="icon-check flex-center text-10 size-16 rounded-full text-green-2 bg-green-1 mr-15"></i>
               {elm.text}
             </div>
@@ -18,7 +18,7 @@ export default function Included() {
       <div className="col-lg-6">
         <div className="y-gap-15">
           {excluded.map((elm, i) => (
-            <div key={i} className="d-flex">
+            <div key={i} className="d-flex items-center">
               <i className="icon-cross flex-center text-10 size-16 rounded-full text-red-3 bg-red-4 mr-15"></i>
               {elm.text}
             </div>

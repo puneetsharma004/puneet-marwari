@@ -5,15 +5,14 @@ import Link from "next/link";
 import React from "react";
 
 export default function DestinationsTwo() {
-  console.log("trips data:", tripsData);
   return (
     <section className="layout-pt-xl layout-pb-xl">
       <div className="container">
         <div className="row y-gap-10 justify-between items-end font-heading">
           <div className="col-auto">
-            <h2 data-aos="fade-up" className="font-heading">
+            <h3 data-aos="fade-up" className="font-heading">
               Featured Trips
-            </h2>
+            </h3>
           </div>
 
           <div className="col-auto">
@@ -39,7 +38,6 @@ export default function DestinationsTwo() {
                 className="-hover-image-scale d-block"
               >
                 {/* Image */}
-                {console.log("trip slug:", trip.slug)}
                 <div className="ratio ratio-3:4 -hover-image-scale__image">
                   <Image
                     width={2000}
@@ -50,17 +48,18 @@ export default function DestinationsTwo() {
                   />
                 </div>
 
-                {/* Review Section */}
+                {/* Review Section 
                 <div className="d-flex items-center mt-15">
                   <i className="icon-star text-yellow-1 mr-5 mb-1"></i>
                   <span className="fw-500">4.9</span>
                   <span className=" ml-5">(42 reviews)</span>
                 </div>
+                */}
 
                 {/* Title */}
-                <h3 className="fw-600 mt-10 font-heading trip__title">
+                <h4 className="fw-500 mt-10 font-heading trip__title">
                   {trip.title}
-                </h3>
+                </h4>
 
                 {/* Location */}
                 <div className="d-flex items-start sub-caps mt-5 trip__location">

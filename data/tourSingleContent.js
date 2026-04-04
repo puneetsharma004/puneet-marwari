@@ -1,31 +1,70 @@
 export const included = [
-  { id: 1, text: "Beverages, drinking water, morning tea and buffet lunch" },
-  { id: 2, text: "Local taxes" },
-  { id: 3, text: "Hotel pickup and drop-off by air-conditioned minivan" },
-  { id: 4, text: "InsuranceTransfer to a private pier" },
-  { id: 5, text: "Soft drinks" },
-  { id: 6, text: "Tour Guide" },
+  { id: 1, text: "Luxury accommodation throughout" },
+  { id: 2, text: "Daily breakfast and dinners and select lunches" },
+  { id: 3, text: "Flight from Athens to Santorini" },
+  { id: 4, text: "High-speed ferries between islands" },
+  { id: 5, text: "Guided sightseeing and entrance fees" },
+  { id: 6, text: "Private tours and experiences" },
+  { id: 7, text: "Private sailing cruise in Mykonos" },
+  { id: 8, text: "Private transportation throughout" },
+  { id: 9, text: "Local English-speaking guides" },
+  { id: 10, text: "Airport transfers and luggage assistance" },
 ];
 
 export const excluded = [
-  { id: 7, text: "Towel" },
-  { id: 8, text: "Tips" },
-  { id: 9, text: "Alcoholic Beverages" },
+  { id: 11, text: "International flights" },
+  { id: 12, text: "Tips and personal expenses" },
+];
+
+export const highlights = [
+  { id: 1, text: "Explore Athens, the birthplace of democracy and Western philosophy" },
+  { id: 2, text: "Visit the Acropolis and discover Athens' LGBTQ+ history and modern gay district" },
+  { id: 3, text: "Explore traditional villages and local life in Naxos" },
+  { id: 4, text: "Full-day island tour of Paros" },
+  { id: 5, text: "Beach time and island tours" },
+  { id: 6, text: "Private sailing cruise to Delos and Rhenia with dinner and DJ" },
+  { id: 7, text: "Premium hotels throughout the trip" },
+  { id: 8, text: "A perfect balance of culture, island life, relaxation, and nightlife" },
 ];
 
 export const roadmapData = [
-  { id: 1, icon: "icon-pin", title: "Day 1: Airport Pick Up" },
+  {
+    id: 1,
+    icon: "icon-pin",
+    title: "Day 1 & 2 - Athens",
+    content: [
+      "Welcome to Greece. Upon arrival in Athens, you'll be met at the airport and transferred to your hotel in the heart of the city. Athens is one of those rare places where the ancient and modern exist side by side, and historic ruins rise above lively neighborhoods, café culture spills into the streets, and every corner seems to carry another layer of history. After time to settle in, meet your group and trip leader and kick off the journey together with welcome drinks and dinner. It's the perfect first evening to ease into the trip, get to know one another, and toast to the adventure ahead.",
+      "The next day, we dive into the story of Athens, beginning with its most iconic ancient sites and the cultural legacy that shaped the Western world. Explore the Acropolis and the neighborhoods below it, walk through the atmospheric streets of Plaka, and take in the energy of a city that feels both historic and distinctly current. We also weave in Athens' LGBTQ+ history and present-day culture, giving a fuller perspective on the city beyond the classic landmarks. In the evening, we head into Athens' gay district for dinner, drinks, and a night out, experiencing a more contemporary side of the city and setting the tone for the fun and connection that builds throughout the trip."
+    ]
+  },
   {
     id: 2,
-    title: "Day 2: Temples & River Cruise",
-    content:
-      "Like on all of our trips, we can collect you from the airport when you land and take you directly to your hotel. The first Day is just a check-in Day so you have this freedom to explore the city and get settled in.",
+    title: "Day 3 & 4 - Santorini",
+    content: [
+      "Today we fly to Santorini, one of the most iconic and visually striking islands in the world. Rising dramatically above the Aegean Sea, Santorini is all whitewashed villages, blue domes, winding paths, and incredible panoramic caldera views. After arriving, we begin exploring the island's beauty and contrasts, from traditional inland villages to dramatic cliffside viewpoints and volcanic landscapes shaped by one of the most famous eruptions in history. This first taste of Santorini captures both its elegance and its raw natural beauty.",
+      "The following day brings one of the trip's signature experiences: a sunset catamaran cruise on the Aegean. Spend the afternoon sailing beneath Santorini's cliffs, passing volcanic beaches and rock formations, with time to swim, snorkel, sunbathe, and simply enjoy being out on the water. With drinks flowing and dinner served on board, the whole experience feels effortless. As the sky turns gold and the sun begins to sink into the sea, Santorini puts on the kind of sunset it's known for, and there are few better places to take it all in than from the deck of a private catamaran."
+    ],
   },
-  { id: 3, title: "Day 3: Massage & Overnight Train" },
-  { id: 4, title: "Day 4: Khao Sok National Park" },
-  { id: 5, title: "Day 5: Travel to Koh Phangan" },
-  { id: 6, title: "Day 6: Morning Chill & Muay Thai Lesson" },
-  { id: 7, icon: "icon-flag", title: "Day 7: Island Boat Trip" },
+  {
+    id: 3,
+    title: "Day 5, 6 & 7 - Naxos & Paros",
+    content: [
+      "From Santorini, we ferry to Naxos, an island that offers a different rhythm and a more grounded, authentic side of the Cyclades. Less polished than Santorini and all the better for it, Naxos is full of traditional villages, local farms, mountain scenery, old stone streets, and a food culture that is deeply rooted in the island itself. After arriving, we explore Naxos Town, where mythology, Venetian history, and everyday Greek island life all come together. As the light softens toward sunset, the atmosphere here is especially magical, and dinner gives us our first taste of the warm hospitality and strong culinary identity that define the island.",
+      "The next day, we go deeper into Naxos, exploring its villages, local traditions, and countryside. Visit important historic sites, discover local craftsmanship, and sample some of the island's best-known products and flavors. This is the Greece that many travelers hope to find: beautiful, relaxed, welcoming, and still closely tied to local life. We enjoy a long, leisurely lunch in one of the island's villages before returning to the coast for dinner by the sea.",
+      "During our stay in Naxos, we also take a full-day trip to nearby Paros, another stunning Cycladic island with its own distinct personality. Here, we explore elegant villages, charming harbor towns, historic sites, and beautiful stretches of coastline. Paros feels refined but relaxed, stylish without losing its authenticity. It adds another layer to the journey and offers an even broader look at island life in Greece before we continue on to our final stop."
+    ]
+  },
+  {
+    id: 4,
+    icon: "icon-flag",
+    title: "Day 8, 9, 10 & 11 - Mykonos",
+    content: [
+      "Next, we travel to Mykonos, the most famous gay island in Greece and one of the world's most celebrated LGBTQ+ destinations. But Mykonos is much more than beach clubs and nightlife. On arrival, we get to know the island through both Mykonos Town and the surrounding landscapes, exploring its maze of whitewashed lanes, iconic windmills, Little Venice, quiet corners, scenic beaches, and traditional village life. It's an island with unmistakable glamour, but also real beauty and personality beyond the party reputation.",
+      "Our first full day in Mykonos is intentionally left open for you to experience the island in your own way. You may choose to spend the day at the famous Jackie O' Beach Club, browsing the boutiques and galleries tucked into the winding streets of Mykonos Town, joining a cooking class to learn traditional Greek dishes, or simply relaxing at our hotel and enjoying the pool and sea views. Mykonos is an island meant to be enjoyed slowly, and today gives you the freedom to experience it exactly as you like.",
+      "For our final full day, we celebrate in style with a private Delos sailing cruise. Delos is one of the most important archaeological sites in Greece and the mythological birthplace of Apollo, adding one last powerful cultural moment to the journey. From there, we continue to nearby Rhenia for swimming, relaxing on board, and soaking up the final hours of the trip in the Aegean sun. As evening sets in, we enjoy dinner, drinks, music, and a DJ on board, turning the farewell into something festive, beautiful, and memorable. It's the perfect last chapter to a trip that moves from ancient history to island beauty to full celebration.",
+      "After breakfast, the trip comes to an end in Mykonos. By this point, what began as a group trip usually feels much more like a shared adventure among friends, shaped by incredible scenery, great meals, long conversations, late nights, and a lot of unforgettable moments along the way. Guests depart with a deeper connection to Greece and, usually, a strong desire to come back."
+    ]
+  },
 ];
 
 export const roadmapData2 = [

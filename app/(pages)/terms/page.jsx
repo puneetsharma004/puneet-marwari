@@ -1,25 +1,22 @@
-
-
-import Content from "@/components/pages/terms/Content";
-import PageHeader from "@/components/pages/terms/PageHeader";
+import HeroBanner from "@/components/common/HeroBanner";
+import TermsConditionsBody from "@/components/pages/terms-conditions/TermsConditionsBody";
 import React from "react";
-import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
-  title: "Terms || ViaTour - Travel & Tour React NextJS Template",
-  description: "ViaTour - Travel & Tour React NextJS Template",
+  title: "Terms || Mawari - A more refined way to travel",
+  description: "Mawari - Terms & Conditions",
 };
 
 export default function page() {
   return (
     <>
-      <main>
-        <Header />
-        <PageHeader />
-        <Content />
-        <Footer />
-      </main>
+      <HeroBanner
+        title="Terms & Conditions"
+        description="Terms & Conditions"
+        imageSrc="/heroimg/registration.jpg"
+      />
+
+      <TermsConditionsBody />
     </>
   );
 }

@@ -18,28 +18,27 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    imageSrc: "/img/hero/7/Hero11.jpg",
-    subtitle:
-      "Mawari was created for travelers who value beautiful places, well-paced journeys, and experiences that feel considered rather than rushed.",
-    title: "Luxury Travel, Thoughtfully Done. For Our Community.",
+    imageSrc: "/img/hero/7/hero1n.webp",
+    subtitle: "",
+    title: "",
   },
   {
     id: 2,
-    imageSrc: "/img/hero/7/Hero21.jpg",
+    imageSrc: "/img/hero/7/hero2n.webp",
     subtitle:
       "At the heart of Mawari is what we like to call structured spontaneity.",
     title: "Structure Where It Matters. Freedom Where It Counts.",
   },
   {
     id: 3,
-    imageSrc: "/img/hero/7/Hero3.webp",
+    imageSrc: "/img/hero/7/hero3n.webp",
     subtitle:
       "Our travelers often arrive solo but never stay that way for long.",
     title: "More Than a Group. More Than a Trip.",
   },
   {
     id: 4,
-    imageSrc: "/img/hero/7/Hero41.jpg",
+    imageSrc: "/img/hero/7/hero4n.webp",
     subtitle: "Mawari trips are led by seasoned Detours Trip Leaders.",
     title: "Experienced, Attentive, and Genuinely Human.",
   },

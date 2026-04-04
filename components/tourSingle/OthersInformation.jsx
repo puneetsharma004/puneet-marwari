@@ -29,7 +29,7 @@ export default function OthersInformation() {
         </div>
       </div>
 
-      <div className="col-lg-3 col-6">
+      {/* <div className="col-lg-3 col-6">
         <div className="d-flex items-center">
           <div className="flex-center size-50 border-1">
             <i className="text-20 icon-birthday-cake"></i>
@@ -53,7 +53,7 @@ export default function OthersInformation() {
             <div className="text-light-2 lh-16">English, Japanese</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

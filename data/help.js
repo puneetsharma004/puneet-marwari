@@ -11,7 +11,7 @@ export const sections = [
   },
   {
     imgSrc: "/img/icons/6/3.svg",
-    title: "Booking changes & refunds",
+    title: "Booking & refunds",
     content: "Lorem ipsum is placeholder text commonly used in site.",
   },
   {

@@ -34,7 +34,7 @@ export default function TourList1() {
     <section className="layout-pb-xl">
       <div className="container">
         <div className="row">
-          <div className="col-xl-3 col-lg-4">
+          {/* <div className="col-xl-3 col-lg-4">
             <div className="lg:d-none">
               <Sidebar />
             </div>
@@ -63,9 +63,9 @@ export default function TourList1() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-xl-9 col-lg-8">
+          <div className="col-xl-12 col-lg-8">
             <div className="row y-gap-5 justify-between">
               <div className="col-auto">
                 <div>1362 results</div>
@@ -120,7 +120,7 @@ export default function TourList1() {
                         alt="image"
                       />
 
-                      {elm.badgeText && (
+                      {/* {elm.badgeText && (
                         <div className="tourCard__badge">
                           <div className="bg-accent-1 text-white lh-11 px-15 py-10">
                             {elm.badgeText}
@@ -134,7 +134,7 @@ export default function TourList1() {
                             FEATURED
                           </div>
                         </div>
-                      )}
+                      )} */}
 
                       {/* <div className="tourCard__favorite">
                         <button className="button -accent-1 size-35 bg-white rounded-full flex-center">
@@ -160,7 +160,7 @@ export default function TourList1() {
                       <p className="tourCard__text mt-5 pb-30">
                         {elm.description}
                       </p>
-                      <div className="d-flex items-center mt-5">
+                      {/* <div className="d-flex items-center mt-5">
                         <div className="d-flex items-center x-gap-5">
                           <Stars star={elm.rating} font={12} />
                         </div>
@@ -169,9 +169,9 @@ export default function TourList1() {
                           <span className="fw-500">{elm.rating}</span> (
                           {elm.ratingCount})
                         </div>
-                      </div>
+                      </div> */}
 
-                      <div className="row x-gap-20 y-gap-5 pt-30">
+                      {/* <div className="row x-gap-20 y-gap-5 pt-30">
                         {elm.features?.map((elm2, i2) => (
                           <div key={i2} className="col-auto">
                             <div className=" text-accent-1">
@@ -180,7 +180,7 @@ export default function TourList1() {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="tourCard__info">
@@ -206,7 +206,7 @@ export default function TourList1() {
                         {/* <Link href={`/tour-single-1/${elm.id}`}> */}
                         <Link href={`/trip-details/${elm.id}`}>
                           View Details
-                          <i className="icon-arrow-top-right ml-10"></i>
+                          {/* <i className="icon-arrow-top-right ml-10"></i> */}
                         </Link>
                       </button>
                     </div>

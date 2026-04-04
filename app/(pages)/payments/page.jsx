@@ -145,7 +145,7 @@ export default function MakingPayments() {
                           setCurrentActiveFaq((pre) => (pre === i ? -1 : i))
                         }
                       >
-                        <h1 className="text-dark-1 fw-500">{elm.question}</h1>
+                        <h5 className="text-dark-1 fw-500">{elm.question}</h5>
 
                         <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
                           <i className="icon-plus"></i>

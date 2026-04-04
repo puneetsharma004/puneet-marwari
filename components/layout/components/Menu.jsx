@@ -13,13 +13,13 @@ export default function Menu() {
     <>
       <div className="xl:d-none ml-30">
         <div className="desktopNav">
-          <div className="desktopNav__item">
+          {/* <div className="desktopNav__item">
             <Link href="/">Home</Link>
-          </div>
+          </div> */}
 
           <div className="desktopNav__item">
             <Link href="#">
-              Tours <i className="icon-chevron-down"></i>
+              Our Tours <i className="icon-chevron-down"></i>
             </Link>
 
             <div className="desktopNavSubnav">

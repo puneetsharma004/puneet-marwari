@@ -18,7 +18,7 @@ export default function FlightsFaq() {
         <div className="row justify-center pt-30">
           <div className="">
             <div className="accordion -simple row y-gap-20 js-accordion">
-                          {flightsFaqData.map((elm, i) => (
+              {flightsFaqData.map((elm, i) => (
                 <div key={i} className="col-12">
                   <div
                     className={`accordion__item px-20 py-15 border-1 ${

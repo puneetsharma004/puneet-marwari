@@ -31,16 +31,16 @@ export default function Design() {
                 >
                   <div className="featureIcon__icon">
                     <Image
-                      width="25"
-                      height="25"
+                      width="40"
+                      height="40"
                       src={elm.iconSrc}
                       alt="icon"
                     />
                   </div>
 
-                  <h3 className="featureIcon__title fw-500 mt-30">
+                  <h6 className="featureIcon__title fw-600 mt-30 uppercase">
                     {elm.title}
-                  </h3>
+                  </h6>
                   <p className="featureIcon__text mt-10">{elm.text}</p>
                 </div>
               </div>

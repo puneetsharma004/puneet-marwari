@@ -1,27 +1,43 @@
 import Square from "@/components/common/icons/Square";
 
+const items = [
+  {
+    bold: "6+ months (180+ days) prior to departure",
+    text: "Deposit is 100% transferable to a future Mawari trip",
+  },
+  {
+    bold: "4 months (120-179 days) prior to departure",
+    text: "Deposit is 50% transferable to a future Mawari trip",
+  },
+  {
+    bold: "3 months (90-119 days) prior to departure",
+    text: "Deposit is non-transferable",
+  },
+  {
+    bold: "Less than 3 months (0-89 days) prior to departure",
+    text: "All payments are non-refundable and non-transferable",
+  },
+];
+
 const sections = [
   {
     title: "Cancellations",
     content: (
       <>
-        <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
-          All of our trips are "guaranteed departures" which means we do not
-          have a minimum number of travelers required to confirm a departure.
-          That said, we reserve the right to cancel a trip based on situations
-          out of our control — political instability, terrorism, natural
-          disasters, travel restrictions, pandemics, etc. We will always give
-          our travelers as much notice as possible if any situation arises that
-          forces a trip cancellation.
+        <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
+          All Mawari trips are <strong>guaranteed departures,</strong> meaning
+          we do not require a minimum number of travelers to operate a trip.
+          That said, Mawari reserves the right to cancel a departure due to
+          circumstances beyond our control, which may include political
+          instability, terrorism, natural disasters, travel restrictions,
+          pandemics, or similar events.
         </p>
-        <p
-          className="text-13 text-light-2 mt-15"
-          style={{ lineHeight: "1.85" }}
-        >
-          If we must cancel a trip for reasons outside of our control, booked
-          travelers will retain all paid funds, minus unrecoverable costs, as
-          credit for future travel with no expiry date or destination
-          restrictions.
+        <p className=" text-light-2 mt-15" style={{ lineHeight: "1.85" }}>
+          Should a cancellation be necessary, we will always provide as much
+          notice as possible. If Mawari must cancel a trip for reasons outside
+          of our control, all paid funds (minus any unrecoverable costs) will be
+          issued as a credit for future travel with Mawari. This credit will
+          have <strong>no expiry date and no destination restrictions.</strong>
         </p>
       </>
     ),
@@ -40,9 +56,9 @@ const sections = [
             desc: "Due 90 days prior to trip start date.",
           },
         ].map((item, i) => (
-          <div key={i} className="d-flex x-gap-15 text-13">
+          <div key={i} className="d-flex x-gap-15 ">
             <Square />
-            <p className="text-13 text-light-2" style={{ lineHeight: "1.8" }}>
+            <p className=" text-light-2" style={{ lineHeight: "1.8" }}>
               <span className="fw-700 text-dark-1">{item.label}</span> —{" "}
               {item.desc}
             </p>
@@ -56,24 +72,21 @@ const sections = [
     content: (
       <>
         <div className="d-flex flex-column y-gap-12 mb-20">
-          {[
-            "Cancel/reschedule at least 6 months (180+ days) prior to trip start — deposit is 100% transferable to a future trip.",
-            "Cancel/reschedule at least 4 months (120–179 days) prior to trip start — deposit is 50% transferable to a future trip.",
-            "Cancel/reschedule at least 3 months (90–119 days) prior to trip start — deposit is not transferable.",
-            "Cancel/reschedule less than 3 months (0–89 days) prior to trip start date — all payments non-refundable, non-transferable.",
-          ].map((item, i) => (
+          {items.map((item, i) => (
             <div key={i} className="d-flex x-gap-15">
               <Square />
-              <p className="text-13 text-light-2" style={{ lineHeight: "1.8" }}>
-                {item}
+
+              <p className=" text-light-2" style={{ lineHeight: "1.8" }}>
+                <strong>{item.bold}</strong> - {item.text}
               </p>
             </div>
           ))}
         </div>
         <p className="text-14 text-light-2 mb-15" style={{ lineHeight: "1.8" }}>
-          It's optional, but we always suggest taking out comprehensive travel
-          insurance which can include trip cancellation, baggage delay, etc.
-          Travel insurance can be purchased through our{" "}
+          We strongly recommend purchasing comprehensive travel insurance, which
+          may include coverage for trip cancellation, baggage delay, and other
+          unforeseen circumstances. Travel insurance options can be found on our
+          &nbsp;
           <a
             href="/insurance"
             className="text-dark-1 fw-600"
@@ -83,13 +96,16 @@ const sections = [
           </a>
           .
         </p>
+        <p className="" style={{ lineHeight: "1.8" }}>
+          <strong>Why do cancellation fees exist?</strong>
+        </p>
         <p className="text-14 text-light-2" style={{ lineHeight: "1.85" }}>
-          Why do we have cancellation fees? Nobody likes them, we get it, and we
-          don't either. However, traveler payments are used to confirm flights,
-          hotel bookings, and other services on their behalf in the destination
-          country. As the trip approaches, those payments are subject to
-          increasing costs — this is why comprehensive travel insurance is the
-          best way to protect your payments against unpredictable life events.
+          While no one enjoys them, cancellation fees reflect the reality that
+          traveler payments are used to secure flights, accommodations, and
+          services well in advance. As departure approaches, these commitments
+          become increasingly non-recoverable. Comprehensive travel insurance
+          remains the most effective way to protect your investment against
+          unexpected life events.
         </p>
       </>
     ),
@@ -98,27 +114,27 @@ const sections = [
     title: "Rooming",
     content: (
       <>
-        <p
-          className="text-13 text-light-2 mb-20"
-          style={{ lineHeight: "1.85" }}
-        >
-          All published prices are based on twin-share (2 travelers per room).
-          Solo traveler? No problem! We offer two options:
+        <p className=" text-light-2 mb-20" style={{ lineHeight: "1.85" }}>
+          All published prices are based on{" "}
+          <strong> twin-share accommodation</strong> (two travelers per room)
+        </p>
+        <p className=" text-light-2 mb-20" style={{ lineHeight: "1.85" }}>
+          Traveling solo? We're happy to offer two options:
         </p>
         <div className="d-flex flex-column y-gap-12">
           {[
             {
               label: "Roommate Matching",
-              desc: "We will match you up with another solo traveler to share a room (two separate beds) at no additional cost. Please note that we cannot guarantee any specific roommate features (ie: non-snorers, non-smokers, etc).",
+              desc: "We will pair you with another solo traveler in a twin room at no additional cost. While we do our best to ensure compatibility, specific roommate preferences cannot be guaranteed.",
             },
             {
               label: "Private Room",
-              desc: "We charge a very reasonable private room cost to give you your own room for the duration of the trip. This fee is different for each trip — please check the specific trip page for details.",
+              desc: "A single-room supplement is available for travelers who prefer their own space. Fees vary by trip; please refer to the individual trip page for details.",
             },
           ].map((item, i) => (
             <div key={i} className="d-flex x-gap-15">
               <Square />
-              <p className="text-13 text-light-2" style={{ lineHeight: "1.8" }}>
+              <p className=" text-light-2" style={{ lineHeight: "1.8" }}>
                 <span className="fw-700 text-dark-1">{item.label}: </span>
                 {item.desc}
               </p>
@@ -131,63 +147,67 @@ const sections = [
   {
     title: "Passports & Visas",
     content: (
-      <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
-        We are here to help with any information you require regarding passport
-        and visa requirements in each of the countries we operate in. The
-        responsibility, however, relies on the traveler to ensure the passport
-        is valid for 6 months beyond the trip end date, and that visas are
-        obtained and valid (if required). We cannot be held responsible for
-        individual passport or visa problems that may arise.
+      <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
+        We are happy to provide guidance on passport and visa requirements for
+        the destinations we operate in. However, it is the traveler's
+        responsibility to ensure their passport is valid for{" "}
+        <strong>at least six months beyond the trip end date,</strong> and that
+        all required visas are obtained and valid prior to departure. Mawari
+        cannot be held responsible for issues arising from passport or visa
+        non-compliance.
       </p>
     ),
   },
   {
     title: "Flights",
     content: (
-      <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
+      <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
         International flights to and from the destination are not included in
-        the trip cost. As we are a tour operator and not a travel agency, if you
-        would like assistance with booking your flights beyond the suggestions
-        we provide in your welcome email, we suggest connecting with a travel
-        agent who can help.
+        the trip price. As part of your Mawari experience, all flight planning
+        and flight searches are handled by Mawari as an all-inclusive service,
+        with ticketing arranged directly by Mawari in accordance with applicable
+        regulations.
       </p>
     ),
   },
   {
     title: "Group Sizes",
     content: (
-      <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
-        We definitely aren't the "big 50-person tour bus" kind of company. We
-        believe the best way to experience a new place is with a more intimate
-        group. That's why, unless otherwise stated on the trip's info page, our
-        groups range in size up to 16 members plus one trip leader. This gives
-        everyone plenty of opportunities to meet new people while not
-        overwhelming our destinations. Wondering how many people are booked on
-        your upcoming trip? Just ask!
+      <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
+        Mawari trips are intentionally designed to remain intimate. Unless
+        otherwise stated on the trip page, group sizes are capped at{" "}
+        <strong>12 travelers plus one trip leader.</strong> This allows for a
+        more personal experience, meaningful connections, and a lighter
+        footprint in the destinations we visit.
+        <br />
+        <br />
+        If you're curious about how many travelers are booked on your upcoming
+        trip, feel free to ask.
       </p>
     ),
   },
   {
     title: "Itinerary Changes",
     content: (
-      <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
-        Occasionally, situations arise that require a change of accommodation,
-        itinerary, mode of transport, schedule, etc. We will always inform our
-        travelers of these changes as soon as possible as they arise. We cannot
-        be held responsible for major changes forced by circumstances beyond our
-        control (natural disaster, political instability, extreme weather,
-        terrorism, etc.).
+      <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
+        Occasionally, adjustments to accommodations, transportation, or
+        scheduling may be required. Mawari will always communicate any changes
+        as soon as they arise. We cannot be held responsible for significant
+        alterations caused by circumstances beyond our control, including but
+        not limited to natural disasters, political instability, extreme
+        weather, or acts of terrorism.
       </p>
     ),
   },
   {
     title: "Your Conduct",
     content: (
-      <p className="text-13 text-light-2" style={{ lineHeight: "1.85" }}>
-        Any traveler who makes racist, abusive, offensive or any other form of
-        discriminatory actions or physical assault against any group members,
-        trip leaders or any third party will be removed from the tour and will
-        not be entitled to a refund for any missed services or accommodation.
+      <p className=" text-light-2" style={{ lineHeight: "1.85" }}>
+        All travelers are expected to conduct themselves with respect toward
+        fellow guests, trip leaders, and third parties. Any racist, abusive,
+        offensive, discriminatory behavior, or physical assault will result in
+        immediate removal from the tour. In such cases, the traveler will not be
+        entitled to a refund for missed services or accommodations. on.
       </p>
     ),
   },
@@ -195,89 +215,39 @@ const sections = [
 
 export default function BookingConditionsBody() {
   return (
-    <section className=" layout-pb-lg" style={{ backgroundColor: "#fef7f4" }}>
+    <section className="layout-pb-lg">
       <div className="container">
         <div className="row justify-center">
-          <div className="">
+          <div className="col-xl-9 col-lg-10 col-12">
             {/* Intro */}
-            <p
-              className="text-13 text-light-2 mb-50"
-              style={{ lineHeight: "1.85" }}
-            >
-              It's always a good idea to spend a few minutes getting acquainted
-              with our booking conditions prior to signing up for a trip.
+            <p className="text-light-2 mb-40 lg:mb-30 lh-18">
+              We recommend taking a few moments to review the booking conditions
+              below before confirming your Mawari journey. These guidelines are
+              designed to ensure clarity, fairness, and peace of mind for all
+              travelers.
             </p>
 
             {/* Sections */}
-            <div className="d-flex flex-column y-gap-0">
+            <div className="d-flex flex-column y-gap-40 lg:y-gap-30">
               {sections.map((section, i) => (
-                <div
-                  key={i}
-                  style={{
-                    paddingTop: "36px",
-                    paddingBottom: "36px",
-                    borderBottom: "1px solid #E7E6E6",
-                  }}
-                >
-                  <div className="d-flex items-center x-gap-15 mb-20">
-                    <span
-                      style={{
-                        flexShrink: 0,
-                        width: 24,
-                        height: 24,
-                        border: "1px solid #1a1715",
-                        borderRadius: "0%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "10px",
-                        fontWeight: 700,
-                        color: "#1a1715",
-                      }}
-                    >
-                      {i + 1}
-                    </span>
-                    <h2
-                      className="text-12 fw-700 uppercase text-dark-1"
-                      style={{
-                        letterSpacing: "4px",
-                        margin: 0,
-                        fontFamily: "var(--font-caslon), serif",
-                      }}
-                    >
-                      {section.title}
-                    </h2>
+                <div key={i} className="pb-10 border-bottom-light">
+                  <div className="d-flex items-start x-gap-15 mb-15">
+                    <div className=" fw-600 lh-1">{i + 1}.</div>
+                    <h6 className="fw-600 uppercase">{section.title}</h6>
                   </div>
-                  {section.content}
+
+                  <div className="pl-35 text-light-1 lh-18">
+                    {section.content}
+                  </div>
                 </div>
               ))}
             </div>
 
             {/* Footer note */}
-            <div
-              style={{ borderLeft: "3px solid #1a1715", paddingLeft: "24px" }}
-              className="mt-50"
-            >
-              <p
-                className="text-13 text-dark-1"
-                style={{
-                  lineHeight: "1.75",
-                  fontFamily: "var(--font-caslon), serif",
-                }}
-              >
-                "Questions about our booking conditions? We're happy to walk you
-                through anything before you register."{" "}
-                <a
-                  href="/contact"
-                  className="text-dark-1 fw-600"
-                  style={{
-                    textDecoration: "underline",
-                    textUnderlineOffset: "3px",
-                    fontStyle: "normal",
-                  }}
-                >
-                  Contact us here.
-                </a>
+            <div className="mt-50 lg:mt-40 pt-10">
+              <p className="lh-18 text-light-1 mb-0">
+                “Questions about our booking conditions? We’re happy to walk you
+                through anything before you register.”{" "}
               </p>
             </div>
           </div>

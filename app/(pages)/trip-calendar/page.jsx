@@ -117,9 +117,9 @@ export default function TripCalendar() {
         image="/heroimg/trip-calendar.jpg"
       /> */}
       <HeroBanner
-        title="Phuket"
-        description="Explore deals, travel guides and things to do in Phuket"
-        imageSrc="/heroimg/trip-calendar.jpg"
+        title="Trip Calendar"
+        description="Trip Calendar"
+        imageSrc="/heroimg/trip-calendar1.jpg"
       />
       <TourList1 />
     </>

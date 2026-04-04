@@ -13,10 +13,27 @@ export default function RoadMap() {
           ) : (
             <div className="roadmap__icon"></div>
           )}
+
           <div className="roadmap__wrap">
-            <div className="roadmap__title">{elm.title}</div>
+            <h5>{elm.title}</h5>
+
             {elm.content && (
-              <div className="roadmap__content">{elm.content}</div>
+              <div className="roadmap__content">
+                {Array.isArray(elm.content) ? (
+                  elm.content.map((paragraph, index) => (
+                    <p
+                      key={index}
+                      className={
+                        index !== elm.content.length - 1 ? "mb-15" : ""
+                      }
+                    >
+                      {paragraph}
+                    </p>
+                  ))
+                ) : (
+                  <p>{elm.content}</p>
+                )}
+              </div>
             )}
           </div>
         </div>

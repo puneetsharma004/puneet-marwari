@@ -62,13 +62,13 @@ export default function Community() {
           <div className="row">
             <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-7">
               <div className="cta__content">
-                <h2 data-aos="fade-up" data-aos-delay="" className="lh-13">
-                  <span className="text-accent-2">Community, Naturally.</span>
+                <h3 data-aos="fade-up" data-aos-delay="" className="lh-13">
+                  <span>Community, Naturally.</span>
                   <br className="lg:d-none" />
                   More Than a Group.
                   <br className="lg:d-none" />
                   More Than a Trip.
-                </h2>
+                </h3>
 
                 <p data-aos="fade-up" data-aos-delay="" className="mt-10">
                   Like Detours, community is at the core of Mawari. Our
