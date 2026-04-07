@@ -1,4 +1,3 @@
-import { featuresFour } from "@/data/features";
 import Image from "next/image";
 import React from "react";
 
@@ -29,27 +28,6 @@ export default function Features10() {
               data-aos-delay=""
               className="row y-gap-30 pt-30 sm:pt-30"
             >
-              {/* {featuresFour.map((elm, i) => (
-                <div key={i} className="col-12">
-                  <div className="featureIcon -type-1 d-flex">
-                    <div className="featureIcon__icon size-50">
-                      <Image
-                        width="25"
-                        height="25"
-                        src={elm.iconSrc}
-                        alt="icon"
-                      />
-                    </div>
-
-                    <div className="ml-30">
-                      <h3 className="featureIcon__title text-18 fw-500">
-                        {elm.title}
-                      </h3>
-                      <p className="featureIcon__text mt-10">{elm.text}</p>
-                    </div>
-                  </div>
-                </div>
-              ))} */}
               <p>
                 Mawari journeys are designed for travelers who value exceptional
                 places, thoughtful pacing, and shared moments that feel
@@ -83,22 +61,24 @@ export default function Features10() {
                 to wander, rest, or indulge as you see fit.
                 <br />
                 <br />
+              </p>
+              <p className={`font-montserrat`}>
                 Mawari travelers share a desire for quality over quantity.
                 Whether that means a private cultural visit, a beautifully
                 prepared meal, a scenic transfer, or simply time to enjoy a
                 place without rushing, our journeys prioritize moments that feel
-                memorable rather than programmed.
-                <br />
-                <br />
+                memorable rather than programmed.{" "}
+              </p>
+              <p className={`font-montserrat`}>
                 Our trip leaders are experienced, discreet, and deeply
                 knowledgeable. They manage the details seamlessly, allowing you
                 to relax into the experience, confident that everything is taken
                 care of, while still feeling personal, human, and warm.
-                <br />
-                <br />
+              </p>
+              <p className={`font-montserrat`}>
                 The result is a growing community of Mawari travelers who return
-                home feeling enriched: by the places they’ve seen, the
-                experiences they’ve shared, and the connections they’ve made
+                home feeling enriched: by the places they've seen, the
+                experiences they've shared, and the connections they've made
                 along the way.
               </p>
             </div>

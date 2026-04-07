@@ -15,7 +15,7 @@ export default function page() {
       <HeroBanner
         title="Contact"
         description="Let's Start a Conversation"
-        imageSrc="/heroimg/contact.jpg"
+        imageSrc="/heroimg/contact-hero.png"
       />
 
       {/* <Locations /> */}

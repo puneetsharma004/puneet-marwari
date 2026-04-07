@@ -10,7 +10,7 @@ export default function FaqPage() {
       <HeroBanner
         title="Frequently Asked Questions"
         description="We're Here to Help"
-        imageSrc="/heroimg/faq.png"
+        imageSrc="/heroimg/faq-hero.webp"
       />
       <div className="container">
         {/* Intro */}

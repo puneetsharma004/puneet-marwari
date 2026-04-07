@@ -1,7 +1,7 @@
 "use client";
 
 import HeroBanner from "@/components/common/HeroBanner";
-import { faqData2, faqData3 } from "@/data/tourSingleContent";
+import { faqData3 } from "@/data/tourSingleContent";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -14,14 +14,14 @@ export default function MakingPayments() {
       <HeroBanner
         title="Making Payments"
         description="Flexible & Convenient"
-        imageSrc="/heroimg/payments.jpg"
+        imageSrc="/heroimg/payments-hero.webp"
       />
 
       <section className=" layout-pb-xl">
         <div className="container">
           <div className="row y-gap-20 justify-between">
             <div className="col-lg-6">
-              <h2 className=" fw-700">MAWARI - PAYMENT OPTIONS</h2>
+              <h2 className=" fw-700"> PAYMENT OPTIONS</h2>
             </div>
 
             <div className="col-lg-5">
@@ -46,18 +46,18 @@ export default function MakingPayments() {
       <section
         className=" relative"
         style={{
-          minHeight: "600px",
+          minHeight: "800px",
           display: "flex",
           alignItems: "center",
           //   marginTop: "100px",
         }}
       >
         <div className="container">
-          <div className="sectionBg">
+          <div className="sectionBg hero-overlay">
             <Image
               width={1920}
-              height={690}
-              src="/img/about/3/4.jpg"
+              height={890}
+              src="/heroimg/pay-schedule.webp"
               alt="image"
               className="img-ratio"
               style={{
@@ -102,7 +102,7 @@ export default function MakingPayments() {
               >
                 <Link href={"/faq"}>
                   Know More
-                  <i className="icon-arrow-top-right ml-10"></i>
+                  <i className=" ml-10"></i>
                 </Link>
               </button>
             </div>
@@ -212,7 +212,7 @@ export default function MakingPayments() {
               <div className="col-lg-6">
                 <div className="cta__image">
                   <Image
-                    src="/img/cta/11/3.jpeg"
+                    src="/heroimg/next-steps.webp"
                     width={730}
                     height={375}
                     alt="image"

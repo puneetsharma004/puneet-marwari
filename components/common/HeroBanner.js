@@ -32,7 +32,7 @@ export default function HeroBanner({ imageSrc, title, description }) {
                 <div className="row justify-center">
                     <div className="col-12">
                         <div className="pageHeader__content">
-                            <h1 className="pageHeader__title">
+                            <h1 className="text-white uppercase">
                                 {title || "Default Title"}
                             </h1>
 

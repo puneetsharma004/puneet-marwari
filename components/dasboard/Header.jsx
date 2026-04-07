@@ -15,14 +15,14 @@ export default function Header({ setSideBarOpen }) {
           </button>
         </div>
 
-        <div className="dashboard__content_header_search d-flex items-center py-5 px-20 rounded-200 border-1 md:d-none">
+        {/* <div className="dashboard__content_header_search d-flex items-center py-5 px-20 rounded-200 border-1 md:d-none">
           <i className="icon-search text-18 mr-10"></i>
           <input type="text" placeholder="Search" />
-        </div>
+        </div> */}
       </div>
 
       <div>
-        <div>
+        {/* <div>
           <button>
             <svg
               width="20"
@@ -94,13 +94,13 @@ export default function Header({ setSideBarOpen }) {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
 
         <div>
           <Image
             width={50}
             height={50}
-            src="/img/dashboard/header/1.png"
+            src="/img/dashboard/header/profile.webp"
             alt="image"
           />
         </div>

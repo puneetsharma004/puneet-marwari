@@ -15,7 +15,7 @@ export default function page() {
       <HeroBanner
         title="Register Now"
         description="Let's create your account!"
-        imageSrc="/heroimg/registration.jpg"
+        imageSrc="/heroimg/register-hero.webp"
       />
       <Register />
     </>

@@ -213,6 +213,34 @@ export const faqData3 = [
 
 ];
 
+export const faqData4 = [
+  {
+    question: "WHAT FLIGHT SUPPORT DOES MAWARI PROVIDE?",
+    answer:
+      "As part of your Mawari journey, all international flights to and from the destination are arranged by Mawari as an inclusive service. Our team will work with you to identify the most suitable flights based on your departure city and schedule, and we will coordinate your airline ticketing directly on your behalf. Our goal is to ensure your travel logistics feel effortless and well-supported from departure to arrival.",
+  },
+  {
+    question: "WHEN SHOULD YOU BOOK YOUR FLIGHTS?",
+    answer:
+      "Airline pricing and availability can change frequently. Although Mawari coordinates your flight arrangements, it is generally advisable to complete your flight plans as soon as possible after registration, especially for travel during peak periods such as holidays and high season.",
+  },
+  {
+    question: "ARRIVAL AND DEPARTURE AIRPORTS?",
+    answer:
+      "Your detailed welcome email, sent after registration, will include recommended arrival and departure airports for your trip, along with suggested arrival windows and meeting instructions.",
+  },
+  {
+    question: "RETURN FLIGHTS?",
+    answer:
+      "You are welcome to depart at any time on the final day of your itinerary. Mawari does not schedule group activities on the last day, giving you flexibility in planning your return flight.",
+  },
+  {
+    question: "ADDITIONAL SUPPORT?",
+    answer:
+      "Our team is happy to recommend airlines, routing options, and timing considerations based on your departure city, frequent flyer preferences, and comfort needs. If you have specific questions or require bespoke assistance, please reach out to us directly. We aim to make your flight planning as intuitive and well-coordinated as the rest of your Mawari experience.",
+  }
+];
+
 export const flightsFaqData = [
   {
     question: "Can I get the refund?",

@@ -24,7 +24,7 @@ export default function Community() {
       <HeroBanner
         title="Our Community"
         description="Giving Back"
-        imageSrc="/heroimg/community.jpg"
+        imageSrc="/heroimg/community-hero.webp"
       />
 
       <section className="cta -type-2">
@@ -93,7 +93,7 @@ export default function Community() {
                   <button className="button -md -dark-1 bg-accent-2 text-white">
                     <Link href="/trip-calendar">
                       Book Now
-                      <i className="icon-arrow-top-right ml-10 text-16"></i>
+                      <i className=" ml-10 text-16"></i>
                     </Link>
                   </button>
                 </div>

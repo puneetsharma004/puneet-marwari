@@ -88,7 +88,7 @@ const tabButtons = [
   "Accommodation",
   // "calendar",
   "Trip Notes",
-  "Trip Style",
+  // "Trip Style",
   // "Reviews",
 ];
 
@@ -199,13 +199,13 @@ export default function Single({ tour }) {
                   </div>
                 </div>
 
-                <div
+                {/* <div
                   className={`tabs__pane ${
                     activeTab == "Trip Style" ? "is-tab-el-active" : ""
                   }`}
                 >
                   <TripStyle />
-                </div>
+                </div> */}
 
                 {/* <div
                   className={`tabs__pane ${

@@ -8,7 +8,7 @@ export default function page() {
       <HeroBanner
         title="Booking Conditions"
         description="Booking Conditions"
-        imageSrc="/heroimg/registration.jpg"
+        imageSrc="/heroimg/booking-hero.webp"
       />
 
       <BookingConditionsBody />

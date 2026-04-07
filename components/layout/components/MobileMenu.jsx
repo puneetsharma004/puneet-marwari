@@ -1,6 +1,7 @@
 "use client";
 
 import { menuData } from "@/data/mobileMenu";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -31,7 +32,14 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
 
       <div className="menu__container">
         <div className="menu__header">
-          <h4>Mawari</h4>
+          <Link href="/" className="header__logo">
+            <Image
+              width={125}
+              height={32}
+              src="/home/mawari-logo-dark.png"
+              alt="logo icon"
+            />
+          </Link>
 
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -119,7 +127,7 @@ export default function MobileMenu({ mobileMenuOpen, setMobileMenuOpen }) {
 
           <div className="text-20 lh-12 fw-500 mt-20">
             <div>Speak to our expert at</div>
-            <div className="text-accent-1">1-800-453-6744</div>
+            <div className="text-accent-1">800-680-8066</div>
           </div>
 
           <div className="d-flex items-center x-gap-10 pt-30">

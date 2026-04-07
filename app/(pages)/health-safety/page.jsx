@@ -22,7 +22,7 @@ export default function HealthSafety() {
           <div className="row y-gap-30 items-center justify-between">
             <div className="col-xl-4 col-lg-5">
               <h2 data-aos="fade-up" data-aos-delay="">
-                MAWARI — HEALTH & SAFETY
+                HEALTH & SAFETY
               </h2>
 
               <p
@@ -87,7 +87,7 @@ export default function HealthSafety() {
               <Image
                 width={717}
                 height={700}
-                src="/heroimg/emergency.jpg"
+                src="/heroimg/health-page.webp"
                 alt="image"
                 data-aos="fade-up"
                 data-aos-delay=""

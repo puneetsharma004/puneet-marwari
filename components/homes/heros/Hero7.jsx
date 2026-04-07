@@ -15,12 +15,15 @@ import {
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import React from "react";
 const slides = [
   {
     id: 1,
     imageSrc: "/img/hero/7/hero1n.webp",
-    subtitle: "",
+    logoSrc: "/img/logo/mawari-logo-white.png",
+    subtitle: "LUXURY GAY TRAVEL. FOR OUR COMMUNITY.",
     title: "",
+    logoSlide: true,
   },
   {
     id: 2,
@@ -112,6 +115,7 @@ export default function Hero7() {
                       height={960}
                       src={elm.imageSrc}
                       alt="background"
+                      priority={i === 0}
                     />
                     <div
                       className="absolute inset-0"
@@ -123,32 +127,50 @@ export default function Hero7() {
                     <div className="row justify-center">
                       <div className="col-lg-8 col-md-10">
                         <div className="hero__content text-center">
-                          <h1
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            className="hero__title text-white"
-                          >
-                            {(() => {
-                              const parts = elm.title.split(",");
-                              return (
-                                <>
-                                  {parts[0]}
-                                  {parts[1] && (
-                                    <>
-                                      <br className="md:d-none" />
-                                      {parts.slice(1).join(",")}
-                                    </>
-                                  )}
-                                </>
-                              );
-                            })()}
-                          </h1>
+                          {elm.logoSrc ? (
+                            <div
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              className="mb-40 md:mb-20"
+                            >
+                              <Image
+                                src={elm.logoSrc}
+                                alt="Mawari Logo"
+                                width={600} // Adjust based on your logo size
+                                height={150}
+                                style={{ objectFit: "contain" }}
+                                className="w-auto max-h-[120px] md:max-h-[80px]"
+                              />
+                            </div>
+                          ) : (
+                            <h1
+                              data-aos="fade-up"
+                              data-aos-delay="300"
+                              className="hero__title text-white font-bold"
+                            >
+                              {elm.title.split(",").map((part, index) => (
+                                <React.Fragment key={index}>
+                                  {index > 0 && <br className="md:d-none" />}
+                                  {part}
+                                </React.Fragment>
+                              ))}
+                            </h1>
+                          )}
                           <div
                             data-aos="fade-up"
                             data-aos-delay="100"
                             className="hero__subtitle text-white mt-20 md:mt-10"
                           >
-                            {elm.subtitle}
+                            {elm.logoSlide ? (
+                              <>
+                                <p className="text-white text-40 sm:text-30">
+                                  LUXURY GAY TRAVEL. FOR{" "}
+                                  <strong> OUR COMMUNITY.</strong>
+                                </p>
+                              </>
+                            ) : (
+                              elm.subtitle
+                            )}
                           </div>
                         </div>
                       </div>
