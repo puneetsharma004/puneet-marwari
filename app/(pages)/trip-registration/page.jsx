@@ -9,219 +9,279 @@ const TripRegistration = () => {
         description="Journey Through the Greek Islands"
         imageSrc="/heroimg/greece.png"
       />
-      <div className="registration-page">
-        {/* 1. TOP STEPPER - 5px Radius applied to active state */}
-        <nav className="form-steps">
-          <div className="step-item active">1. Your Details</div>
-          <div className="step-item">2. Additional Guest</div>
-          <div className="step-item">3. Pay Deposit</div>
-          <div className="step-item">4. Confirmation</div>
+      <div className="tr-wrapper">
+        {/* 1. TOP STEPPER (TABS) */}
+        <nav className="tr-stepper">
+          <div className="tr-step active">
+            <span className="tr-step-dot"></span>
+            <div className="tr-step-text">
+              <span className="tr-step-num">STEP 01</span>
+              <span className="tr-step-label">Your Details</span>
+            </div>
+          </div>
+          <div className="tr-step">
+            <span className="tr-step-dot"></span>
+            <div className="tr-step-text">
+              <span className="tr-step-num">STEP 02</span>
+              <span className="tr-step-label">Guest Info</span>
+            </div>
+          </div>
+          <div className="tr-step">
+            <span className="tr-step-dot"></span>
+            <div className="tr-step-text">
+              <span className="tr-step-num">STEP 03</span>
+              <span className="tr-step-label">Payment</span>
+            </div>
+          </div>
+          <div className="tr-step">
+            <span className="tr-step-dot"></span>
+            <div className="tr-step-text">
+              <span className="tr-step-num">STEP 04</span>
+              <span className="tr-step-label">Success</span>
+            </div>
+          </div>
         </nav>
 
-        <div className="main-layout">
-          <div className="form-column">
-            <h1 className="page-title">Trip Registration</h1>
-
-            {/* URGENCY ALERTS */}
-            <div className="alert-container">
-              <div className="alert-item warning">
-                <strong>
-                  Only 1 available space remains on this departure.
-                </strong>
-              </div>
-              <div className="alert-item info">
-                This trip begins in less than 90 days and, as a result, cannot
-                be immediately confirmed. Please contact us directly to confirm
-                availability.
+        <div className="tr-main-grid">
+          {/* LEFT COLUMN: FORM */}
+          <div className="tr-content">
+            <div className="tr-page-header">
+              <h2 className="">Trip Registration</h2>
+              <div className="tr-alert-stack">
+                <div className="tr-alert warning">
+                  <strong>Only 1 available space</strong> remains on this
+                  departure.
+                </div>
+                <div className="tr-alert info">
+                  This trip begins in less than 90 days and requires manual
+                  confirmation.
+                </div>
               </div>
             </div>
 
-            <form className="structured-form">
+            <form className="tr-form">
               {/* CONTACT DETAILS */}
-              <fieldset className="form-group">
-                <legend>Contact Details</legend>
-                <div className="row">
-                  <div className="field full">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="example@mail.com" />
+              <div className="tr-card">
+                <h2 className="tr-card-title">Contact Details</h2>
+                <div className="tr-grid">
+                  <div className="tr-field full">
+                    <label className="tr-label">Email Address</label>
+                    <input
+                      type="email"
+                      className="tr-input"
+                      placeholder="e.g., travel@example.com"
+                    />
                   </div>
-                </div>
-                <div className="row two-col">
-                  <div className="field">
-                    <label>Primary Phone Number</label>
-                    <input type="tel" />
+                  <div className="tr-field">
+                    <label className="tr-label">Primary Phone Number</label>
+                    <input type="tel" className="tr-input" />
                   </div>
-                  <div className="field">
-                    <label>Secondary Phone Number</label>
-                    <input type="tel" />
+                  <div className="tr-field">
+                    <label className="tr-label">Secondary Phone Number</label>
+                    <input
+                      type="tel"
+                      className="tr-input"
+                      placeholder="Optional"
+                    />
                   </div>
-                </div>
-                <div className="row two-col">
-                  <div className="field">
-                    <label>Travel Agent Email</label>
-                    <input type="email" />
-                    <span className="helper">
+                  <div className="tr-field">
+                    <label className="tr-label">Travel Agent Email</label>
+                    <input type="email" className="tr-input" />
+                    <p className="tr-helper">
                       Registered travel agents, enter your email here.
-                    </span>
+                    </p>
                   </div>
-                  <div className="field">
-                    <label>Referral Code</label>
-                    <input type="text" />
-                    <span className="helper">
+                  <div className="tr-field">
+                    <label className="tr-label">Referral Code</label>
+                    <input type="text" className="tr-input" />
+                    <p className="tr-helper">
                       If you received a referral code, enter it here.
-                    </span>
+                    </p>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
-              {/* YOUR DETAILS */}
-              <fieldset className="form-group">
-                <legend>Your Details</legend>
-                <div className="row two-col">
-                  <div className="field">
-                    <label>First Name</label>
-                    <input type="text" />
+              {/* PERSONAL DETAILS */}
+              <div className="tr-card">
+                <h2 className="tr-card-title">Your Details</h2>
+                <div className="tr-grid">
+                  <div className="tr-field">
+                    <label className="tr-label">First Name</label>
+                    <input type="text" className="tr-input" />
+                    <p className="tr-helper">
+                      Please ensure this matches your passport info.
+                    </p>
                   </div>
-                  <div className="field">
-                    <label>Middle Name</label>
-                    <input type="text" />
+                  <div className="tr-field">
+                    <label className="tr-label">Middle Name</label>
+                    <input type="text" className="tr-input" />
                   </div>
-                </div>
-                <div className="row two-col">
-                  <div className="field">
-                    <label>Last Name</label>
-                    <input type="text" />
+                  <div className="tr-field">
+                    <label className="tr-label">Last Name</label>
+                    <input type="text" className="tr-input" />
+                    <p className="tr-helper">
+                      Please ensure this matches your passport info.
+                    </p>
                   </div>
-                  <div className="field">
-                    <label>Preferred First Name</label>
-                    <input type="text" />
+                  <div className="tr-field">
+                    <label className="tr-label">Preferred First Name</label>
+                    <input type="text" className="tr-input" />
+                    <p className="tr-helper">Name you'd prefer to be called.</p>
                   </div>
-                </div>
-                <div className="row three-col">
-                  <div className="field">
-                    <label>Citizenship</label>
-                    <select>
+                  <div className="tr-field">
+                    <label className="tr-label">Gender</label>
+                    <select className="tr-input">
+                      <option>Select...</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option> X / Other</option>
+                    </select>
+                  </div>
+                  <div className="tr-field">
+                    <label className="tr-label">Date of Birth</label>
+                    <input type="date" className="tr-input" />
+                  </div>
+
+                  <div className="tr-field full">
+                    <label className="tr-label">Street Address</label>
+                    <input type="text" className="tr-input mb-10" />
+                    <input type="text" className="tr-input" />
+                  </div>
+                  <div className="tr-field">
+                    <label className="tr-label">City</label>
+                    <input type="text" className="tr-input" />
+                  </div>
+                  <div className="tr-field">
+                    <label className="tr-label">Zip/Postal</label>
+                    <input type="text" className="tr-input" />
+                  </div>
+                  <div className="tr-field">
+                    <label className="tr-label">Country</label>
+                    <select className="tr-input">
                       <option>Select...</option>
                     </select>
                   </div>
-                  <div className="field">
-                    <label>Date of Birth</label>
-                    <input type="date" />
-                  </div>
-                  <div className="field">
-                    <label>Gender</label>
-                    <div className="radio-set">
-                      <label>
-                        <input type="radio" name="gender" /> Male
-                      </label>
-                      <label>
-                        <input type="radio" name="gender" /> Female
-                      </label>
-                      <label>
-                        <input type="radio" name="gender" /> X / Other
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className="field full mt-10">
-                  <label>Street Address</label>
-                  <input type="text" className="mb-10" />
-                  <input type="text" />
-                </div>
-                <div className="row three-col mt-10">
-                  <div className="field">
-                    <label>City</label>
-                    <input type="text" />
-                  </div>
-                  <div className="field">
-                    <label>Zip/Postal</label>
-                    <input type="text" />
-                  </div>
-                  <div className="field">
-                    <label>Country</label>
-                    <select>
+                  <div className="tr-field">
+                    <label className="tr-label">Citizenship</label>
+                    <select className="tr-input">
                       <option>Select...</option>
                     </select>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
               {/* PREFERENCES */}
-              <fieldset className="form-group">
-                <legend>Rooming & Travel Preferences</legend>
-                <div className="radio-list">
-                  <label className="radio-box">
-                    <input type="radio" name="room" /> One bed. Traveling with
-                    my partner.
+              <div className="tr-card">
+                <h2 className="tr-card-title">Rooming & Flights</h2>
+
+                <div className="tr-radio-stack">
+                  <label className="tr-radio-box">
+                    <input
+                      type="radio"
+                      name="room"
+                      style={{ width: "auto", marginRight: "20px" }}
+                    />
+                    <span>One bed. Traveling with my partner.</span>
                   </label>
-                  <label className="radio-box">
-                    <input type="radio" name="room" /> One bed. Traveling solo.
-                    (private room upgrade applicable)
+                  <label className="tr-radio-box">
+                    <input
+                      type="radio"
+                      name="room"
+                      style={{ width: "auto", marginRight: "20px" }}
+                    />
+                    <span>One bed. Traveling solo. (private upgrade)</span>
                   </label>
-                  <label className="radio-box">
-                    <input type="radio" name="room" /> Two beds. Traveling with
-                    a friend.
+                  <label className="tr-radio-box">
+                    <input
+                      type="radio"
+                      name="room"
+                      style={{ width: "auto", marginRight: "20px" }}
+                    />
+                    <span>Two beds. Traveling with a friend.</span>
                   </label>
-                  <label className="radio-box">
-                    <input type="radio" name="room" /> Two beds. Please pair me
-                    with another solo traveler.
-                  </label>
+                  {/* <label className="tr-radio-box">
+                    <input
+                      type="radio"
+                      name="room"
+                      style={{ width: "auto", marginRight: "20px" }}
+                    />
+                    <span>Two beds. Pair me with a solo traveler.</span>
+                  </label> */}
                 </div>
 
-                <div className="checkbox-area mt-20">
-                  <label className="check-label">
-                    <input type="checkbox" /> <strong>Book Flight</strong>
+                {/* FIXED CHECKBOX WRAPPER */}
+                {/* <div className="tr-checkbox-group">
+                  <label className="tr-check-label">
+                    <input
+                      type="checkbox"
+                      className="tr-checkbox"
+                      style={{ width: "auto" }}
+                    />
+                    <div className="tr-check-text">
+                      <span className="tr-check-title">Book Flight</span>
+                      <p className="tr-helper-text">
+                        (Check this box if you would like Mawari to book your
+                        flight for an additional $50 fee. One of us will follow
+                        up with an email to review potential flights with you,
+                        and then will collect credit card information by phone.
+                        Changes and cancelations will be your responsibility
+                        once the ticket is issued by the airline.)
+                      </p>
+                    </div>
                   </label>
-                  <p className="helper-text">
-                    Check this box if you would like Detours to book your flight
-                    for an additional $50 fee...
+                </div> */}
+
+                <div className="tr-field mt-30">
+                  <label className="tr-label">Traveling Partners</label>
+                  <input type="text" className="tr-input" />
+                  <p className="tr-helper">
+                    Name(s) of the traveler(s) you would like to be grouped
+                    with, or "solo" if you are traveling by yourself.
                   </p>
                 </div>
 
-                <div className="field full mt-20">
-                  <label>Traveling Partners</label>
-                  <input type="text" />
-                  <span className="helper">
-                    Names of traveler(s) you would like to be grouped with.
-                  </span>
-                </div>
-
-                <div className="field full mt-20">
-                  <label>Dietary Requirements</label>
-                  <input type="text" />
-                  <span className="helper">
+                <div className="tr-field mt-30">
+                  <label className="tr-label">Dietary Requirements</label>
+                  <textarea className="tr-input" rows="3"></textarea>
+                  <p className="tr-helper">
                     We'll communicate these, but it's a good idea to chat with
-                    your leader.
-                  </span>
+                    your trip leader in person as well.
+                  </p>
                 </div>
-              </fieldset>
+              </div>
 
-              {/* ADDITIONAL DETAILS */}
-              <fieldset className="form-group">
-                <legend>Additional Details</legend>
-                <div className="field full">
-                  <label>Where did you FIRST hear about Detours?</label>
-                  <textarea rows="3"></textarea>
-                  <span className="helper">
-                    On a search engine? Social media?
-                  </span>
+              {/* FINAL DETAILS */}
+              <div className="tr-card">
+                <h2 className="tr-card-title">Additional Details</h2>
+                <div className="tr-field full">
+                  <label className="tr-label">
+                    Where did you FIRST hear about Mawari?
+                  </label>
+                  <textarea className="tr-input" rows="3"></textarea>
                 </div>
-                <div className="field full mt-20">
-                  <label>Comments</label>
-                  <textarea rows="4"></textarea>
+                <div className="tr-field full mt-20">
+                  <label className="tr-label">Comments</label>
+                  <textarea className="tr-input" rows="3"></textarea>
                 </div>
-              </fieldset>
+              </div>
 
-              <div className="form-footer">
-                <label className="terms">
-                  <input type="checkbox" /> I agree to the{" "}
-                  <a href="#">Terms & Conditions</a>
+              <div className="tr-footer">
+                <label className="tr-terms">
+                  <input
+                    type="checkbox"
+                    style={{
+                      width: "auto",
+                      marginRight: "20px",
+                      marginBottom: "20px",
+                    }}
+                  />{" "}
+                  I agree to the <a href="#">Terms & Conditions</a>
                 </label>
-                <div className="button-row">
-                  <button type="button" className="btn-back">
+                <div className="tr-btn-row d-flex justify-between">
+                  <button type="button" className="tr-btn secondary">
                     BACK
                   </button>
-                  <button type="submit" className="btn-continue">
+                  <button type="submit" className="tr-btn primary">
                     CONTINUE
                   </button>
                 </div>
@@ -229,29 +289,35 @@ const TripRegistration = () => {
             </form>
           </div>
 
-          {/* 2. STICKY SIDEBAR */}
-          <aside className="sticky-sidebar">
-            <div className="summary-card">
-              <h3 className="summary-title">Booking Details</h3>
+          {/* RIGHT COLUMN: STICKY SIDEBAR */}
+          <aside className="tr-sidebar">
+            <div className="tr-sidebar-card">
+              <h4 className="tr-sidebar-title">Trip Summary</h4>
               <img
-                src="/images/greece.jpg"
+                src="/img/greece/6.webp"
                 alt="Greece"
-                className="summary-img"
+                className="tr-sidebar-img"
               />
-              <div className="summary-content">
-                <h4>11 Days In Greece</h4>
-                <ul className="trip-specs">
-                  <li>
-                    <strong>From:</strong> May 31, 2026 Athens
-                  </li>
-                  <li>
-                    <strong>To:</strong> June 10, 2026 Mykonos
-                  </li>
-                </ul>
-                <div className="price-box">
-                  <span className="label">Total:</span>
-                  <span className="usd">$4,380 USD</span>
-                  <span className="inr">( ≈ ₹4,08,450 INR )</span>
+              <div className="tr-sidebar-body">
+                <h5>11 Days In Greece</h5>
+                <div className="tr-spec">
+                  <h6>
+                    <strong>From:</strong> May 31, 2026
+                  </h6>
+                  <h6>Athens</h6>
+                </div>
+                <div className="tr-spec">
+                  <h6>
+                    <strong>To:</strong> June 10, 2026
+                  </h6>
+                  <h6>Mykonos</h6>
+                </div>
+                <div className="tr-price d-flex justify-between">
+                  <h4>Total Amount:</h4>
+                  <div>
+                    <h5 className="tr-currfrom">$4,380 USD</h5>
+                    <span className="tr-currto">≈ $8,450 CAD</span>
+                  </div>
                 </div>
               </div>
             </div>

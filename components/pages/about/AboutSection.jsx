@@ -75,7 +75,7 @@ export default function AboutSection() {
                   >
                     <Link href="/contact">
                       Know More
-                      <i className="icon-arrow-top-right ml-10 text-16"></i>
+                      <i className=" ml-10 text-16"></i>
                     </Link>
                   </button>
                 </div>

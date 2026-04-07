@@ -33,7 +33,7 @@ export default function TourList1() {
   return (
     <section className="layout-pb-xl">
       <div className="container">
-        <div className="row">
+        <div className="row justify-center">
           {/* <div className="col-xl-3 col-lg-4">
             <div className="lg:d-none">
               <Sidebar />
@@ -65,7 +65,7 @@ export default function TourList1() {
             </div>
           </div> */}
 
-          <div className="col-xl-12 col-lg-8">
+          <div className="col-xl-9 col-lg-10 col-12">
             <div className="row y-gap-5 justify-between">
               <div className="col-auto">
                 <div>1362 results</div>
@@ -144,22 +144,30 @@ export default function TourList1() {
                     </div>
 
                     <div className="tourCard__content">
-                      <div className="tourCard__location">
-                        <i className="icon-pin mr-2"></i>
-                        {elm.location}
-                      </div>
-
                       <Link href={`/trip-details/${elm.id}`}>
-                        <h3 className="tourCard__title mt-5 mb-3">
-                          <span style={{ letterSpacing: "4px" }}>
-                            {elm.title}
-                          </span>
+                        <h3 className=" mt-5 mb-3">
+                          <span>{elm.title}</span>
                         </h3>
                       </Link>
 
                       <p className="tourCard__text mt-5 pb-30">
                         {elm.description}
                       </p>
+
+                      <h6 className=" mt-5">
+                        <span>
+                          Starts in <strong> {elm.startLocation}</strong> on{" "}
+                          <strong> {elm.startDate}</strong>
+                        </span>
+                      </h6>
+
+                      <h6 className=" mt-5">
+                        <span>
+                          Finishes in <strong> {elm.endLocation}</strong> on{" "}
+                          <strong> {elm.endDate}</strong>
+                        </span>
+                      </h6>
+
                       {/* <div className="d-flex items-center mt-5">
                         <div className="d-flex items-center x-gap-5">
                           <Stars star={elm.rating} font={12} />

@@ -43,7 +43,7 @@ export default function Philosophy() {
               >
                 <Link href={"/trip-calendar"}>
                   Explore Our Tours
-                  <i className="icon-arrow-top-right ml-10"></i>
+                  <i className=" ml-10"></i>
                 </Link>
               </button>
             </div>

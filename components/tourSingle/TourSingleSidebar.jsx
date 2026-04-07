@@ -1,4 +1,5 @@
 import { departureGroups } from "@/data/trips";
+import Link from "next/link";
 
 export default function TourSingleSidebar() {
   return (
@@ -29,41 +30,53 @@ export default function TourSingleSidebar() {
                 <div className="d-flex flex-column y-gap-12">
                   {group.departures.map((departure) => {
                     const isAvailable = departure.status === "available";
+                    const showUrgency =
+                      isAvailable &&
+                      departure.spotsLeft &&
+                      departure.spotsLeft <= 3;
 
                     return (
-                      <button
-                        key={departure.id}
-                        className={`departureCard ${
-                          isAvailable ? "is-available" : "is-full"
-                        }`}
-                        type="button"
-                      >
-                        <div className="departureCard__left">
-                          <div className="departureCard__date">
-                            {departure.date}
-                          </div>
+                      <Link key={departure.id} href={departure.link}>
+                        <button
+                          key={departure.id}
+                          className={`departureCard ${
+                            isAvailable ? "is-available" : "is-full"
+                          }`}
+                          type="button"
+                        >
+                          <div className="departureCard__left">
+                            <div className="departureCard__date">
+                              {departure.date}
+                            </div>
 
-                          <div className="departureCard__meta mt-10">
-                            <span
-                              className={`departureBadge ${
-                                isAvailable ? "is-available" : "is-full"
-                              }`}
-                            >
-                              {isAvailable ? "Available" : "Full"}
-                            </span>
-
-                            {!isAvailable && (
-                              <span className="departureCard__waitlist">
-                                {departure.cta}
+                            <div className="departureCard__meta mt-10">
+                              <span
+                                className={`departureBadge ${
+                                  isAvailable ? "is-available" : "is-full"
+                                }`}
+                              >
+                                {isAvailable ? "Available" : "Full"}
                               </span>
-                            )}
-                          </div>
-                        </div>
 
-                        <div className="departureCard__right">
-                          <i className="icon-chevron-right text-16"></i>
-                        </div>
-                      </button>
+                              {showUrgency && (
+                                <span className="urgency-badge pulse-red ml-10">
+                                  {departure.spotsLeft} Spots Left!
+                                </span>
+                              )}
+
+                              {!isAvailable && (
+                                <span className="departureCard__waitlist">
+                                  {departure.cta}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className="departureCard__right">
+                            <i className="icon-chevron-right text-16"></i>
+                          </div>
+                        </button>
+                      </Link>
                     );
                   })}
                 </div>

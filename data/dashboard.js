@@ -13,66 +13,67 @@ export const sidebarItems = [
   },
   {
     id: 3,
-    href: "/db-listing",
+    href: "/db-statement",
     iconClass: "icon-menu text-26",
-    label: "My Listings",
+    label: "Account Statement",
   },
   {
     id: 4,
     href: "/db-add-tour",
     iconClass: "icon-clipboard text-26",
-    label: "Add Tour",
+    label: "Requirements",
   },
-  {
-    id: 5,
-    href: "/db-favorites",
-    iconClass: "icon-heart text-26",
-    label: "My Favorites",
-  },
+  // {
+  //   id: 5,
+  //   href: "/db-favorites",
+  //   iconClass: "icon-heart text-26",
+  //   label: "My Wishlist",
+  // },
+
   {
     id: 6,
-    href: "/db-messages",
-    iconClass: "icon-message text-26",
-    label: "Messages",
-  },
-  {
-    id: 7,
     href: "/db-profile",
     iconClass: "icon-account text-26",
     label: "My Profile",
   },
-  { id: 8, href: "/", iconClass: "icon-logout text-26", label: "Logout" },
+
+  { id: 7, href: "/", iconClass: "icon-logout text-26", label: "Logout" },
+
 ];
 
 export const states = [
   {
     id: 1,
-    title: "Total Earnings",
+    title: "Your Balance",
     amount: "$10,800",
-    today: "$50",
+    today: "Add Payment",
     iconClass: "icon-wallet text-accent-1",
+    link: "#"
   },
-  {
-    id: 2,
-    title: "Total Pending",
-    amount: "$12,800",
-    today: "40+",
-    iconClass: "icon-payment text-accent-1",
-  },
+  // {
+  //   id: 2,
+  //   title: "Recent Booking",
+  //   amount: "$12,800",
+  //   today: "View All",
+  //   iconClass: "icon-payment text-accent-1",
+  //   link: "#"
+  // },
   {
     id: 3,
-    title: "Total Booking",
-    amount: "$54,800",
-    today: "90+",
+    title: "Your Referral Code",
+    amount: "DTI7IBsERM",
+    today: "View Referral Program",
     iconClass: "icon-booking text-accent-1",
+    link: "#"
   },
-  {
-    id: 4,
-    title: "Wishlist",
-    amount: "1834",
-    today: "290+",
-    iconClass: "icon-heart text-accent-1",
-  },
+  // {
+  //   id: 4,
+  //   title: "Wishlist",
+  //   amount: "24",
+  //   today: "Check Trips",
+  //   iconClass: "icon-heart text-accent-1",
+  //   link: "#"
+  // },
 ];
 
 export const notificationData = [

@@ -62,7 +62,7 @@ export default function Adventure() {
               >
                 <Link href={"/contact"}>
                   Contact Us
-                  <i className="icon-arrow-top-right ml-10"></i>
+                  <i className=" ml-10"></i>
                 </Link>
               </button>
             </div>

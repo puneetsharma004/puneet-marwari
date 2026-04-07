@@ -12,7 +12,7 @@ export default function FlightsPage() {
       <HeroBanner
         title="Flights"
         description="Explore deals, travel guides and things to do during Travel"
-        imageSrc="/heroimg/the-travel-concept.png"
+        imageSrc="/heroimg/flights-hero.webp"
       />
 
       <section className=" layout-pb-lg">
@@ -22,7 +22,7 @@ export default function FlightsPage() {
               <Image
                 width={717}
                 height={700}
-                src="/heroimg/flights-2.jpg"
+                src="/heroimg/flights-page.webp"
                 alt="image"
                 data-aos="fade-up"
                 data-aos-delay=""
@@ -37,7 +37,7 @@ export default function FlightsPage() {
               }}
             >
               <h2 data-aos="fade-up" data-aos-delay="" className="fw-700">
-                MAWARI — FLIGHT DETAILS
+                FLIGHT DETAILS
               </h2>
               <p
                 data-aos="fade-up"

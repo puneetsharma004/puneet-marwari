@@ -32,10 +32,10 @@ export default function MainInformation2({ tour }) {
               Share
             </a>
 
-            <a href="#" className="d-flex items-center">
+            {/* <a href="#" className="d-flex items-center">
               <i className="icon-heart flex-center text-16 mr-10"></i>
               Wishlist
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

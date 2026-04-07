@@ -1,6 +1,7 @@
 "use client";
 
 import { tabContentStaticties } from "@/data/dashboard";
+import Image from "next/image";
 import { useState } from "react";
 import {
   LineChart,
@@ -13,36 +14,42 @@ import {
 } from "recharts";
 
 export default function Statistics() {
-  const [activeTab, setActiveTab] = useState(tabContentStaticties[0]);
-  const chart = (interval) => (
-    <ResponsiveContainer height={500} width="100%">
-      <LineChart data={activeTab.data}>
-        <CartesianGrid strokeDasharray="" />
-        <XAxis tick={{ fontSize: 12 }} dataKey="name" interval={interval} />
-        <YAxis
-          tick={{ fontSize: 12 }}
-          domain={[0, 300]}
-          tickCount={7}
-          interval={interval}
-        />
-        <Tooltip />
-        <Line
-          type="monotone"
-          dataKey="value"
-          strokeWidth={2}
-          stroke="#336CFB"
-          fill="#336CFB"
-          activeDot={{ r: 8 }}
-        />
-        {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
-      </LineChart>
-    </ResponsiveContainer>
-  );
+  // const [activeTab, setActiveTab] = useState(tabContentStaticties[0]);
+  // const chart = (interval) => (
+  //   <ResponsiveContainer height={500} width="100%">
+  //     <LineChart data={activeTab.data}>
+  //       <CartesianGrid strokeDasharray="" />
+  //       <XAxis tick={{ fontSize: 12 }} dataKey="name" interval={interval} />
+  //       <YAxis
+  //         tick={{ fontSize: 12 }}
+  //         domain={[0, 300]}
+  //         tickCount={7}
+  //         interval={interval}
+  //       />
+  //       <Tooltip />
+  //       <Line
+  //         type="monotone"
+  //         dataKey="value"
+  //         strokeWidth={2}
+  //         stroke="#336CFB"
+  //         fill="#336CFB"
+  //         activeDot={{ r: 8 }}
+  //       />
+  //       {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
+  //     </LineChart>
+  //   </ResponsiveContainer>
+  // );
   return (
     <div className="col-xl-8 col-lg-12 col-md-6">
       <div className="rounded-12 bg-white shadow-2 h-full">
         <div className="pt-20 px-30">
-          <div className="tabs -underline-2 js-tabs">
+          <Image
+            width={850}
+            height={510}
+            src="/img/greece/7.webp"
+            alt="Dashboard Picture"
+          />
+          {/* <div className="tabs -underline-2 js-tabs">
             <div className="d-flex items-center justify-between">
               <div className="text-18 fw-500">Earning Statistics</div>
 
@@ -70,7 +77,7 @@ export default function Statistics() {
                 {chart("preserveEnd")}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

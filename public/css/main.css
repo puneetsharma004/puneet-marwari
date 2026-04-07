@@ -199,6 +199,11 @@ h6 {
 :root {
   --font-body: var(--font-lato), sans-serif;
   --font-heading: var(--font-josefin), sans-serif;
+  --font-montserrat-var: var(--font-montserrat), sans-serif;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat) !important;
 }
 
 :root {
@@ -233,7 +238,7 @@ h6 {
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
-  --color-black-hover: #282828;
+  --color-black-hover: #2e2e2e;
   --color-border: #DDDDDD;
   --color-accent-hover: #aeaeae;
   --color-accent-1: #1b1212;
@@ -2383,7 +2388,7 @@ h6 {
 }
 
 .header.-is-sticky {
-  box-shadow: 0px 10px 20px 0px #0000000D;
+  box-shadow: 0px 0px 0px 0px #0000000D;
 }
 
 .header__search {
@@ -2564,7 +2569,7 @@ h6 {
 }
 
 .header .desktopNav .desktopNavSubnav {
-  font-family: --font-body;
+  font-family: var(--font-body);
   position: absolute;
   top: 100%;
   left: 0;
@@ -5035,7 +5040,7 @@ h6 {
 
 @media (max-width: 767px) {
   .pageHeader.-type-1 {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 }
 
@@ -5048,6 +5053,7 @@ h6 {
   left: 60px; */
   border-radius: 0px;
   z-index: -1;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -6183,7 +6189,7 @@ h6 {
   width: 300px;
   max-width: calc(100vw - 80px);
   color: white;
-  background-color: var(--color-dark-1);
+  background-color: #2e2e2e;
   z-index: 100;
   transform: translateX(-100%);
   transition: .2s;
@@ -6218,7 +6224,7 @@ h6 {
 .dashboard__content {
   position: relative;
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #f9f4ee;
   transition: .2s;
 }
 
@@ -10921,7 +10927,7 @@ h6 {
 }
 
 .bg-accent-2 {
-  background-color: var(--color-black) !important;
+  background-color: var(--color-black-hover) !important;
 }
 
 .bg-dark-1 {

@@ -15,14 +15,14 @@ export default function InsurancePage() {
       <HeroBanner
         title="Travel Insurance"
         description="Travel With confidence"
-        imageSrc="/heroimg/insurance.jpg"
+        imageSrc="/heroimg/insurance-hero.webp"
       />
 
       <section className=" layout-pb-xl">
         <div className="container">
           <div className="row y-gap-20 justify-between">
             <div className="col-lg-6">
-              <h2 className=" fw-700">MAWARI - TRAVEL INSURANCE</h2>
+              <h2 className=" fw-700"> TRAVEL INSURANCE</h2>
             </div>
 
             <div className="col-lg-5">
@@ -46,10 +46,32 @@ export default function InsurancePage() {
         </div>
       </section>
 
-      <section className="layout-pt-xl layout-pb-xl bg-accent-1-05">
+      <section
+        className="layout-pt-xl layout-pb-xl relative"
+        style={{
+          minHeight: "800px",
+          display: "flex",
+          alignItems: "center",
+          //   marginTop: "100px",
+        }}
+      >
         <div className="container">
+          <div className="sectionBg hero-overlay">
+            <Image
+              width={1920}
+              height={890}
+              src="/heroimg/why-insurance.webp"
+              alt="image"
+              className="img-ratio"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              priority
+            />
+          </div>
           <div className="row y-gap-30 items-center justify-between">
-            <div className="col-xl-4 col-lg-5">
+            <div className="col-xl-4 col-lg-5 text-white">
               <h2 data-aos="fade-up" data-aos-delay="">
                 WHY TRAVEL INSURANCE MATTERS
               </h2>
@@ -57,7 +79,7 @@ export default function InsurancePage() {
               <p
                 data-aos="fade-up"
                 data-aos-delay=""
-                className="mt-30 md:mt-10"
+                className="mt-30 md:mt-10 text-white"
               >
                 Travel insurance offers peace of mind by helping protect you
                 against unexpected costs that can arise while abroad.

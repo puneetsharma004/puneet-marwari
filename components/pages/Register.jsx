@@ -53,7 +53,7 @@ export default function Register() {
 
               <button className="button -md -dark-1 bg-accent-1 text-white col-12 mt-30">
                 Register
-                <i className="icon-arrow-top-right ml-10"></i>
+                <i className=" ml-10"></i>
               </button>
 
               {/* <div className="relative line mt-50 mb-30">

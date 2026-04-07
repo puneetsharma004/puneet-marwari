@@ -16,10 +16,10 @@ export default function ContactForm() {
               }}
             >
               <Image
-                src="/img/faq-hero-bg.png"
+                src="/heroimg/contact-page.webp"
                 alt="Contact"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
               {/* Dark overlay with text */}
               <div
