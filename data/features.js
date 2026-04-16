@@ -1,25 +1,25 @@
 export const features = [
   {
     id: 1,
-    iconSrc: "/img/icons/1/ticket.svg",
+    iconSrc: "/img/icons/1/1.png",
     title: "Thoughtful sustainability",
     text: "Engaging with local cultures and environments with respect",
   },
   {
     id: 2,
-    iconSrc: "/img/icons/1/hot-air-balloon.svg",
+    iconSrc: "/img/icons/1/2.png",
     title: "Responsible partnerships ",
     text: "Working with trusted local providers who share our values",
   },
   {
     id: 3,
-    iconSrc: "/img/icons/1/diamond.svg",
+    iconSrc: "/img/icons/1/3.png",
     title: "Quality over quantity ",
     text: "Refining, not expanding for the sake of size",
   },
   {
     id: 4,
-    iconSrc: "/img/icons/3/4.svg",
+    iconSrc: "/img/icons/1/4.png",
     title: "Authentic engagement ",
     text: "Fostering genuine, respectful connections between guests and places",
   },
@@ -47,32 +47,32 @@ export const featuresFour = [
 export const distinctive = [
   {
     id: 1,
-    iconSrc: "/img/icons/1/diamond.svg",
+    iconSrc: "/img/icons/3/1.png",
     title: "Expertise That You Can Trust",
     text: "Our trip leaders are selected for their deep destination knowledge, poise, and ability to shape each group's experience in ways that feel intuitive and personal, not performed.",
   },
 
   {
     id: 2,
-    iconSrc: "/img/icons/1/hot-air-balloon.svg",
+    iconSrc: "/img/icons/3/2.png",
     title: "Seamless Logistics, Thoughtful Service",
     text: "From flights and transfers to on-trip coordination and support, Mawari handles the details so you can focus on enjoyment and discovery.",
   },
   {
     id: 3,
-    iconSrc: "/img/icons/1/diamond.svg",
+    iconSrc: "/img/icons/3/3.png",
     title: "Small, Intentional Groups",
     text: "Our trips are sized to foster connection without crowding the experience. There’s room to make friends, share moments, and still enjoy personal time.",
   },
   {
     id: 4,
-    iconSrc: "/img/icons/1/hot-air-balloon.svg",
+    iconSrc: "/img/icons/3/4.png",
     title: "Curated Experiences",
     text: "Rather than checking boxes, we design experiences that reflect the essence of a place—private tastings, local stories, refined cultural activities, and moments that feel both authentic and transformative.",
   },
   {
     id: 5,
-    iconSrc: "/img/icons/1/ticket.svg",
+    iconSrc: "/img/icons/3/5.png",
     title: "Elevated Accommodations",
     text: "Every stay is chosen for its location, character, and comfort—whether that’s a boutique hideaway overlooking a historic town square or a luxury resort with elevated service and style.",
   },
@@ -80,34 +80,56 @@ export const distinctive = [
 export const featuresTwo = [
   {
     id: 1,
-    iconSrc: "/img/icons/2/1.svg",
+    iconSrc: "/img/icons/2/1.png",
     value: "Comfortably elegant",
     label: "From boutique and five-star accommodations to premium transfers, your physical experience should reflect the care and quality you bring to choosing where you travel.",
   },
   {
     id: 2,
-    iconSrc: "/img/icons/2/2.svg",
+    iconSrc: "/img/icons/2/2.png",
     value: "Curated, not contrived",
     label: "Each itinerary is crafted with intention, not overcrowded with “stops” but filled with meaningful moments that resonate well beyond the journey itself.",
   },
   {
     id: 3,
-    iconSrc: "/img/icons/2/3.svg",
+    iconSrc: "/img/icons/2/3.png",
     value: "Flexible and liberating",
     label: "We offer structure where it matters and freedom where it flourishes, so you choose how you want to engage with a place.",
   },
   {
     id: 4,
-    iconSrc: "/img/icons/2/2.svg",
+    iconSrc: "/img/icons/2/4.png",
     value: "Authentic in connection",
     label: "Local insight, expert guides, and thoughtfully chosen experiences help you connect with the culture, landscapes, and people of each destination.",
   },
   {
     id: 5,
-    iconSrc: "/img/icons/2/3.svg",
+    iconSrc: "/img/icons/2/5.png",
     value: "Community-minded",
     label: "Our journeys include like-minded explorers, creating the space for shared laughter, friendship, and connection without forcing familiarity.",
   },
+];
+
+export const travelConceptFeatures = [
+  {
+    id: 1,
+    iconSrc: "/img/icons/7/1.png",
+    value: "Guaranteed departures",
+    label: "A trip is guaranteed to go forward, no matter the group size.",
+  },
+  {
+    id: 2,
+    iconSrc: "/img/icons/7/2.png",
+    value: "Small groups capped at 16 travelers",
+    label: "Intentional, intimate, and unrushed.",
+  },
+  {
+    id: 3,
+    iconSrc: "/img/icons/7/3.png",
+    value: "Well-paced itineraries",
+    label: "Balancing iconic highlights with quieter, more personal moments and more inclusions.",
+  },
+
 ];
 
 export const featuresThree = [

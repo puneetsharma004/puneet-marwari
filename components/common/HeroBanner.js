@@ -36,9 +36,9 @@ export default function HeroBanner({ imageSrc, title, description }) {
                                 {title || "Default Title"}
                             </h1>
 
-                            <p className="pageHeader__text">
+                            {/* <p className="pageHeader__text">
                                 {description || "Default description text goes here."}
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>

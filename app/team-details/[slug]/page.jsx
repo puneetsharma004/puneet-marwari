@@ -10,16 +10,13 @@ export const metadata = {
 
 export default async function page(props) {
   const params = await props.params;
-  const id = params.id;
-  const member = teamMembers.find((item) => item.id === id) || teamMembers[0];
+  const slug = params.slug;
+  const member =
+    teamMembers.find((item) => item.slug === slug) || teamMembers[0];
 
   return (
     <>
-      <HeroBanner
-        title={member.heroTitle}
-        description={member.heroDescription}
-        imageSrc={member.heroImage}
-      />
+      <HeroBanner title={`Meet: ${member.name}`} imageSrc={member.heroImage} />
 
       <TeamSingle member={member} />
     </>

@@ -20,7 +20,7 @@ const slides = [
   {
     id: 1,
     imageSrc: "/img/hero/7/hero1n.webp",
-    logoSrc: "/img/logo/mawari-logo-white.png",
+    logoSrc: "/home/mawari-logo-final.webp",
     subtitle: "LUXURY GAY TRAVEL. FOR OUR COMMUNITY.",
     title: "",
     logoSlide: true,
@@ -41,7 +41,7 @@ const slides = [
   },
   {
     id: 4,
-    imageSrc: "/img/hero/7/hero4n.webp",
+    imageSrc: "/img/hero/7/hero5n.webp",
     subtitle: "Mawari trips are led by seasoned Detours Trip Leaders.",
     title: "Experienced, Attentive, and Genuinely Human.",
   },

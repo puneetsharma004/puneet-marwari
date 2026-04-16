@@ -33,11 +33,11 @@ export default function MakingPayments() {
                 Below you will find our standard payment schedule and the
                 available methods for settling your balance.
               </p>
-              <Link href={"/contact"}>
+              {/* <Link href={"/contact"}>
                 <button className="button -md -dark-1 bg-accent-1 text-white mt-30">
                   Consult Us
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

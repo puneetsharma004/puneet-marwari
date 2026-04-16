@@ -62,25 +62,6 @@ export default function Features10() {
                 <br />
                 <br />
               </p>
-              <p className={`font-montserrat`}>
-                Mawari travelers share a desire for quality over quantity.
-                Whether that means a private cultural visit, a beautifully
-                prepared meal, a scenic transfer, or simply time to enjoy a
-                place without rushing, our journeys prioritize moments that feel
-                memorable rather than programmed.{" "}
-              </p>
-              <p className={`font-montserrat`}>
-                Our trip leaders are experienced, discreet, and deeply
-                knowledgeable. They manage the details seamlessly, allowing you
-                to relax into the experience, confident that everything is taken
-                care of, while still feeling personal, human, and warm.
-              </p>
-              <p className={`font-montserrat`}>
-                The result is a growing community of Mawari travelers who return
-                home feeling enriched: by the places they've seen, the
-                experiences they've shared, and the connections they've made
-                along the way.
-              </p>
             </div>
           </div>
         </div>

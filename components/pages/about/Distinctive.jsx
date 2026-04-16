@@ -40,7 +40,7 @@ export default function Distinctive() {
                   className="row y-gap-30"
                 >
                   {distinctive.map((elm, i) => (
-                    <div key={i} className="col-xl-4 col-lg-6 col-sm-6">
+                    <div key={i} className="col-xl-4 col-lg-6 col-sm-6 d-flex">
                       <div className="featureIcon -type-1 px-40 py-40 bg-white shadow-1">
                         <div className="featureIcon__icon">
                           <Image

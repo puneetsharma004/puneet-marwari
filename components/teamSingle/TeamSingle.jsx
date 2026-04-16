@@ -1,43 +1,26 @@
+"use client";
+import "/node_modules/swiper/swiper-bundle.min.css";
 import Image from "next/image";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 export default function TeamSingle({ member }) {
+  const images = member.sliderImages || [member.profileImage];
   return (
     <>
       <section className="cta -type-2" style={{ marginTop: "-88px" }}>
-        <div className="cta__bg">
+        {/* <div className="cta__bg">
           <Image
             width={1530}
             height={600}
             src={member.ctaBg}
             alt="background image"
           />
-
-          <div className="cta__image">
-            <Image
-              width={1000}
-              height={1000}
-              src={member.profileImage}
-              alt={member.name}
-            />
-            {/* <Image
-              width={40}
-              height={600}
-              src="/img/cta/2/shape.svg"
-              alt="shape"
-            />
-            <Image
-              width={390}
-              height={35}
-              src="/img/cta/2/shape2.svg"
-              alt="shape"
-            /> */}
-          </div>
-        </div>
+        </div> */}
 
         <div className="container">
-          <div className="row">
-            <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-7">
+          <div className="row" style={{ justifyContent: "space-between" }}>
+            <div className="col-12 col-xxl-4 col-xl-5 col-lg-6 col-md-7">
               <div className="cta__content">
                 <h2 data-aos="fade-up" className="md:text-30 lh-13">
                   {member.name?.toUpperCase()}
@@ -54,18 +37,36 @@ export default function TeamSingle({ member }) {
                     {paragraph}
                   </p>
                 ))}
-
-                {/* <div className="mt-30 md:mt-20">
-                  <Link
-                    href={member.buttonLink}
-                    className="button -md -dark-1 bg-accent-1 text-white"
-                    data-aos="fade-right"
-                  >
-                    {member.buttonText}
-                    <i className="icon-arrow-top-right ml-10 text-16"></i>
-                  </Link>
-                </div> */}
               </div>
+            </div>
+            <div className="col-12 col-xxl-7 col-xl-6 col-lg-5 col-md-4">
+              <Swiper
+                modules={[Navigation, Autoplay, Pagination, EffectFade]}
+                navigation
+                style={{
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-theme-color": "#fff",
+                }}
+                effect={"fade"}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: true,
+                }}
+                speed={1000}
+                loop={true}
+                className="h-full"
+              >
+                {images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <Image
+                      src={img}
+                      alt="slider"
+                      fill
+                      className="object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>

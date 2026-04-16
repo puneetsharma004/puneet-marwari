@@ -64,6 +64,7 @@ export default function Philosophy() {
                       height="30"
                       src={elm.iconSrc}
                       alt="icon"
+                      className="mx-auto d-block"
                     />
                     <h6 className=" fw-600 text-accent-1 mb-3 mt-3 lh-10 uppercase">
                       {elm.value}

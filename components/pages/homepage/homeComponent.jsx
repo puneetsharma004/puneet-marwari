@@ -6,15 +6,22 @@ import FeaturesVideo from "@/components/homes/features/FeaturesVideo";
 import TestimonialOne from "@/components/homes/testimonials/TestimonialOne";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footers/Footer";
+import HomeAboutSection from "./HomeAboutSection";
+import AccommodationSection from "./AccommodationSection";
+import CommunitySection from "./CommunitySection";
+import LeadersSection from "./LeadersSection";
 
 export default function HomeComponent() {
   return (
     <>
       <Header />
       <Hero7 />
+      <HomeAboutSection />
       <DestinationsTwo />
+      <AccommodationSection />
       <Features5 />
-      <Activity />
+      <CommunitySection />
+      <LeadersSection />
       <FeaturesVideo />
       <div className="bg-accent-1-05">
         <TestimonialOne />

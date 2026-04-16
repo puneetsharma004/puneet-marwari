@@ -1,4 +1,4 @@
-import { featureCards } from "@/data/destinations";
+import { featureCards, travelConceptSectionTwo } from "@/data/destinations";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,13 +15,13 @@ export default function Features9() {
 
             <p data-aos="fade-up" data-aos-delay="" className="mt-30 md:mt-10">
               We encourage you to explore your options and compare thoughtfully.
-              As you do, here’s what defines a Mawari journey
+              As you do, here's what defines a Mawari journey
             </p>
           </div>
 
           <div className="col-xl-12 col-lg-7">
             <div data-aos="fade-up" data-aos-delay="" className="row y-gap-30">
-              {featureCards.map((elm, i) => (
+              {travelConceptSectionTwo.map((elm, i) => (
                 <div key={i} className="col-md-3 col-12 lg:col-6 md:col-6">
                   <div className="featureCard -type-5 -hover-accent-1">
                     <div className="featureCard__icon">
@@ -46,8 +46,8 @@ export default function Features9() {
               We are confident that Mawari offers a distinctive approach to
               luxury LGBTQ+ travel, one rooted in quality, care, and genuine
               enjoyment.
-              <br />
-              <br />
+            </p>
+            <p data-aos="fade-up" data-aos-delay="" className="mt-30 md:mt-10">
               If you have questions or would like help choosing the right
               journey, we'd be happy to assist. You're also welcome to register
               now and begin planning your Mawari experience.

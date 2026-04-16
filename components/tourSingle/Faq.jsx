@@ -1,13 +1,13 @@
 "use client";
 
-import { faqData } from "@/data/tourSingleContent";
+import { faqData, faqData3 } from "@/data/tourSingleContent";
 import React, { useState } from "react";
 
 export default function Faq() {
   const [currentActiveFaq, setCurrentActiveFaq] = useState(0);
   return (
     <>
-      {faqData.map((elm, i) => (
+      {faqData3.map((elm, i) => (
         <div key={i} className="col-12">
           <div
             className={`accordion__item px-20 py-15 border-1 ${

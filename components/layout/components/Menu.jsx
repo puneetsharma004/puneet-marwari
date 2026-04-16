@@ -25,9 +25,9 @@ export default function Menu() {
             <div className="desktopNavSubnav">
               <div className="desktopNavSubnav__content">
                 {/* ✅ Section Title */}
-                <div className="desktopNavSubnav__item text-dark-1 fw-600">
+                {/* <div className="desktopNavSubnav__item text-dark-1 fw-600">
                   General Information
-                </div>
+                </div> */}
 
                 {/* ✅ Static Link */}
                 <div className="desktopNavSubnav__item text-dark-1">
