@@ -17,7 +17,7 @@ export default function AboutSection() {
             <Image
               width={750}
               height={600}
-              src="/heroimg/trip-leader.png"
+              src="/img/travelConcept/about.webp"
               alt="image"
             />
             <Image
@@ -74,7 +74,7 @@ export default function AboutSection() {
                     className="button -md -dark-1 bg-accent-1 text-white"
                   >
                     <Link href="/contact">
-                      Know More
+                      Learn More
                       <i className=" ml-10 text-16"></i>
                     </Link>
                   </button>

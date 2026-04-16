@@ -16,7 +16,7 @@ export default async function page(props) {
   return (
     <>
       <HeroBanner
-        title="GREECE"
+        title="11 Days in Greece"
         description="Journey Through the Greek Islands"
         imageSrc="/heroimg/greece.png"
       />

@@ -17,7 +17,7 @@ export default function MainInformation2({ tour }) {
         </div>
       </div> */}
 
-      <h2 className="text-20 sm:text-16 lh-14 mt-20">
+      <h2 className="md:text-30 lh-13 mt-20">
         {tour?.title.split(" ").slice(0, 7).join(" ")}
 
         <br />

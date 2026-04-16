@@ -21,7 +21,7 @@ export const sidebarItems = [
     id: 4,
     href: "/db-add-tour",
     iconClass: "icon-clipboard text-26",
-    label: "Requirements",
+    label: "Pre-trip Requirements",
   },
   // {
   //   id: 5,

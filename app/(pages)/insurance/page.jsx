@@ -22,7 +22,7 @@ export default function InsurancePage() {
         <div className="container">
           <div className="row y-gap-20 justify-between">
             <div className="col-lg-6">
-              <h2 className=" fw-700"> TRAVEL INSURANCE</h2>
+              <h2 className=" fw-700"> TRAVEL MEDICAL INSURANCE</h2>
             </div>
 
             <div className="col-lg-5">

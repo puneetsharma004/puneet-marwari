@@ -84,7 +84,7 @@ export default function TourList1() {
                   >
                     <span>Sort by: </span>
                     <span className="js-title">
-                      {sortOption ? sortOption : "Featured"}
+                      {sortOption ? sortOption : "Destination"}
                     </span>
                     <i className="icon-chevron-down"></i>
                   </div>

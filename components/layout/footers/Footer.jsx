@@ -38,6 +38,12 @@ export default function Footer() {
                   <div className="footerSocials__icons text-white">
                     <Socials />
                   </div>
+                  <Image
+                    width="125"
+                    height="32"
+                    src="/heroimg/iglta-new.png"
+                    alt="IGLTA icon"
+                  />
                 </div>
               </div>
             </div>
@@ -82,7 +88,7 @@ export default function Footer() {
                   </div>
                 </div>
 
-                <FooterLinksTwo />
+                {/* <FooterLinksTwo /> */}
 
                 <div className="col-lg-3 col-md-6">
                   <h4 className="fw-500 text-white">Newsletter</h4>

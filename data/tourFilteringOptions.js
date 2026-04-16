@@ -27,4 +27,4 @@ export const features = [
   "Private Tour",
 ];
 
-export const speedFeatures = ["Fast", "Steady", "Speedy", "Furious", "Grind"];
+export const speedFeatures = ["Destination", "Date (earliest)", "Date (latest)",];

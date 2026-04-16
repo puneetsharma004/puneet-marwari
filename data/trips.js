@@ -5,7 +5,7 @@ export const tripsData = [
         slug: "greece",
         title: "Greece",
         tours: "Athens -> Mykonos -> Paros -> Santorini",
-        heroImage: "/toursCover/1.webp",
+        heroImage: "/toursCover/greece.webp",
         gallery: [
             "/img/gallery/greece-1.jpg",
             "/img/gallery/greece-2.jpg",
@@ -141,7 +141,7 @@ export const tripsData = [
         slug: "southeast-asia",
         title: "Southeast Asia",
         tours: "Hanoi -> Luang Prabang -> Siem Reap -> Cruise down the Tonle Sap -> Phnom Penh",
-        heroImage: "/toursCover/2.webp",
+        heroImage: "/toursCover/asia.webp",
         gallery: [
             "/img/gallery/southeast-asia-1.jpg",
             "/img/gallery/southeast-asia-2.jpg",
@@ -277,7 +277,7 @@ export const tripsData = [
         slug: "african-safari",
         title: "African Safari",
         tours: "Cape Town -> Victoria Falls -> Chobe National Park -> Okavango Delta",
-        heroImage: "/toursCover/3.webp",
+        heroImage: "/toursCover/africa.webp",
         gallery: [
             "/img/gallery/african-safari-1.jpg",
             "/img/gallery/african-safari-2.jpg",
@@ -412,7 +412,7 @@ export const tripsData = [
         id: 4,
         slug: "antarctica-cruise",
         title: "Antarctica Cruise",
-        heroImage: "/toursCover/4.webp",
+        heroImage: "/toursCover/antarctica.webp",
         gallery: [
             "/img/gallery/antarctica-cruise-1.jpg",
             "/img/gallery/antarctica-cruise-2.jpg",

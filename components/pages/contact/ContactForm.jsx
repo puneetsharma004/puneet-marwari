@@ -90,8 +90,8 @@ export default function ContactForm() {
               }}
             >
               {/* Form heading */}
-              <p className=" mb-5">Contact Us</p>
-              <h3 className=" mb-5">Leave Us Your Info</h3>
+              {/* <p className=" mb-5">Contact Us</p> */}
+              <h2 className="uppercase mb-5">Contact Us</h2>
               <div className="d-flex items-center x-gap-10 mb-40">
                 <span
                   style={{

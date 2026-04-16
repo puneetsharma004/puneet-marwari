@@ -145,9 +145,9 @@ export default function HealthSafety() {
                 data-aos-delay=""
                 className="mt-30 md:mt-10"
               >
-                Whether you find yourself in Paris, Pittsburgh, Phnom Penh, or
-                anywhere in between, the following principles are worth keeping
-                in mind wherever you travel:
+                Whether you find yourself in Hanoi, Athens or Cape Town, the
+                following principles are worth keeping in mind wherever you
+                travel:
               </p>
             </div>
 

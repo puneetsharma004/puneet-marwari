@@ -6,79 +6,11 @@ import Gallery3 from "../Galleries/Gallery3";
 import OthersInformation from "../OthersInformation";
 import Overview from "../Overview";
 import Included from "../Included";
-import RoadMap from "../RoadMap";
-import DateCalender from "../DateCalender";
 import Faq from "../Faq";
-import Rating from "../Rating";
-import Reviews from "../Reviews";
-import CommentBox from "../CommentBox";
 import TourSingleSidebar from "../TourSingleSidebar";
 import Highligts from "../Highlights";
 import Accommodation from "../Accommodation";
-import TripStyle from "../TripStyle";
-
-/**
- * Reusable Accordion Item
- */
-const AccordionItem = ({ title, id, activeId, toggleAccordion, children }) => {
-  const contentRef = useRef(null);
-  const [height, setHeight] = useState("0px");
-  const isOpen = activeId === id;
-
-  useEffect(() => {
-    if (isOpen && contentRef.current) {
-      setHeight(`${contentRef.current.scrollHeight}px`);
-    } else {
-      setHeight("0px");
-    }
-  }, [isOpen]);
-
-  return (
-    <div
-      className={`accordion__item py-20 border-1-top ${isOpen ? "is-active" : ""}`}
-    >
-      <div
-        onClick={() => toggleAccordion(id)}
-        className="accordion__button d-flex items-center justify-between cursor-pointer"
-      >
-        <h5 className="lh-13 uppercase letter-1">{title}</h5>
-
-        {/* IMPROVED ICON: Explicit color and transition for visibility */}
-        <div className=" size-30 flex-center">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#1A1A1A" /* Solid dark color ensures visibility */
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-              transition: "transform 0.4s ease",
-              transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-              display: "block",
-            }}
-          >
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </div>
-      </div>
-
-      <div
-        ref={contentRef}
-        className="accordion__content"
-        style={{
-          maxHeight: height,
-          overflow: "hidden",
-          transition: "max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
-      >
-        <div className="pt-20">{children}</div>
-      </div>
-    </div>
-  );
-};
+import Itinerary from "../Itinerary";
 
 const tabButtons = [
   "Overview",
@@ -160,8 +92,11 @@ export default function Single({ tour }) {
                 >
                   <h4>Itinerary</h4>
 
-                  <div className="mt-30">
+                  {/* <div className="mt-30">
                     <RoadMap />
+                  </div> */}
+                  <div className="accordion -simple row y-gap-20 mt-30 js-accordion">
+                    <Itinerary />
                   </div>
                 </div>
 

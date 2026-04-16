@@ -30,7 +30,7 @@ export default function Faq() {
                         setCurrentActiveFaq((pre) => (pre == i ? -1 : i))
                       }
                     >
-                      <h5 className=" fw-500">{elm.question}</h5>
+                      <h5 className="text-dark-1 fw-500">{elm.question}</h5>
 
                       <div className="accordion__icon size-30 flex-center bg-light-2">
                         <i className="icon-plus"></i>
@@ -40,12 +40,38 @@ export default function Faq() {
 
                     <div
                       className="accordion__content"
-                      style={
-                        currentActiveFaq == i ? { maxHeight: "150px" } : {}
-                      }
+                      style={currentActiveFaq == i ? { maxHeight: "none" } : {}}
                     >
                       <div className="pt-20">
-                        <p>{elm.answer}</p>
+                        <div>
+                          {elm.answer.map((block, idx) => {
+                            if (block.type === "paragraph") {
+                              return (
+                                <p key={idx} className="mb-10">
+                                  {block.text}
+                                </p>
+                              );
+                            }
+
+                            if (block.type === "list") {
+                              return (
+                                <ul
+                                  key={idx}
+                                  className="ulList pl-20"
+                                  style={{ listStyleType: "disc" }}
+                                >
+                                  {block.items.map((item, i) => (
+                                    <li key={i} className="mb-5">
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              );
+                            }
+
+                            return null;
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>

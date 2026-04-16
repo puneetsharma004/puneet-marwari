@@ -1,7 +1,7 @@
 "use client";
 
 import HeroBanner from "@/components/common/HeroBanner";
-import { faqData } from "@/data/tourSingleContent";
+import { faqData4 } from "@/data/tourSingleContent";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -58,7 +58,7 @@ export default function FlightsPage() {
               >
                 <div className="col-lg-12">
                   <div className="accordion -simple row y-gap-20 js-accordion">
-                    {faqData.map((elm, i) => (
+                    {faqData4.map((elm, i) => (
                       <div key={i} className="col-12">
                         <div
                           className={`accordion__item px-20 py-15 border-1 ${

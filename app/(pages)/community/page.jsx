@@ -29,21 +29,25 @@ export default function Community() {
 
       <section className="cta -type-2">
         <div className="cta__bg" style={{ marginTop: "-88px" }}>
-          <Image
+          {/* <Image
             src="/img/cta/7/bg.png"
             width={1093}
             height={600}
             alt="image"
-          />
+          /> */}
 
           <div className="cta__image">
             <Image
-              src="/heroimg/community-2.png"
+              src="/img/community/community.webp"
               width={750}
               height={600}
               alt="image"
+              style={{
+                objectFit: "cover",
+                objectPosition: "bottom",
+              }}
             />
-            <Image
+            {/* <Image
               src="/img/cta/7/shape.svg"
               width="40"
               height="600"
@@ -54,7 +58,7 @@ export default function Community() {
               width="600"
               height="40"
               alt="image"
-            />
+            /> */}
           </div>
         </div>
 
@@ -62,27 +66,33 @@ export default function Community() {
           <div className="row">
             <div className="col-xxl-4 col-xl-5 col-lg-6 col-md-7">
               <div className="cta__content">
-                <h3 data-aos="fade-up" data-aos-delay="" className="lh-13">
+                {/* <h3 data-aos="fade-up" data-aos-delay="" className="lh-13">
                   <span>Community, Naturally.</span>
                   <br className="lg:d-none" />
                   More Than a Group.
                   <br className="lg:d-none" />
                   More Than a Trip.
-                </h3>
+                </h3> */}
 
                 <p data-aos="fade-up" data-aos-delay="" className="mt-10">
-                  Like Detours, community is at the core of Mawari. Our
-                  travelers often arrive solo but never stay that way for long.
-                  Smaller group sizes create the perfect space for genuine
-                  connection over shared meals, conversations, and those
-                  unplanned moments that end up being the most memorable and the
-                  stories we share.
+                  Mawari was created with the same foundation that has shaped
+                  Detours Travel since day one: community matters.
                   <br />
                   <br />
-                  There’s no pressure to be “on” all the time. Some moments are
-                  shared, others are yours alone. By the end, you’ve not only
-                  experienced an incredible destination but you’ve shared it
-                  with people who feel like they belong there with you.
+                  As an extension of that ethos, Mawari carries it forward
+                  through a more elevated lens. We believe travel should not
+                  only be exceptional, but also meaningful, with a
+                  responsibility to support the people and places we encounter
+                  along the way. From early grassroots contributions to local
+                  initiatives to ongoing support of global organizations, giving
+                  back has always been part of how we operate.
+                  <br />
+                  <br />
+                  Through Mawari, that commitment continues, woven into the
+                  experiences we create and the communities we engage with.
+                  <br />
+                  <br />
+                  For registered non-profit donation requests please contact us.
                 </p>
 
                 <div
@@ -91,8 +101,8 @@ export default function Community() {
                   className="mt-30 md:mt-20"
                 >
                   <button className="button -md -dark-1 bg-accent-2 text-white">
-                    <Link href="/trip-calendar">
-                      Book Now
+                    <Link href="/contact">
+                      Contact Us
                       <i className=" ml-10 text-16"></i>
                     </Link>
                   </button>
